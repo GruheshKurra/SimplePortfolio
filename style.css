@@ -337,6 +337,21 @@ a.pub-title {
 }
 
 /* ── Experience ── */
+.exp-timeline {
+  position: relative;
+}
+
+.exp-timeline::before {
+  content: '';
+  position: absolute;
+  left: 80px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: #cfcfcf;
+  z-index: 0;
+}
+
 .exp-item {
   display: grid;
   grid-template-columns: 80px 18px 1fr;
@@ -359,21 +374,22 @@ a.pub-title {
 }
 
 .exp-ico {
-  border-left: 2px solid #cfcfcf;
   position: relative;
   padding-left: 14px;
   padding-bottom: 20px;
+  z-index: 1;
 }
 
 .entry-dot {
   position: absolute;
   top: 15px;
-  left: -7px;
+  left: -5px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: #cfcfcf;
   border: 2px solid #fff;
+  z-index: 2;
 }
 
 .exp-badge {
@@ -695,17 +711,16 @@ footer {
     font-size: 26px;
   }
 
+  .exp-timeline::before {
+    display: none;
+  }
+
   .exp-item {
-    grid-template-columns: 48px 1fr;
+    grid-template-columns: 0 16px 1fr;
   }
 
   .exp-left {
     display: none;
-  }
-
-  .exp-badge {
-    width: 44px;
-    height: 44px;
   }
 
   .skills-grid {
