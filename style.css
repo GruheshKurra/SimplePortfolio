@@ -556,49 +556,89 @@ a.pub-title {
 }
 
 /* ── Certs ── */
-.cert-table {
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s;
+}
+
+.cert-card:hover {
+  border-color: #aaa;
+  text-decoration: none;
+}
+
+.cert-thumb {
   width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
+  height: 130px;
+  object-fit: cover;
+  object-position: top;
+  border-bottom: 1px solid #ddd;
+  display: block;
+  flex-shrink: 0;
 }
 
-.cert-table th {
-  text-align: left;
-  font-size: 13px;
-  text-transform: none;
-  letter-spacing: normal;
-  color: #777;
+.cert-thumb-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  background: #f0f0f0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #555;
+  border-bottom: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+.cert-info {
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cert-name {
+  font-size: 12.5px;
   font-weight: 600;
-  border-bottom: 1px solid #d0ccc6;
-  padding: 7px 10px;
+  color: #1c1c1e;
+  line-height: 1.4;
 }
 
-.cert-table th:last-child,
-.cert-table td:last-child {
-  text-align: right;
-  width: 52px;
-  color: #9a9a9a;
+.cert-meta {
+  font-size: 11.5px;
+  color: #777;
 }
 
-.cert-table th:nth-child(2),
-.cert-table td:nth-child(2) {
-  width: 180px;
-  color: #6b6b6b;
+.cert-tag {
+  font-size: 11px;
+  color: #0a7c42;
+  font-weight: 600;
+  margin-top: 2px;
 }
 
-.cert-table td {
-  padding: 7px 10px;
-  border-bottom: 1px solid #ede9e3;
-  vertical-align: middle;
-  color: #2e2e2e;
+@media (max-width: 768px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.cert-table tr:last-child td {
-  border-bottom: none;
-}
-
-.cert-table tr:hover td {
-  background: #f5f5f5;
+@media (max-width: 480px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }
 
 /* ── Awards ── */
@@ -682,10 +722,7 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
-  .cert-table th:nth-child(2),
-  .cert-table td:nth-child(2) {
-    display: none;
-  }
+  /* cert-table removed */
 
   nav {
     font-size: 11px;
@@ -813,15 +850,6 @@ footer {
 
   .stats-row {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .cert-table {
-    font-size: 12px;
-  }
-
-  .cert-table th,
-  .cert-table td {
-    padding: 6px 6px;
   }
 
   .pub-list li {
