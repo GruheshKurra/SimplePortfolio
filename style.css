@@ -343,7 +343,7 @@ a.pub-title {
 .exp-timeline::before {
   content: '';
   position: absolute;
-  left: 80px;
+  left: 88px;
   top: 20px;
   bottom: 20px;
   width: 2px;
@@ -382,7 +382,7 @@ a.pub-title {
 .entry-dot {
   position: absolute;
   top: 15px;
-  left: -5px;
+  left: 4px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -624,6 +624,10 @@ footer {
 
   .exp-item {
     grid-template-columns: 60px 16px 1fr;
+  }
+
+  .exp-timeline::before {
+    left: 67px;
   }
 
   .exp-period {
