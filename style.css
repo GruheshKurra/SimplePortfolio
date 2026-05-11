@@ -46,9 +46,8 @@ a:focus-visible {
 
 /* ── Layout ── */
 .page-wrap {
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 44px 28px 90px;
+  max-width: 100%;
+  padding: 44px clamp(24px, 5vw, 80px) 90px;
 }
 
 /* ── Header ── */
@@ -666,7 +665,7 @@ footer {
 /* ── Responsive ── */
 @media (max-width: 700px) {
   .page-wrap {
-    padding: 28px 18px 70px;
+    padding: 28px clamp(14px, 4vw, 24px) 70px;
   }
 
   section h2 {
@@ -762,7 +761,7 @@ footer {
 
 @media (max-width: 480px) {
   .page-wrap {
-    padding: 20px 14px 60px;
+    padding: 20px clamp(12px, 4vw, 20px) 60px;
   }
 
   .site-header {
