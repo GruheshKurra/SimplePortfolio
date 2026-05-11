@@ -1,0 +1,519 @@
+/* ── Color tokens ──────────────────────────────────────
+   bg:          #f6f4f0  warm off-white (page)
+   surface:     #ffffff  (cards, table hover)
+   text:        #1c1c1e  near-black
+   muted:       #6b6b6b  subtitles, org names, meta
+   faint:       #9a9a9a  labels, years, tags
+   accent:      #2c5f9e  one blue — links, stat nums
+   border:      #e2dedd  warm light gray, all dividers
+   border-hvy:  #1c1c1e  header bottom line only
+   ──────────────────────────────────────────────────── */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Georgia", serif;
+  font-size: 15px;
+  line-height: 1.72;
+  color: #1c1c1e;
+  background: #f6f4f0;
+}
+
+a {
+  color: #2c5f9e;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── Layout ── */
+.page-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 44px 28px 90px;
+}
+
+/* ── Header ── */
+.site-header {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  padding-bottom: 26px;
+  border-bottom: 2px solid #1c1c1e;
+  margin-bottom: 20px;
+}
+
+.site-header img {
+  width: 128px;
+  height: 128px;
+  border-radius: 3px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid #d6d1cb;
+}
+
+.header-text {
+  padding-top: 4px;
+  min-width: 0;
+}
+
+.header-text h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  line-height: 1.3;
+  color: #1c1c1e;
+}
+
+.header-text .subtitle {
+  font-size: 13.5px;
+  color: #6b6b6b;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.header-links {
+  font-size: 13px;
+  line-height: 2;
+}
+
+.header-links .link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+  margin-bottom: 2px;
+}
+
+.header-links .link-row span {
+  white-space: nowrap;
+  color: #6b6b6b;
+}
+
+.header-links .link-row a {
+  white-space: nowrap;
+  color: #2c5f9e;
+}
+
+/* ── Nav ── */
+nav {
+  padding: 10px 0;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #e2dedd;
+  font-size: 12px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 0;
+}
+
+nav a {
+  margin-right: 20px;
+  color: #2c5f9e;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+nav a:hover {
+  color: #1c1c1e;
+  text-decoration: none;
+  border-bottom: 1px solid #1c1c1e;
+}
+
+/* ── Sections ── */
+section {
+  margin-bottom: 46px;
+}
+
+section h2 {
+  font-size: 11.5px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #9a9a9a;
+  border-bottom: 1px solid #e2dedd;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+section p {
+  margin-bottom: 10px;
+}
+
+.sub-label {
+  font-size: 11.5px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: #9a9a9a;
+  margin-top: 22px;
+  margin-bottom: 5px;
+}
+
+/* ── Stat bar ── */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 24px;
+  border: 1px solid #e2dedd;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 14px 8px;
+  border-right: 1px solid #e2dedd;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-item .stat-num {
+  font-size: 20px;
+  font-weight: 700;
+  display: block;
+  color: #2c5f9e;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.stat-item .stat-label {
+  font-size: 9.5px;
+  color: #9a9a9a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.35;
+}
+
+/* ── Publications ── */
+.pub-list {
+  list-style: none;
+}
+
+.pub-list li {
+  margin-bottom: 22px;
+  padding-left: 14px;
+  border-left: 3px solid #d0ccc6;
+}
+
+.pub-list li:last-child {
+  margin-bottom: 0;
+}
+
+.pub-title {
+  font-weight: bold;
+  line-height: 1.45;
+  color: #1c1c1e;
+}
+
+.pub-meta {
+  font-size: 13px;
+  color: #6b6b6b;
+  margin-top: 3px;
+}
+
+.pub-desc {
+  font-size: 13px;
+  color: #4a4a4a;
+  margin-top: 5px;
+  line-height: 1.6;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  background: #fdf0d5;
+  color: #8a5c00;
+  padding: 2px 7px;
+  border-radius: 3px;
+  margin-left: 7px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  letter-spacing: 0.02em;
+}
+
+.badge.new {
+  background: #e4f4ec;
+  color: #1a6040;
+}
+
+/* ── Experience ── */
+.exp-item {
+  margin-top: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #ede9e3;
+}
+
+.exp-item:first-child {
+  margin-top: 0;
+}
+
+.exp-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.exp-role {
+  font-weight: bold;
+  font-size: 15px;
+  flex: 1;
+  min-width: 0;
+  color: #1c1c1e;
+}
+
+.exp-period {
+  font-size: 12px;
+  color: #9a9a9a;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.exp-org {
+  font-style: italic;
+  color: #6b6b6b;
+  margin-bottom: 8px;
+  font-size: 13.5px;
+}
+
+.exp-item ul {
+  padding-left: 18px;
+  font-size: 13.5px;
+  color: #2e2e2e;
+}
+
+.exp-item ul li {
+  margin-bottom: 4px;
+}
+
+/* ── Projects ── */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.proj-card {
+  border: 1px solid #e2dedd;
+  background: #fff;
+  padding: 14px 16px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.proj-card h3 {
+  font-size: 13.5px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  color: #1c1c1e;
+}
+
+.proj-card p {
+  font-size: 13px;
+  color: #4a4a4a;
+  line-height: 1.57;
+  margin: 0;
+  flex: 1;
+}
+
+.proj-card .tags {
+  font-size: 11px;
+  color: #9a9a9a;
+  font-family: "SFMono-Regular", Consolas, monospace;
+}
+
+.proj-card .proj-links {
+  font-size: 12.5px;
+  display: flex;
+  gap: 12px;
+  margin-top: 2px;
+}
+
+/* ── Skills ── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px 28px;
+}
+
+.skill-group h3 {
+  font-size: 11px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: #9a9a9a;
+  margin-bottom: 5px;
+}
+
+.skill-group p {
+  font-size: 13px;
+  color: #3a3a3a;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Certs ── */
+.cert-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.cert-table th {
+  text-align: left;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9a9a9a;
+  border-bottom: 1px solid #d0ccc6;
+  padding: 7px 10px;
+}
+
+.cert-table th:last-child,
+.cert-table td:last-child {
+  text-align: right;
+  width: 52px;
+  color: #9a9a9a;
+}
+
+.cert-table th:nth-child(2),
+.cert-table td:nth-child(2) {
+  width: 180px;
+  color: #6b6b6b;
+}
+
+.cert-table td {
+  padding: 7px 10px;
+  border-bottom: 1px solid #ede9e3;
+  vertical-align: middle;
+  color: #2e2e2e;
+}
+
+.cert-table tr:last-child td {
+  border-bottom: none;
+}
+
+.cert-table tr:hover td {
+  background: #f0ede8;
+}
+
+/* ── Awards ── */
+.award-item {
+  margin-bottom: 18px;
+  padding-left: 14px;
+  border-left: 3px solid #b8d0e8;
+}
+
+.award-item:last-child {
+  margin-bottom: 0;
+}
+
+.award-item strong {
+  display: block;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #1c1c1e;
+}
+
+.award-meta {
+  font-size: 12px;
+  color: #9a9a9a;
+  margin-bottom: 4px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.award-item p {
+  font-size: 13px;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+/* ── Footer ── */
+footer {
+  margin-top: 60px;
+  padding-top: 18px;
+  border-top: 1px solid #e2dedd;
+  font-size: 12px;
+  color: #b8b4ae;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .stat-item:nth-child(3),
+  .stat-item:nth-child(4) {
+    border-top: 1px solid #e2dedd;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cert-table th:nth-child(2),
+  .cert-table td:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    flex-direction: column;
+  }
+
+  .site-header img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
