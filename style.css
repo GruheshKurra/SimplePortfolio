@@ -9,6 +9,10 @@
    border-hvy:  #1c1c1e  header bottom line only
    ──────────────────────────────────────────────────── */
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,10 +30,17 @@ body {
 a {
   color: #2c5f9e;
   text-decoration: none;
+  transition: color 0.15s;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid #2c5f9e;
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 /* ── Layout ── */
@@ -56,6 +67,11 @@ a:hover {
   object-fit: cover;
   flex-shrink: 0;
   border: 1px solid #d6d1cb;
+  transition: transform 0.2s;
+}
+
+.site-header img:hover {
+  transform: scale(1.04);
 }
 
 .header-text {
@@ -110,6 +126,11 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 4px 0;
+  position: sticky;
+  top: 0;
+  background: rgba(246, 244, 240, 0.96);
+  backdrop-filter: blur(8px);
+  z-index: 100;
 }
 
 nav a {
@@ -123,6 +144,11 @@ nav a {
 nav a:hover {
   color: #1c1c1e;
   text-decoration: none;
+  border-bottom: 1px solid #1c1c1e;
+}
+
+nav a.active {
+  color: #1c1c1e;
   border-bottom: 1px solid #1c1c1e;
 }
 
@@ -325,6 +351,12 @@ section p {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.proj-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 .proj-card h3 {
@@ -496,6 +528,51 @@ footer {
   .cert-table td:nth-child(2) {
     display: none;
   }
+}
+
+/* ── Scroll-to-top ── */
+#top-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #2c5f9e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s, transform 0.2s, background 0.15s;
+  pointer-events: none;
+  z-index: 200;
+}
+
+#top-btn.visible {
+  opacity: 0.82;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#top-btn:hover {
+  opacity: 1;
+  background: #1d4a80;
+}
+
+/* ── Print ── */
+@media print {
+  nav, #top-btn { display: none; }
+  .page-wrap { max-width: 100%; padding: 16px; }
+  section { break-inside: avoid; margin-bottom: 28px; }
+  a { color: #1c1c1e; text-decoration: none; }
+  .proj-card { break-inside: avoid; }
+  body { font-size: 11pt; line-height: 1.5; background: #fff; }
+  .stats-row { background: #f6f4f0; }
 }
 
 @media (max-width: 480px) {

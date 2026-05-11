@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gruhesh Sri Sai Karthik Kurra — AI/ML Researcher</title>
+  <meta name="description" content="Independent AI/ML researcher specialising in LLMs, computer vision, deepfake detection, and neural compression. 7+ papers, 50+ open-source projects." />
+  <meta property="og:title" content="Gruhesh Sri Sai Karthik Kurra — AI/ML Researcher" />
+  <meta property="og:description" content="Independent AI/ML researcher specialising in LLMs, computer vision, deepfake detection, and neural compression." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="@Karthik__kurra" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -461,6 +467,37 @@
 <footer>
   <p>Gruhesh Sri Sai Karthik Kurra &nbsp;·&nbsp; Last updated May 2026</p>
 </footer>
+
+
+<button id="top-btn" aria-label="Back to top">↑</button>
+
+<script>
+  // Security: add rel to all external links
+  document.querySelectorAll('a[target="_blank"]').forEach(a => {
+    a.rel = 'noopener noreferrer';
+  });
+
+  // Active nav section highlight
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav a');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const link = document.querySelector(`nav a[href="#${e.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  sections.forEach(s => io.observe(s));
+
+  // Scroll-to-top button
+  const topBtn = document.getElementById('top-btn');
+  window.addEventListener('scroll', () => {
+    topBtn.classList.toggle('visible', window.scrollY > 500);
+  });
+  topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
 
 </body>
 </html>
