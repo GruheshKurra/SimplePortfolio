@@ -434,28 +434,18 @@ a.pub-title {
 .proj-entry {
   display: flex;
   flex-direction: column;
-  border: 1px solid #e2dedd;
-  border-radius: 8px;
-  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   background: #fff;
-  transition: box-shadow 0.18s, transform 0.18s;
+  transition: border-color 0.15s;
 }
 
 .proj-entry:hover {
-  box-shadow: 0 4px 18px rgba(0,0,0,0.10);
-  transform: translateY(-2px);
+  border-color: #aaa;
 }
 
 .proj-thumb {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 56px;
-  font-size: 13px;
-  font-weight: 800;
-  color: #fff;
-  letter-spacing: 0.04em;
-  flex-shrink: 0;
+  display: none;
 }
 
 .proj-text {
