@@ -4,7 +4,7 @@
    text:        #1c1c1e  near-black
    muted:       #6b6b6b  subtitles, org names, meta
    faint:       #9a9a9a  labels, years, tags
-   accent:      #2c5f9e  one blue — links, stat nums
+   accent:      #0000ee  one blue — links, stat nums
    border:      #e2dedd  warm light gray, all dividers
    border-hvy:  #1c1c1e  header bottom line only
    ──────────────────────────────────────────────────── */
@@ -22,23 +22,24 @@ html {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.4;
   color: #333;
   background: #fff;
 }
 
 a {
-  color: #2c5f9e;
-  text-decoration: none;
+  color: #0000ee;
+  text-decoration: underline;
   transition: color 0.15s;
 }
 
 a:hover {
+  color: #0000ee;
   text-decoration: underline;
 }
 
 a:focus-visible {
-  outline: 2px solid #2c5f9e;
+  outline: 2px solid #333;
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -117,7 +118,7 @@ a:focus-visible {
 }
 
 .social-icons a:hover {
-  background: #2c5f9e;
+  background: #333;
   transform: scale(1.1);
   text-decoration: none;
 }
@@ -163,21 +164,22 @@ nav {
 
 nav a {
   margin-right: 20px;
-  color: #2c5f9e;
+  color: #555;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  text-decoration: none;
 }
 
 nav a:hover {
-  color: #1c1c1e;
+  color: #000;
   text-decoration: none;
-  border-bottom: 1px solid #1c1c1e;
+  border-bottom: 1px solid #000;
 }
 
 nav a.active {
-  color: #1c1c1e;
-  border-bottom: 1px solid #1c1c1e;
+  color: #000;
+  border-bottom: 1px solid #000;
 }
 
 /* ── Sections ── */
@@ -238,7 +240,7 @@ section p {
   font-size: 20px;
   font-weight: 700;
   display: block;
-  color: #2c5f9e;
+  color: #333;
   line-height: 1.2;
   margin-bottom: 4px;
 }
@@ -259,7 +261,7 @@ section p {
 .pub-list li {
   margin-bottom: 12px;
   padding: 2px 0 2px 10px;
-  border-left: 4px solid #aaa;
+  border-left: 4px solid #333;
   font-size: 14px;
 }
 
@@ -309,7 +311,7 @@ section p {
 }
 
 a.pub-title {
-  color: #2c5f9e;
+  color: #0000ee;
   text-decoration: underline;
 }
 
@@ -458,7 +460,7 @@ a.pub-title {
 .proj-name {
   font-weight: 600;
   font-size: 14.5px;
-  color: #2c5f9e;
+  color: #0000ee;
   text-decoration: underline;
 }
 
@@ -646,7 +648,7 @@ footer {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: #2c5f9e;
+  background: #333;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -669,7 +671,7 @@ footer {
 
 #top-btn:hover {
   opacity: 1;
-  background: #1d4a80;
+  background: #000;
 }
 
 /* ── Print ── */
