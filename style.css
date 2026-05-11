@@ -339,7 +339,7 @@ a.pub-title {
 /* ── Experience ── */
 .exp-item {
   display: grid;
-  grid-template-columns: 80px 72px 1fr;
+  grid-template-columns: 80px 18px 1fr;
   column-gap: 0;
   margin-bottom: 0;
   align-items: start;
@@ -377,17 +377,7 @@ a.pub-title {
 }
 
 .exp-badge {
-  width: 52px;
-  height: 52px;
-  border-radius: 8px;
-  color: #fff;
-  font-weight: 800;
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  letter-spacing: -0.3px;
+  display: none;
 }
 
 .exp-right {
@@ -426,12 +416,9 @@ a.pub-title {
 }
 
 .proj-entry {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 18px;
-  padding: 18px 0;
-  border-bottom: 1px solid #ede9e3;
-  align-items: start;
+  display: block;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
 }
 
 .proj-entry:first-child {
@@ -444,17 +431,7 @@ a.pub-title {
 }
 
 .proj-thumb {
-  width: 72px;
-  height: 72px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-weight: 800;
-  font-size: 12px;
-  flex-shrink: 0;
-  letter-spacing: -0.3px;
+  display: none;
 }
 
 .proj-name {
@@ -498,25 +475,34 @@ a.pub-title {
 /* ── Skills ── */
 .skills-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 18px 28px;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 40px;
 }
 
 .skill-group h3 {
   font-size: 11px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.07em;
   font-weight: 700;
-  color: #9a9a9a;
-  margin-bottom: 5px;
+  color: #999;
+  margin-bottom: 8px;
 }
 
-.skill-group p {
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 2px 9px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
   font-size: 13px;
-  color: #3a3a3a;
-  line-height: 1.6;
-  margin: 0;
+  color: #444;
+  background: #fafafa;
+  line-height: 1.7;
 }
 
 /* ── Certs ── */
@@ -623,7 +609,7 @@ footer {
   }
 
   .exp-item {
-    grid-template-columns: 60px 60px 1fr;
+    grid-template-columns: 60px 16px 1fr;
   }
 
   .exp-period {
