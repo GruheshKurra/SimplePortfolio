@@ -53,20 +53,20 @@ a:focus-visible {
 /* ── Header ── */
 .site-header {
   display: flex;
-  gap: 30px;
-  align-items: flex-start;
-  padding-bottom: 26px;
+  gap: 36px;
+  align-items: center;
+  padding-bottom: 30px;
   border-bottom: 2px solid #1c1c1e;
   margin-bottom: 20px;
 }
 
 .site-header img {
-  width: 128px;
-  height: 128px;
-  border-radius: 3px;
+  width: 185px;
+  height: 185px;
+  border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  border: 1px solid #d6d1cb;
+  border: 3px solid #e2dedd;
   transition: transform 0.2s;
 }
 
@@ -80,40 +80,68 @@ a:focus-visible {
 }
 
 .header-text h1 {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: bold;
-  margin-bottom: 3px;
-  line-height: 1.3;
+  margin-bottom: 8px;
+  line-height: 1.2;
   color: #1c1c1e;
 }
 
 .header-text .subtitle {
-  font-size: 13.5px;
+  font-size: 16px;
   color: #6b6b6b;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   font-style: italic;
+  line-height: 1.5;
 }
 
-.header-links {
-  font-size: 13px;
-  line-height: 2;
-}
-
-.header-links .link-row {
+.social-icons {
   display: flex;
   flex-wrap: wrap;
-  gap: 0 20px;
-  margin-bottom: 2px;
+  gap: 10px;
+  margin: 20px 0 12px;
 }
 
-.header-links .link-row span {
-  white-space: nowrap;
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #1c1c1e;
+  color: #fff;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.social-icons a:hover {
+  background: #2c5f9e;
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+.social-icons a svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-icons .icon-text {
+  font-size: 10.5px;
+  font-weight: 800;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.3px;
+}
+
+.header-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 18px;
+  font-size: 12.5px;
   color: #6b6b6b;
-}
-
-.header-links .link-row a {
-  white-space: nowrap;
-  color: #2c5f9e;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 /* ── Nav ── */
@@ -578,11 +606,25 @@ footer {
 @media (max-width: 480px) {
   .site-header {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .header-meta {
+    justify-content: center;
   }
 
   .site-header img {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .header-text h1 {
+    font-size: 26px;
   }
 
   .exp-header {
