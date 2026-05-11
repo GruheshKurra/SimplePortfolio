@@ -1,0 +1,29 @@
+{
+  "name": "Gruhesh Kurra — AI Engineer & Researcher",
+  "short_name": "Gruhesh Kurra",
+  "description": "Portfolio of Gruhesh Sri Sai Karthik Kurra — AI Integration Engineer, Researcher & Founder",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A1020",
+  "theme_color": "#0A1020",
+  "icons": [
+    {
+      "src": "/assets/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/profile-picture.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
