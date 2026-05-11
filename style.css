@@ -21,8 +21,8 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.4;
   color: #333;
   background: #fff;
 }
@@ -46,8 +46,9 @@ a:focus-visible {
 
 /* ── Layout ── */
 .page-wrap {
-  max-width: 100%;
-  padding: 44px clamp(24px, 5vw, 80px) 90px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 44px 28px 90px;
 }
 
 /* ── Header ── */
