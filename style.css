@@ -560,6 +560,7 @@ a.pub-title {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  align-items: start;
 }
 
 .cert-card {
@@ -754,7 +755,7 @@ footer {
   .page-wrap { max-width: 100%; padding: 16px; }
   section { break-inside: avoid; margin-bottom: 28px; }
   a { color: #1c1c1e; text-decoration: none; }
-  .proj-card { break-inside: avoid; }
+  .proj-entry { break-inside: avoid; }
   body { font-size: 11pt; line-height: 1.5; background: #fff; }
   .stats-row { background: #f6f4f0; }
 }
