@@ -204,12 +204,11 @@ section p {
 }
 
 .sub-label {
-  font-size: 11.5px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 13px;
+  text-transform: none;
+  letter-spacing: normal;
   font-weight: 700;
-  color: #9a9a9a;
+  color: #555;
   margin-top: 22px;
   margin-bottom: 5px;
 }
@@ -469,9 +468,8 @@ a.pub-title {
 }
 
 .proj-tags-inline {
-  font-size: 11.5px;
-  color: #9a9a9a;
-  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+  color: #999;
   margin-left: 10px;
 }
 
@@ -496,11 +494,11 @@ a.pub-title {
 }
 
 .skill-group h3 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
+  font-size: 13px;
+  text-transform: none;
+  letter-spacing: normal;
   font-weight: 700;
-  color: #999;
+  color: #555;
   margin-bottom: 8px;
 }
 
@@ -530,11 +528,11 @@ a.pub-title {
 
 .cert-table th {
   text-align: left;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 10.5px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #9a9a9a;
+  font-size: 13px;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #777;
+  font-weight: 600;
   border-bottom: 1px solid #d0ccc6;
   padding: 7px 10px;
 }
