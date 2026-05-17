@@ -46,9 +46,23 @@ a:focus-visible {
 
 /* ── Layout ── */
 .page-wrap {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 44px clamp(28px, 4vw, 80px) 90px;
+  padding: 44px clamp(28px, 4vw, 72px) 90px;
+}
+
+/* Mid-range monitors (~1080p / 1366) — scale content down a touch */
+@media (max-width: 1440px) {
+  .page-wrap {
+    max-width: 1080px;
+    padding: 36px clamp(24px, 3.5vw, 56px) 80px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .page-wrap {
+    max-width: 960px;
+  }
 }
 
 /* ── Header ── */
@@ -518,7 +532,8 @@ a.pub-title {
 
 @media (max-width: 480px) {
   .proj-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 }
 
