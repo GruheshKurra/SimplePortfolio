@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
   line-height: 1.4;
   color: #333;
@@ -146,7 +146,7 @@ a:focus-visible {
 .social-icons .icon-text {
   font-size: 10.5px;
   font-weight: 800;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   letter-spacing: -0.3px;
 }
 
@@ -156,7 +156,7 @@ a:focus-visible {
   gap: 0 18px;
   font-size: 12.5px;
   color: #6b6b6b;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* ── Nav ── */
@@ -165,7 +165,7 @@ nav {
   margin-bottom: 28px;
   border-bottom: 1px solid #ddd;
   font-size: 12px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   display: flex;
   flex-wrap: wrap;
   gap: 4px 0;
@@ -236,7 +236,7 @@ section p {
   border-radius: 4px;
   overflow: hidden;
   background: #fafafa;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .stat-item {
@@ -336,7 +336,7 @@ a.pub-title {
   padding: 2px 7px;
   border-radius: 3px;
   margin-left: 7px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 600;
   vertical-align: middle;
   position: relative;
@@ -658,7 +658,7 @@ a.pub-title {
   font-size: 12px;
   color: #9a9a9a;
   margin-bottom: 4px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .award-item p {
@@ -674,7 +674,7 @@ footer {
   border-top: 1px solid #e2dedd;
   font-size: 12px;
   color: #b8b4ae;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   text-align: center;
 }
 
