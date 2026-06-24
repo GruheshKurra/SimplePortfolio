@@ -12,8 +12,7 @@
 
   <!-- PWA Manifest -->
   <link rel="manifest" href="/manifest.json" />
-  <meta name="theme-color" content="#f6f4f0" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#ffffff" />
 
   <!-- RSS Feed -->
   <link rel="alternate" type="application/rss+xml" title="Gruhesh Kurra Blog" href="https://blogs.gruheshkurra.com/rss.xml" />
@@ -196,10 +195,18 @@
 
   <!-- ══ Header ══ -->
   <header class="site-header">
-    <img src="assets/profile-picture.webp" alt="Gruhesh Sri Sai Karthik Kurra — AI Engineer and Researcher" width="160" height="160" decoding="async" fetchpriority="high" />
+    <div class="profile-photo-wrap">
+      <img src="assets/profile-picture.webp" alt="Gruhesh Sri Sai Karthik Kurra — AI Engineer and Researcher" width="160" height="160" decoding="async" fetchpriority="high" />
+    </div>
     <div class="header-text">
+      <p class="mono-label">AI Engineer · Researcher · Founder</p>
       <h1>Gruhesh Sri Sai Karthik Kurra</h1>
-      <p class="subtitle">I build AI systems from scratch and ship them to the real world 🧠🤖🚀</p>
+      <p class="subtitle">I build AI systems from scratch and ship them to the real world.</p>
+      <div class="hero-actions">
+        <a href="mailto:gruheshkurra2@gmail.com" class="btn btn-primary">Get in touch</a>
+        <a href="assets/Resume.pdf" target="_blank" class="btn btn-secondary">Download CV</a>
+        <a href="https://blogs.gruheshkurra.com" target="_blank" class="btn btn-outline">Read the blog</a>
+      </div>
       <div class="social-icons">
         <a href="https://x.com/Karthik__kurra" target="_blank" aria-label="Twitter / X">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.26 5.632L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -228,16 +235,49 @@
     </div>
   </header>
 
-  <nav aria-label="Page sections">
-    <a href="#about">About</a>
-    <a href="#publications">Publications</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#awards">Awards</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="site-nav-wrap" id="site-nav-wrap">
+    <div class="site-nav-bar">
+      <button
+        type="button"
+        class="nav-menu-toggle"
+        id="nav-menu-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" width="20" height="20">
+          <line x1="4" y1="7" x2="20" y2="7"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" width="20" height="20">
+          <line x1="6" y1="6" x2="18" y2="18"/>
+          <line x1="6" y1="18" x2="18" y2="6"/>
+        </svg>
+      </button>
+      <span class="nav-current-label" id="nav-current-label" aria-hidden="true">About</span>
+      <nav class="nav-desktop" aria-label="Page sections">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Page sections" aria-hidden="true">
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 
 <!-- ══ About ══ -->
   <section id="about">
@@ -264,7 +304,7 @@
 
     <p>Independent AI/ML researcher and builder, specialising in building AI systems end-to-end: from implementing transformer architectures from scratch to deploying on-device deepfake detectors. Expertise spans LLM optimisation, computer vision, neural network compression, and synthetic data generation.</p>
     <p>As a Research Intern at <strong>IIIT Hyderabad</strong>, I developed a Layout Preserving Document Translation system achieving 92% accuracy in layout detection with multi-language OCR support. I have published 7 research papers in international conferences and journals (IEEE, IJNRD, Zenodo) covering neural network compression, deepfake detection, and novel word representation systems.</p>
-    <p>Certified <strong>AWS Cloud Practitioner</strong>, <strong>AWS Solutions Architect</strong>, <strong>TensorFlow Developer</strong>, and <strong>WSO2 Micro Integrator Developer</strong>. Experienced across the full AI/ML stack — from building LLMs from scratch to deploying production systems on cloud infrastructure. I write an ML-from-scratch blog at <a href="https://blogs.gruheshkurra.com" target="_blank">blogs.gruheshkurra.com</a>.</p>
+    <p>Certified <strong>AWS Cloud Practitioner</strong>, <strong>AWS Solutions Architect</strong>, <strong>TensorFlow Developer</strong>, and <strong>WSO2 Micro Integrator Developer</strong>. Experienced across the full AI/ML stack — from building LLMs from scratch to deploying production systems on cloud infrastructure. I write an ML-from-scratch blog at <a href="https://blogs.gruheshkurra.com" target="_blank" class="text-link">blogs.gruheshkurra.com</a>.</p>
 
     <p class="sub-label">Education</p>
     <p><strong>B.Tech in Computer Science and Engineering</strong><br />
@@ -280,81 +320,94 @@
       <li>
         <div class="pub-title-row">
           <span class="pub-title">RADAR: Reasoning-Augmented Deepfake Artifact Recognition via Multi-Branch Evidence Aggregation</span>
-          <span class="badge">Under Review</span>
+        </div>
+        <div class="pub-meta-col">
+          <div class="pub-status"><span class="badge">Under Review</span></div>
           <span class="pub-venue">IJECE · April 2026</span>
         </div>
         <div class="pub-authors">Gruhesh Sri Sai Karthik Kurra, Venkata Keerthi Singamreddy, Jyotheeswara Reddy Gottam, Pavan Kumar Pagadala, Batumalay M, Anil Kumar Budati</div>
-        <details class="pub-abstract">
-          <summary>Show abstract</summary>
-          <div class="pub-desc">Novel architecture modelling deepfake detection as structured evidence aggregation through three complementary branches — STAM (skin texture), BADM (boundary aliasing), AADM (GAN fingerprints) — with a Reasoning Module using recurrent cross-attention for cross-dataset generalisation.</div>
-        </details>
+        <p class="pub-desc">Novel architecture modelling deepfake detection as structured evidence aggregation through three complementary branches — STAM (skin texture), BADM (boundary aliasing), AADM (GAN fingerprints) — with a Reasoning Module using recurrent cross-attention for cross-dataset generalisation.</p>
       </li>
 
       <li>
         <div class="pub-title-row">
           <span class="pub-title">Morphology-Aware Nested Character Embeddings for Word Representation</span>
-          <span class="badge new">Accepted</span>
+        </div>
+        <div class="pub-meta-col">
+          <div class="pub-status"><span class="badge new">Accepted</span></div>
           <span class="pub-venue">IEEE ICCCMLA 2025 · 2025</span>
         </div>
-        <details class="pub-abstract">
-          <summary>Show abstract</summary>
-          <div class="pub-desc">Novel character-level representation modelling words as nested character sequences via bidirectional LSTMs and Transformers. Achieved +2–8% improvement on English classification tasks and <strong>+58.3% improvement on German NER</strong> over baselines.</div>
-        </details>
+        <p class="pub-desc">Novel character-level representation modelling words as nested character sequences via bidirectional LSTMs and Transformers. Achieved +2–8% improvement on English classification tasks and <strong>+58.3% improvement on German NER</strong> over baselines.</p>
       </li>
 
       <li>
         <div class="pub-title-row">
-          <a href="https://zenodo.org/records/17217218" target="_blank" class="pub-title">BIE: Bit-Index Encoding for Efficient Neural Network Weight Compression</a>
+          <a href="https://zenodo.org/records/17217218" target="_blank" class="pub-link">
+            <span class="pub-title">BIE: Bit-Index Encoding for Efficient Neural Network Weight Compression</span>
+            <span class="pub-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
+          </a>
+        </div>
+        <div class="pub-meta-col">
+          <div class="pub-status"><span class="badge new">Accepted</span></div>
           <span class="pub-venue">Zenodo · September 2025</span>
         </div>
-        <details class="pub-abstract">
-          <summary>Show abstract</summary>
-          <div class="pub-desc">Novel compression framework representing neural network weights through bit-level indexing, achieving compression ratios up to <strong>40× with MSE &lt; 10⁻⁶</strong> and minimal accuracy degradation. Includes complete open-source implementation with optimised sparse kernels.</div>
-        </details>
+        <p class="pub-desc">Novel compression framework representing neural network weights through bit-level indexing, achieving compression ratios up to <strong>40× with MSE &lt; 10⁻⁶</strong> and minimal accuracy degradation. Includes complete open-source implementation with optimised sparse kernels.</p>
       </li>
 
       <li>
         <div class="pub-title-row">
-          <a href="https://zenodo.org/records/16732053" target="_blank" class="pub-title">Hybrid RAG-Enhanced Deepfake Detection: Combining Retrieval-Augmented Generation with Visual Inconsistency Analysis</a>
-          <span class="pub-venue">Zenodo Preprint · August 2024</span>
+          <a href="https://zenodo.org/records/16732053" target="_blank" class="pub-link">
+            <span class="pub-title">Hybrid RAG-Enhanced Deepfake Detection: Combining Retrieval-Augmented Generation with Visual Inconsistency Analysis</span>
+            <span class="pub-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
+          </a>
         </div>
-        <details class="pub-abstract">
-          <summary>Show abstract</summary>
-          <div class="pub-desc">Privacy-first deepfake detection combining RAG-based semantic retrieval with visual anomaly detection and uncertainty-aware classification for enhanced accuracy and interpretability.</div>
-        </details>
+        <div class="pub-meta-col">
+          <div class="pub-status"><span class="badge new">Accepted</span></div>
+          <span class="pub-venue">Zenodo · August 2024</span>
+        </div>
+        <p class="pub-desc">Privacy-first deepfake detection combining RAG-based semantic retrieval with visual anomaly detection and uncertainty-aware classification for enhanced accuracy and interpretability.</p>
       </li>
 
       <li>
         <div class="pub-title-row">
-          <a href="https://ijnrd.org/papers/IJNRD2501080.pdf" target="_blank" class="pub-title">Voice-Activated AI for Seamless Computer Interaction</a>
+          <a href="https://ijnrd.org/papers/IJNRD2501080.pdf" target="_blank" class="pub-link">
+            <span class="pub-title">Voice-Activated AI for Seamless Computer Interaction</span>
+            <span class="pub-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
+          </a>
+        </div>
+        <div class="pub-meta-col">
+          <div class="pub-status"><span class="badge new">Accepted</span></div>
           <span class="pub-venue">IJNRD · January 2025</span>
         </div>
-        <details class="pub-abstract">
-          <summary>Show abstract</summary>
-          <div class="pub-desc">End-to-end voice command system with intent classification and system control for seamless human–computer interaction.</div>
-        </details>
+        <p class="pub-desc">End-to-end voice command system with intent classification and system control for seamless human–computer interaction.</p>
       </li>
 
       <li>
         <div class="pub-title-row">
-          <a href="https://ijnrd.org/papers/IJNRD2412277.pdf" target="_blank" class="pub-title">Global Remote RAM Sharing: A Novel Framework for Distributed Computational Systems</a>
+          <a href="https://ijnrd.org/papers/IJNRD2412277.pdf" target="_blank" class="pub-link">
+            <span class="pub-title">Global Remote RAM Sharing: A Novel Framework for Distributed Computational Systems</span>
+            <span class="pub-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
+          </a>
+        </div>
+        <div class="pub-meta-col">
+          <div class="pub-status"><span class="badge new">Accepted</span></div>
           <span class="pub-venue">IJNRD · December 2024</span>
         </div>
-        <details class="pub-abstract">
-          <summary>Show abstract</summary>
-          <div class="pub-desc">Innovative framework optimising memory utilisation in distributed systems through global remote RAM sharing mechanisms for compute-constrained environments.</div>
-        </details>
+        <p class="pub-desc">Innovative framework optimising memory utilisation in distributed systems through global remote RAM sharing mechanisms for compute-constrained environments.</p>
       </li>
 
       <li>
         <div class="pub-title-row">
-          <a href="https://ijnrd.org/papers/IJNRD2411189.pdf" target="_blank" class="pub-title">Dynamic Auto-Finetuning of Language Models Based on Confidence-Driven Knowledge Integration</a>
+          <a href="https://ijnrd.org/papers/IJNRD2411189.pdf" target="_blank" class="pub-link">
+            <span class="pub-title">Dynamic Auto-Finetuning of Language Models Based on Confidence-Driven Knowledge Integration</span>
+            <span class="pub-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
+          </a>
+        </div>
+        <div class="pub-meta-col">
+          <div class="pub-status"><span class="badge new">Accepted</span></div>
           <span class="pub-venue">IJNRD · November 2024</span>
         </div>
-        <details class="pub-abstract">
-          <summary>Show abstract</summary>
-          <div class="pub-desc">Confidence score triggers selective fine-tuning without full retraining — novel approach for dynamically adapting language models using confidence metrics and knowledge integration strategies.</div>
-        </details>
+        <p class="pub-desc">Confidence score triggers selective fine-tuning without full retraining — novel approach for dynamically adapting language models using confidence metrics and knowledge integration strategies.</p>
       </li>
 
     </ul>
@@ -811,14 +864,14 @@
   </section>
 
   <!-- ══ Contact ══ -->
-  <section id="contact">
+  <section id="contact" class="dark-feature-band">
     <h2>Collaborate</h2>
     <p class="contact-lead">Open to research collaborations, consulting, and full-time roles in AI engineering and ML systems.</p>
     <div class="contact-actions">
       <a href="mailto:gruheshkurra2@gmail.com" class="btn btn-primary">Email me</a>
       <a href="assets/Resume.pdf" target="_blank" class="btn btn-secondary">Download CV</a>
     </div>
-    <p class="contact-topics"><em>Interested in:</em> Transformer Research · LLM Development · iOS On-Device AI · Vision-Language Models · Neural Compression · Agentic Systems</p>
+    <p class="contact-topics"><em>Interested in</em> Transformer Research · LLM Development · iOS On-Device AI · Vision-Language Models · Neural Compression · Agentic Systems</p>
   </section>
 
 </main>
@@ -836,15 +889,55 @@
     a.rel = 'noopener noreferrer';
   });
 
+  // Mobile nav toggle
+  const navWrap = document.getElementById('site-nav-wrap');
+  const navToggle = document.getElementById('nav-menu-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+  const navCurrentLabel = document.getElementById('nav-current-label');
+
+  function setNavOpen(open) {
+    navWrap.classList.toggle('nav-open', open);
+    mobileNav.classList.toggle('is-open', open);
+    mobileNav.setAttribute('aria-hidden', open ? 'false' : 'true');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.classList.toggle('nav-menu-open', open);
+  }
+
+  navToggle.addEventListener('click', () => setNavOpen(!navWrap.classList.contains('nav-open')));
+
+  document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', () => setNavOpen(false));
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && navWrap.classList.contains('nav-open')) setNavOpen(false);
+  });
+
   // Active nav section highlight
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('nav a');
+  const navLinks = document.querySelectorAll('.nav-desktop a, .mobile-nav a');
+  const sectionLabels = {
+    about: 'About',
+    publications: 'Publications',
+    experience: 'Experience',
+    projects: 'Projects',
+    skills: 'Skills',
+    certifications: 'Certifications',
+    awards: 'Awards',
+    contact: 'Contact'
+  };
+
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         navLinks.forEach(a => a.classList.remove('active'));
-        const link = document.querySelector(`nav a[href="#${e.target.id}"]`);
-        if (link) link.classList.add('active');
+        document.querySelectorAll(`.nav-desktop a[href="#${e.target.id}"], .mobile-nav a[href="#${e.target.id}"]`).forEach(link => {
+          link.classList.add('active');
+        });
+        if (navCurrentLabel && sectionLabels[e.target.id]) {
+          navCurrentLabel.textContent = sectionLabels[e.target.id];
+        }
       }
     });
   }, { rootMargin: '-10% 0px -80% 0px' });

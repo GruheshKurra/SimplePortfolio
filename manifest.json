@@ -4,8 +4,8 @@
   "description": "Portfolio of Gruhesh Sri Sai Karthik Kurra — AI Integration Engineer, Researcher & Founder",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f6f4f0",
-  "theme_color": "#f6f4f0",
+  "background_color": "#ffffff",
+  "theme_color": "#17171c",
   "icons": [
     {
       "src": "/assets/favicon-192.png",
