@@ -229,9 +229,9 @@
         </a>
       </div>
       <div class="header-meta">
-        <span>📍 Hyderabad, India</span>
-        <span>📞 +91 8008258065</span>
-        <a href="assets/Resume.pdf" target="_blank">CV / Résumé ↗</a>
+        <span class="meta-chip">Hyderabad, India</span>
+        <span class="meta-chip">+91 8008258065</span>
+        <a href="assets/Resume.pdf" target="_blank" class="meta-chip meta-chip-link">CV / Résumé</a>
       </div>
     </div>
   </header>
@@ -282,7 +282,10 @@
 
 <!-- ══ About ══ -->
   <section id="about">
-    <h2>About</h2>
+    <div class="section-heading">
+      <span class="section-eyebrow" aria-hidden="true">01</span>
+      <h2>About</h2>
+    </div>
 
     <div class="stats-row">
       <div class="stat-item">
@@ -315,7 +318,10 @@
 
   <!-- ══ Publications ══ -->
   <section id="publications">
-    <h2>Research Publications</h2>
+    <div class="section-heading">
+      <span class="section-eyebrow" aria-hidden="true">02</span>
+      <h2>Research Publications</h2>
+    </div>
     <ul class="pub-list">
 
       <li>
@@ -419,92 +425,107 @@
 
   <!-- ══ Experience ══ -->
   <section id="experience">
-    <h2>Experience</h2>
+    <div class="section-heading">
+      <span class="section-eyebrow" aria-hidden="true">03</span>
+      <h2>Experience</h2>
+    </div>
 
     <div class="exp-timeline">
 
-      <div class="exp-item">
-        <div class="exp-left"><span class="exp-period">Oct – Nov<br>2025</span></div>
-        <div class="exp-ico"><div class="entry-dot"></div><div class="exp-badge" style="background:#7c3aed">IA</div></div>
-        <div class="exp-right">
-          <div class="exp-role">AI Integration Engineer</div>
-          <div class="exp-org">InfoAjax Consulting Pvt Ltd &nbsp;·&nbsp; Remote, Hyderabad</div>
+      <article class="exp-item">
+        <header class="exp-card-head">
+          <div class="exp-badge" style="background:#7c3aed" aria-hidden="true">IA</div>
+          <div class="exp-card-title">
+            <h3 class="exp-role">AI Integration Engineer</h3>
+            <p class="exp-org">InfoAjax Consulting Pvt Ltd &nbsp;·&nbsp; Remote, Hyderabad</p>
+          </div>
+          <time class="exp-period" datetime="2025-10/2025-11">Oct – Nov 2025</time>
+        </header>
           <ul>
             <li>Led development of an AI-driven integration framework connecting enterprise applications with cybersecurity services via standardised APIs and intelligent orchestration.</li>
             <li>Architected agent-based system using Azure OpenAI for automated schema mapping and adaptive connection strategies with performance learning from historical patterns.</li>
             <li>Built full-stack application using React 18, Vite, TailwindCSS + FastAPI backend with WebSocket integration for real-time monitoring and agent coordination.</li>
             <li>Integrated Azure Active Directory via Microsoft Graph API for application discovery and automated metadata management.</li>
           </ul>
-        </div>
-      </div>
+      </article>
 
-      <div class="exp-item">
-        <div class="exp-left"><span class="exp-period">Dec 2024 –<br>Jun 2025</span></div>
-        <div class="exp-ico"><div class="entry-dot"></div><div class="exp-badge" style="background:#2563eb">IH</div></div>
-        <div class="exp-right">
-          <div class="exp-role">Research Intern</div>
-          <div class="exp-org">IIIT Hyderabad &nbsp;·&nbsp; Hyderabad, India</div>
+      <article class="exp-item">
+        <header class="exp-card-head">
+          <div class="exp-badge" style="background:#2563eb" aria-hidden="true">IH</div>
+          <div class="exp-card-title">
+            <h3 class="exp-role">Research Intern</h3>
+            <p class="exp-org">IIIT Hyderabad &nbsp;·&nbsp; Hyderabad, India</p>
+          </div>
+          <time class="exp-period" datetime="2024-12/2025-06">Dec 2024 – Jun 2025</time>
+        </header>
           <ul>
             <li>Led development of a <strong>Layout Preserving Document Translation</strong> system: Vision Transformer-based layout detection (92% accuracy), character metrics-based font detection, K-means colour palette extraction (88% accuracy).</li>
             <li>Built FastAPI backend integrating Tesseract OCR for multi-language text extraction (English, Hindi, Telugu, German) while preserving document formatting.</li>
             <li>Presented at IIIT Hyderabad research expo (May 2025) with live demonstrations to faculty and industry visitors.</li>
           </ul>
-        </div>
-      </div>
+      </article>
 
-      <div class="exp-item">
-        <div class="exp-left"><span class="exp-period">Oct 2024 –<br>Jun 2025</span></div>
-        <div class="exp-ico"><div class="entry-dot"></div><div class="exp-badge" style="background:#6366f1">IA</div></div>
-        <div class="exp-right">
-          <div class="exp-role">WSO2 API Developer</div>
-          <div class="exp-org">InfoAjax Consulting Pvt Ltd &nbsp;·&nbsp; Remote, Hyderabad</div>
+      <article class="exp-item">
+        <header class="exp-card-head">
+          <div class="exp-badge" style="background:#6366f1" aria-hidden="true">IA</div>
+          <div class="exp-card-title">
+            <h3 class="exp-role">WSO2 API Developer</h3>
+            <p class="exp-org">InfoAjax Consulting Pvt Ltd &nbsp;·&nbsp; Remote, Hyderabad</p>
+          </div>
+          <time class="exp-period" datetime="2024-10/2025-06">Oct 2024 – Jun 2025</time>
+        </header>
           <ul>
             <li>Developed and deployed RESTful APIs for <strong>PLDT</strong> (Philippines' largest telecoms provider) using WSO2 Integration Studio for ticketing system integration.</li>
             <li>Managed production ticket systems with secure credential management through GitLab and Choreo cloud platform with vault-based secrets management.</li>
             <li>Engaged directly with international clients under strict SLAs to resolve production issues in environments with sparse framework documentation.</li>
           </ul>
-        </div>
-      </div>
+      </article>
 
-      <div class="exp-item">
-        <div class="exp-left"><span class="exp-period">May – Oct<br>2024</span></div>
-        <div class="exp-ico"><div class="entry-dot"></div><div class="exp-badge" style="background:#0891b2">ID</div></div>
-        <div class="exp-right">
-          <div class="exp-role">AI &amp; ML Research Training</div>
-          <div class="exp-org">iHub-Data, IIIT Hyderabad &nbsp;·&nbsp; Hyderabad</div>
+      <article class="exp-item">
+        <header class="exp-card-head">
+          <div class="exp-badge" style="background:#0891b2" aria-hidden="true">ID</div>
+          <div class="exp-card-title">
+            <h3 class="exp-role">AI &amp; ML Research Training</h3>
+            <p class="exp-org">iHub-Data, IIIT Hyderabad &nbsp;·&nbsp; Hyderabad</p>
+          </div>
+          <time class="exp-period" datetime="2024-05/2024-10">May – Oct 2024</time>
+        </header>
           <ul>
             <li>Completed intensive 6-month apprenticeship covering neural architecture design, LLM fundamentals, prompt engineering, model fine-tuning, quantisation, and deployment strategies.</li>
             <li>Worked on research projects in document analysis, OCR systems, and computer vision under faculty mentorship.</li>
           </ul>
-        </div>
-      </div>
+      </article>
 
-      <div class="exp-item">
-        <div class="exp-left"><span class="exp-period">Mar 2024 –<br>Jan 2025</span></div>
-        <div class="exp-ico"><div class="entry-dot"></div><div class="exp-badge" style="background:#059669">Z</div></div>
-        <div class="exp-right">
-          <div class="exp-role">Founder &amp; CEO</div>
-          <div class="exp-org">Zynthetix &nbsp;·&nbsp; Hyderabad, India</div>
+      <article class="exp-item">
+        <header class="exp-card-head">
+          <div class="exp-badge" style="background:#059669" aria-hidden="true">Z</div>
+          <div class="exp-card-title">
+            <h3 class="exp-role">Founder &amp; CEO</h3>
+            <p class="exp-org">Zynthetix &nbsp;·&nbsp; Hyderabad, India</p>
+          </div>
+          <time class="exp-period" datetime="2024-03/2025-01">Mar 2024 – Jan 2025</time>
+        </header>
           <ul>
             <li>Founded a synthetic data platform producing tabular, image, and text data using GANs and VAEs to address dataset scarcity in ML training.</li>
             <li>Designed meta-controller architecture where a mother model orchestrates 200–1000 specialised child models to generate millions of rows without duplication.</li>
             <li>Implemented prototype with transformer-based PII detection (98.5% accuracy) and 95% statistical similarity between synthetic and real data.</li>
           </ul>
-        </div>
-      </div>
+      </article>
 
-      <div class="exp-item">
-        <div class="exp-left"><span class="exp-period">Jul – Oct<br>2023</span></div>
-        <div class="exp-ico"><div class="entry-dot"></div><div class="exp-badge" style="background:#d97706">XL</div></div>
-        <div class="exp-right">
-          <div class="exp-role">Data Science Intern</div>
-          <div class="exp-org">Xtraleap India Pvt Ltd &nbsp;·&nbsp; Remote, Hyderabad</div>
+      <article class="exp-item">
+        <header class="exp-card-head">
+          <div class="exp-badge" style="background:#d97706" aria-hidden="true">XL</div>
+          <div class="exp-card-title">
+            <h3 class="exp-role">Data Science Intern</h3>
+            <p class="exp-org">Xtraleap India Pvt Ltd &nbsp;·&nbsp; Remote, Hyderabad</p>
+          </div>
+          <time class="exp-period" datetime="2023-07/2023-10">Jul – Oct 2023</time>
+        </header>
           <ul>
             <li>Exploratory data analysis, statistical modelling, and ML model development using Python (pandas, NumPy, scikit-learn, Matplotlib).</li>
             <li>Feature engineering and model evaluation on real-world datasets in retail analytics and customer segmentation.</li>
           </ul>
-        </div>
-      </div>
+      </article>
 
     </div>
 
@@ -512,7 +533,10 @@
 
   <!-- ══ Projects ══ -->
   <section id="projects">
-    <h2>Selected Projects</h2>
+    <div class="section-heading">
+      <span class="section-eyebrow" aria-hidden="true">04</span>
+      <h2>Selected Projects</h2>
+    </div>
 
     <div class="proj-list">
 
@@ -629,7 +653,10 @@
 
   <!-- ══ Skills ══ -->
   <section id="skills">
-    <h2>Technical Skills</h2>
+    <div class="section-heading">
+      <span class="section-eyebrow" aria-hidden="true">05</span>
+      <h2>Technical Skills</h2>
+    </div>
     <div class="skills-grid">
 
       <div class="skill-group">
@@ -693,7 +720,10 @@
 
   <!-- ══ Certifications ══ -->
   <section id="certifications">
-    <h2>Certifications</h2>
+    <div class="section-heading">
+      <span class="section-eyebrow" aria-hidden="true">06</span>
+      <h2>Certifications</h2>
+    </div>
     <div class="cert-grid">
 
       <a class="cert-card" href="assets/certificates/TensorFlow_Developer_Certificate.webp" target="_blank">
@@ -845,7 +875,10 @@
 
   <!-- ══ Awards ══ -->
   <section id="awards">
-    <h2>Awards &amp; Honours</h2>
+    <div class="section-heading">
+      <span class="section-eyebrow" aria-hidden="true">07</span>
+      <h2>Awards &amp; Honours</h2>
+    </div>
 
     <div class="award-item">
       <strong>1st Place — University Webathon</strong>
@@ -869,7 +902,10 @@
 
   <!-- ══ Contact ══ -->
   <section id="contact" class="dark-feature-band">
-    <h2>Collaborate</h2>
+    <div class="section-heading section-heading-invert">
+      <span class="section-eyebrow" aria-hidden="true">08</span>
+      <h2>Collaborate</h2>
+    </div>
     <p class="contact-lead">Open to research collaborations, consulting, and full-time roles in AI engineering and ML systems.</p>
     <div class="contact-actions">
       <a href="mailto:gruheshkurra2@gmail.com" class="btn btn-primary">Email me</a>
