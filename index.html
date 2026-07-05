@@ -196,19 +196,19 @@
 
   <!-- ══ Header ══ -->
   <header class="site-header">
-    <div class="profile-photo-wrap">
-      <img src="assets/profile-picture.webp" alt="Gruhesh Sri Sai Karthik Kurra — AI Engineer and Researcher" width="160" height="160" decoding="async" fetchpriority="high" />
-    </div>
-    <div class="header-text">
-      <p class="mono-label">AI Engineer · Researcher · Founder</p>
-      <h1>Gruhesh Sri Sai Karthik Kurra</h1>
-      <p class="subtitle">I build AI systems from scratch and ship them to the real world.</p>
-      <div class="hero-actions">
-        <a href="mailto:gruheshkurra2@gmail.com" class="btn btn-primary">Get in touch</a>
-        <a href="assets/Resume.pdf" target="_blank" class="btn btn-secondary">Download CV</a>
-        <a href="https://blogs.gruheshkurra.com" target="_blank" class="btn btn-outline">Read the blog</a>
+    <div class="hero-main">
+      <div class="profile-photo-wrap">
+        <img src="assets/profile-picture.webp" alt="Gruhesh Sri Sai Karthik Kurra — AI Engineer and Researcher" width="160" height="160" decoding="async" fetchpriority="high" />
       </div>
-      <div class="social-icons">
+      <div class="header-text">
+        <p class="mono-label">AI Engineer · Researcher · Founder</p>
+        <h1>Gruhesh Sri Sai Karthik Kurra</h1>
+        <p class="subtitle">I build AI systems from scratch and ship them to the real world.</p>
+        <div class="hero-actions">
+          <a href="mailto:gruheshkurra2@gmail.com" class="btn btn-primary">Get in touch</a>
+          <a href="assets/Resume.pdf" target="_blank" class="btn btn-secondary">Download CV</a>
+        </div>
+        <div class="social-icons">
         <a href="https://x.com/Karthik__kurra" target="_blank" aria-label="Twitter / X">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.26 5.632L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         </a>
@@ -228,12 +228,27 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         </a>
       </div>
-      <div class="header-meta">
-        <span class="meta-chip">Hyderabad, India</span>
-        <span class="meta-chip">+91 8008258065</span>
-        <a href="assets/Resume.pdf" target="_blank" class="meta-chip meta-chip-link">CV / Résumé</a>
+        <div class="header-meta">
+          <span class="meta-chip">Hyderabad, India</span>
+          <a href="tel:+918008258065" class="meta-chip meta-chip-link">+91 8008258065</a>
+        </div>
       </div>
     </div>
+    <aside class="hero-proof" aria-label="Featured project highlight">
+      <div class="hero-proof-media">
+        <img src="assets/projects/deepguard.gif" alt="DeepGuard on-device deepfake detection demo" width="280" height="160" loading="eager" />
+        <span class="hero-proof-badge">Live demo</span>
+      </div>
+      <div class="hero-proof-body">
+        <p class="hero-proof-label">Featured build</p>
+        <p class="hero-proof-title">DeepGuard — On-Device Deepfake Detection</p>
+        <div class="hero-proof-metrics">
+          <span class="metric-pill metric-pill-coral">98.62% accuracy</span>
+          <span class="metric-pill metric-pill-green">&lt;500ms inference</span>
+        </div>
+        <a href="https://github.com/GruheshKurra/Deepguard" target="_blank" class="hero-proof-link">View project →</a>
+      </div>
+    </aside>
   </header>
 
   <div class="site-nav-wrap" id="site-nav-wrap">
@@ -263,10 +278,11 @@
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#certifications">Certifications</a>
+        <a href="#certifications">Certs</a>
         <a href="#awards">Awards</a>
         <a href="#contact">Contact</a>
       </nav>
+      <a href="mailto:gruheshkurra2@gmail.com" class="btn btn-primary nav-cta">Email me</a>
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Page sections" aria-hidden="true">
       <a href="#about">About</a>
@@ -277,6 +293,9 @@
       <a href="#certifications">Certifications</a>
       <a href="#awards">Awards</a>
       <a href="#contact">Contact</a>
+      <div class="mobile-nav-cta">
+        <a href="mailto:gruheshkurra2@gmail.com" class="btn btn-primary btn-block">Email me</a>
+      </div>
     </nav>
   </div>
 
@@ -288,7 +307,7 @@
     </div>
 
     <div class="stats-row">
-      <div class="stat-item">
+      <div class="stat-item stat-item-highlight">
         <span class="stat-num">7+</span>
         <span class="stat-label">Papers Published</span>
       </div>
@@ -306,9 +325,13 @@
       </div>
     </div>
 
-    <p>Independent AI/ML researcher and builder, specialising in building AI systems end-to-end: from implementing transformer architectures from scratch to deploying on-device deepfake detectors. Expertise spans LLM optimisation, computer vision, neural network compression, and synthetic data generation.</p>
-    <p>As a Research Intern at <strong>IIIT Hyderabad</strong>, I developed a Layout Preserving Document Translation system achieving 92% accuracy in layout detection with multi-language OCR support. I have published 7 research papers in international conferences and journals (IEEE, IJNRD, Zenodo) covering neural network compression, deepfake detection, and novel word representation systems.</p>
-    <p>Certified <strong>AWS Cloud Practitioner</strong>, <strong>AWS Solutions Architect</strong>, <strong>TensorFlow Developer</strong>, and <strong>WSO2 Micro Integrator Developer</strong>. Experienced across the full AI/ML stack — from building LLMs from scratch to deploying production systems on cloud infrastructure. I write an ML-from-scratch blog at <a href="https://blogs.gruheshkurra.com" target="_blank" class="text-link">blogs.gruheshkurra.com</a>.</p>
+    <p class="about-lead">Independent AI/ML researcher and builder — from transformer architectures implemented from scratch to on-device deepfake detectors shipped to production.</p>
+    <ul class="about-highlights">
+      <li><strong>IIIT Hyderabad</strong> — Layout-preserving document translation with 92% layout detection accuracy and multi-language OCR</li>
+      <li><strong>7+ published papers</strong> — IEEE, IJNRD, Zenodo on compression, deepfake detection, and word representation</li>
+      <li><strong>Full-stack AI</strong> — LLMs, computer vision, neural compression, synthetic data, and cloud deployment</li>
+    </ul>
+    <p class="about-note">AWS &amp; TensorFlow certified. ML-from-scratch blog at <a href="https://blogs.gruheshkurra.com" target="_blank" class="text-link">blogs.gruheshkurra.com</a>.</p>
 
     <p class="sub-label">Education</p>
     <p><strong>B.Tech in Computer Science and Engineering</strong><br />
@@ -329,7 +352,7 @@
           <span class="pub-title">RADAR: Reasoning-Augmented Deepfake Artifact Recognition via Multi-Branch Evidence Aggregation</span>
         </div>
         <div class="pub-meta-col">
-          <div class="pub-status"><span class="badge">Under Review</span></div>
+          <div class="pub-status"><span class="badge badge-review">Under Review</span></div>
           <span class="pub-venue">IJECE · April 2026</span>
         </div>
         <div class="pub-authors">Gruhesh Sri Sai Karthik Kurra, Venkata Keerthi Singamreddy, Jyotheeswara Reddy Gottam, Pavan Kumar Pagadala, Batumalay M, Anil Kumar Budati</div>
@@ -724,9 +747,9 @@
       <span class="section-eyebrow" aria-hidden="true">06</span>
       <h2>Certifications</h2>
     </div>
-    <div class="cert-grid">
+    <div class="cert-grid" id="cert-grid">
 
-      <a class="cert-card" href="assets/certificates/TensorFlow_Developer_Certificate.webp" target="_blank">
+      <a class="cert-card cert-featured" href="assets/certificates/TensorFlow_Developer_Certificate.webp" target="_blank">
         <img class="cert-thumb" src="assets/certificates/TensorFlow_Developer_Certificate.webp" alt="TensorFlow Developer Certificate" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">TensorFlow Developer Certificate</div>
@@ -734,7 +757,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/AWS_Certified_Cloud_Practitioner_2023.webp" target="_blank">
+      <a class="cert-card cert-featured" href="assets/certificates/AWS_Certified_Cloud_Practitioner_2023.webp" target="_blank">
         <img class="cert-thumb" src="assets/certificates/AWS_Certified_Cloud_Practitioner_2023.webp" alt="AWS Cloud Practitioner" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">AWS Certified Cloud Practitioner</div>
@@ -742,7 +765,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/AWS_Certified_Solutions_Architect_Associate_2023.webp" target="_blank">
+      <a class="cert-card cert-featured" href="assets/certificates/AWS_Certified_Solutions_Architect_Associate_2023.webp" target="_blank">
         <img class="cert-thumb" src="assets/certificates/AWS_Certified_Solutions_Architect_Associate_2023.webp" alt="AWS Solutions Architect" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">AWS Certified Solutions Architect – Associate</div>
@@ -750,7 +773,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/Oracle_Cloud_Infrastructure_Architect_Associate_2023.webp" target="_blank">
+      <a class="cert-card cert-extra" href="assets/certificates/Oracle_Cloud_Infrastructure_Architect_Associate_2023.webp" target="_blank">
         <img class="cert-thumb" src="assets/certificates/Oracle_Cloud_Infrastructure_Architect_Associate_2023.webp" alt="Oracle Cloud Infrastructure" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">Oracle Cloud Infrastructure Architect Associate</div>
@@ -758,7 +781,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/Oracle_Database_Certificate.webp" target="_blank">
+      <a class="cert-card cert-extra" href="assets/certificates/Oracle_Database_Certificate.webp" target="_blank">
         <img class="cert-thumb" src="assets/certificates/Oracle_Database_Certificate.webp" alt="Oracle Database Certificate" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">Oracle Database Certificate</div>
@@ -766,7 +789,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/Certified Advanced Automation Professional.webp" target="_blank">
+      <a class="cert-card cert-extra" href="assets/certificates/Certified Advanced Automation Professional.webp" target="_blank">
         <img class="cert-thumb" src="assets/certificates/Certified Advanced Automation Professional.webp" alt="Certified Advanced Automation Professional" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">Certified Advanced Automation Professional</div>
@@ -774,7 +797,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/RedHat_Certified_Enterprise_Application_Developer_2024.webp" target="_blank">
+      <a class="cert-card cert-extra" href="assets/certificates/RedHat_Certified_Enterprise_Application_Developer_2024.webp" target="_blank">
         <img class="cert-thumb" src="assets/certificates/RedHat_Certified_Enterprise_Application_Developer_2024.webp" alt="Red Hat Certified Developer" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">Red Hat Certified Enterprise Application Developer</div>
@@ -782,7 +805,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/WSO2 MI Developer.webp" target="_blank">
+      <a class="cert-card cert-featured" href="assets/certificates/WSO2 MI Developer.webp" target="_blank">
         <img class="cert-thumb" src="assets/certificates/WSO2 MI Developer.webp" alt="WSO2 MI Developer" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">WSO2 Certified Micro Integrator Developer – V4</div>
@@ -790,7 +813,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/Visuara Build Large Language Models.webp" target="_blank">
+      <a class="cert-card cert-extra" href="assets/certificates/Visuara Build Large Language Models.webp" target="_blank">
         <img class="cert-thumb" src="assets/certificates/Visuara Build Large Language Models.webp" alt="Build LLMs From Scratch" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">Build Large Language Models From Scratch</div>
@@ -798,7 +821,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/Hugging Face MCP Unit1.webp" target="_blank">
+      <a class="cert-card cert-extra" href="assets/certificates/Hugging Face MCP Unit1.webp" target="_blank">
         <img class="cert-thumb" src="assets/certificates/Hugging Face MCP Unit1.webp" alt="Hugging Face MCP Unit 1" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">Hugging Face MCP – Unit 1</div>
@@ -806,7 +829,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/Hugging Face MCP Unit3.webp" target="_blank">
+      <a class="cert-card cert-extra" href="assets/certificates/Hugging Face MCP Unit3.webp" target="_blank">
         <img class="cert-thumb" src="assets/certificates/Hugging Face MCP Unit3.webp" alt="Hugging Face MCP Unit 3" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">Hugging Face MCP – Unit 3</div>
@@ -814,7 +837,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/IIIT_6Month_Training_Certificate.webp" target="_blank">
+      <a class="cert-card cert-featured" href="assets/certificates/IIIT_6Month_Training_Certificate.webp" target="_blank">
         <img class="cert-thumb" src="assets/certificates/IIIT_6Month_Training_Certificate.webp" alt="IIIT Hyderabad Training" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">IIIT Hyderabad 6-Month AI/ML Training</div>
@@ -822,7 +845,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/SAC_Certificate.webp" target="_blank">
+      <a class="cert-card cert-extra" href="assets/certificates/SAC_Certificate.webp" target="_blank">
         <img class="cert-thumb" src="assets/certificates/SAC_Certificate.webp" alt="SAC Certificate" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">SAC Certificate</div>
@@ -830,7 +853,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/StreetCause_Certificate.webp" target="_blank">
+      <a class="cert-card cert-extra" href="assets/certificates/StreetCause_Certificate.webp" target="_blank">
         <img class="cert-thumb" src="assets/certificates/StreetCause_Certificate.webp" alt="StreetCause Certificate" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">StreetCause Certificate</div>
@@ -838,7 +861,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/WSO2_Certified_Micro_Integrator_Practitioner_V4_2025.webp" target="_blank">
+      <a class="cert-card cert-extra" href="assets/certificates/WSO2_Certified_Micro_Integrator_Practitioner_V4_2025.webp" target="_blank">
         <img class="cert-thumb" src="assets/certificates/WSO2_Certified_Micro_Integrator_Practitioner_V4_2025.webp" alt="WSO2 MI Practitioner V4" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">WSO2 Certified Micro Integrator Practitioner V4</div>
@@ -846,7 +869,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/google gdg.webp" target="_blank">
+      <a class="cert-card cert-extra" href="assets/certificates/google gdg.webp" target="_blank">
         <img class="cert-thumb" src="assets/certificates/google gdg.webp" alt="Google GDG Certificate" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">Google GDG Certificate</div>
@@ -854,7 +877,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/Udemy_Linear_Algebra_Master_2026.jpg" target="_blank">
+      <a class="cert-card cert-extra" href="assets/certificates/Udemy_Linear_Algebra_Master_2026.jpg" target="_blank">
         <img class="cert-thumb" src="assets/certificates/Udemy_Linear_Algebra_Master_2026.jpg" alt="Linear Algebra Master" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">Become a Linear Algebra Master</div>
@@ -862,7 +885,7 @@
         </div>
       </a>
 
-      <a class="cert-card" href="assets/certificates/deep-learning-udemy.png" target="_blank">
+      <a class="cert-card cert-extra" href="assets/certificates/deep-learning-udemy.png" target="_blank">
         <img class="cert-thumb" src="assets/certificates/deep-learning-udemy.png" alt="Deep Learning with Python" loading="lazy" />
         <div class="cert-info">
           <div class="cert-name">A Deep Understanding of Deep Learning (with Python)</div>
@@ -871,6 +894,9 @@
       </a>
 
     </div>
+    <button type="button" class="btn btn-outline cert-toggle" id="cert-toggle" aria-expanded="false" aria-controls="cert-grid">
+      Show all certifications <span class="cert-toggle-count">(+13)</span>
+    </button>
   </section>
 
   <!-- ══ Awards ══ -->
@@ -906,18 +932,55 @@
       <span class="section-eyebrow" aria-hidden="true">08</span>
       <h2>Collaborate</h2>
     </div>
-    <p class="contact-lead">Open to research collaborations, consulting, and full-time roles in AI engineering and ML systems.</p>
+    <p class="contact-lead">Open to research collaborations, consulting, and full-time roles in AI engineering and ML systems — Hyderabad or remote.</p>
     <div class="contact-actions">
       <a href="mailto:gruheshkurra2@gmail.com" class="btn btn-primary">Email me</a>
       <a href="assets/Resume.pdf" target="_blank" class="btn btn-secondary">Download CV</a>
+      <a href="https://linkedin.com/in/gruhesh-sri-sai-karthik-kurra-178249227" target="_blank" class="btn btn-secondary">Connect on LinkedIn</a>
     </div>
-    <p class="contact-topics"><em>Interested in</em> Transformer Research · LLM Development · iOS On-Device AI · Vision-Language Models · Neural Compression · Agentic Systems</p>
+    <p class="contact-topics-label">Interested in</p>
+    <div class="topic-chips">
+      <a href="mailto:gruheshkurra2@gmail.com?subject=Collaboration%3A%20Transformer%20Research" class="topic-chip">Transformer Research</a>
+      <a href="mailto:gruheshkurra2@gmail.com?subject=Collaboration%3A%20LLM%20Development" class="topic-chip">LLM Development</a>
+      <a href="mailto:gruheshkurra2@gmail.com?subject=Collaboration%3A%20On-Device%20AI" class="topic-chip">On-Device AI</a>
+      <a href="mailto:gruheshkurra2@gmail.com?subject=Collaboration%3A%20Vision-Language%20Models" class="topic-chip">Vision-Language Models</a>
+      <a href="mailto:gruheshkurra2@gmail.com?subject=Collaboration%3A%20Neural%20Compression" class="topic-chip">Neural Compression</a>
+      <a href="mailto:gruheshkurra2@gmail.com?subject=Collaboration%3A%20Agentic%20Systems" class="topic-chip">Agentic Systems</a>
+    </div>
   </section>
 
 </main>
 
-<footer>
-  <p>Gruhesh Sri Sai Karthik Kurra &nbsp;·&nbsp; Last updated June 2026</p>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <p class="footer-name">Gruhesh Sri Sai Karthik Kurra</p>
+      <p class="footer-tagline">AI Engineer · Researcher · Founder</p>
+      <p class="footer-availability">Open to roles &amp; collaborations · Hyderabad / Remote</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="assets/Resume.pdf" target="_blank">Résumé</a>
+    </nav>
+    <div class="footer-social">
+      <a href="https://github.com/GruheshKurra" target="_blank" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.341-3.369-1.341-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/gruhesh-sri-sai-karthik-kurra-178249227" target="_blank" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="https://x.com/Karthik__kurra" target="_blank" aria-label="Twitter / X">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.26 5.632L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="mailto:gruheshkurra2@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 Gruhesh Kurra &nbsp;·&nbsp; Last updated June 2026</p>
 </footer>
 
 
@@ -989,6 +1052,19 @@
     topBtn.classList.toggle('visible', window.scrollY > 500);
   });
   topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // Certifications expand/collapse
+  const certToggle = document.getElementById('cert-toggle');
+  const certGrid = document.getElementById('cert-grid');
+  if (certToggle && certGrid) {
+    certToggle.addEventListener('click', () => {
+      const expanded = certGrid.classList.toggle('is-expanded');
+      certToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      certToggle.innerHTML = expanded
+        ? 'Show fewer certifications'
+        : 'Show all certifications <span class="cert-toggle-count">(+13)</span>';
+    });
+  }
 </script>
 
 </body>
