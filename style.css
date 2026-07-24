@@ -1,11 +1,12 @@
 /* Cohere-inspired design system — see DESIGN.md */
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500&display=swap");
+/* Typeface: Helvetica only. Hierarchy comes from size, weight, tracking, and
+   colour — never from a second family. No webfont request; the stack is local. */
 
 :root {
-  --font-display: "Space Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
-  --font-body: Inter, Arial, ui-sans-serif, system-ui, sans-serif;
-  --font-mono: ui-monospace, "Cascadia Code", "JetBrains Mono", monospace;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: var(--font-sans);
+  --font-body: var(--font-sans);
+  --font-label: var(--font-sans);
 
   --black: #000000;
   --near-black: #17171c;
@@ -22,22 +23,31 @@
   --card-border: #f2f2f2;
 
   --ink: #212121;
-  --muted: #93939f;
-  --slate: #75758a;
+  /* --muted was #93939f (3.0:1 on white — below AA). Darkened for body-size
+     metadata: venue lines, cert meta, footer links. Chosen to clear 4.5:1 on
+     the --stone surface too (4.62:1), since stat labels, the hero role label,
+     and the footer copyright all sit on stone rather than white. */
+  --muted: #68687a;
+  --slate: #5f5f70;
   --hairline: #d9d9dd;
   --border-light: #e5e7eb;
 
   --focus-blue: #4c6ee6;
 
+  /* Four steps only — one radius language across the whole site. */
   --radius-xs: 4px;
   --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 22px;
-  --radius-pill: 32px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
 
-  --max-width: 1180px;
-  --nav-height: 60px;
-  --section-gap: clamp(56px, 8vw, 88px);
+  /* Label tracking: the single lever that makes uppercase Helvetica read as a
+     technical marker now that there is no mono face. */
+  --track-label: 0.08em;
+
+  --max-width: 1240px;
+  --nav-height: 52px;
+  --section-gap: clamp(40px, 5vw, 68px);
   --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
 
   color-scheme: light;
@@ -165,13 +175,13 @@ a:focus-visible {
 .page-wrap {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 clamp(18px, 4vw, 40px) 64px;
+  padding: 0 clamp(18px, 4vw, 40px) 56px;
 }
 
 /* ── Hero ── */
 .site-header {
   display: block;
-  padding: clamp(40px, 7vw, 72px) clamp(18px, 4vw, 40px);
+  padding: clamp(32px, 5vw, 56px) clamp(18px, 4vw, 40px);
   margin: 0 calc(-1 * clamp(18px, 4vw, 40px));
   margin-bottom: 0;
   background: var(--stone);
@@ -181,7 +191,7 @@ a:focus-visible {
 .hero-main {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
-  gap: clamp(24px, 4vw, 40px);
+  gap: clamp(22px, 3.2vw, 34px);
   align-items: center;
   min-width: 0;
   max-width: var(--max-width);
@@ -190,7 +200,7 @@ a:focus-visible {
 
 .profile-photo-wrap {
   flex-shrink: 0;
-  padding: 8px;
+  padding: 6px;
   background: var(--canvas);
   border: 1px solid var(--hairline);
   border-radius: var(--radius-lg);
@@ -199,9 +209,9 @@ a:focus-visible {
 
 .profile-photo-wrap img {
   display: block;
-  width: clamp(132px, 24vw, 188px);
-  height: clamp(132px, 24vw, 188px);
-  border-radius: calc(var(--radius-lg) - 4px);
+  width: clamp(120px, 20vw, 164px);
+  height: clamp(120px, 20vw, 164px);
+  border-radius: calc(var(--radius-lg) - 5px);
   object-fit: cover;
   border: 1px solid var(--card-border);
 }
@@ -211,52 +221,62 @@ a:focus-visible {
   padding-top: 0;
 }
 
+/* Uppercase Helvetica label — replaces the former mono voice site-wide. */
 .mono-label {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0.32px;
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: var(--track-label);
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .header-text h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.15rem, 5vw, 3.65rem);
-  font-weight: 400;
-  line-height: 0.98;
-  letter-spacing: -0.035em;
+  font-size: clamp(2.05rem, 4.6vw, 3.4rem);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: -0.04em;
   color: var(--black);
-  margin-bottom: 14px;
-  max-width: 14ch;
+  margin-bottom: 10px;
+  max-width: 15ch;
 }
 
 .header-text .subtitle {
-  font-size: clamp(16px, 2vw, 19px);
+  font-size: clamp(15px, 1.8vw, 18px);
   line-height: 1.45;
   color: var(--slate);
   margin-bottom: 0;
   font-style: normal;
-  max-width: 42ch;
+  max-width: 46ch;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 22px;
+  gap: 8px;
+  margin-top: 0;
+}
+
+/* Actions + social icons share one row instead of stacking two blocks. */
+.hero-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin-top: 16px;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 24px;
+  padding: 10px 22px;
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.71;
-  border-radius: 30px;
+  line-height: 1.5;
+  border-radius: var(--radius-pill);
   text-align: center;
   transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.15s;
   border: none;
@@ -294,7 +314,7 @@ a:focus-visible {
   background: transparent;
   color: var(--ink);
   border: 1px solid var(--ink);
-  border-radius: 30px;
+  border-radius: var(--radius-pill);
 }
 
 .btn-outline:hover {
@@ -314,16 +334,16 @@ a:focus-visible {
 .social-icons {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin: 20px 0 0;
+  gap: 6px;
+  margin: 0;
 }
 
 .social-icons a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: var(--radius-sm);
   background: transparent;
   color: var(--muted);
@@ -346,14 +366,14 @@ a:focus-visible {
 .header-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 18px;
+  gap: 6px;
+  margin-top: 14px;
 }
 
 .meta-chip {
   display: inline-flex;
   align-items: center;
-  padding: 7px 14px;
+  padding: 6px 13px;
   font-size: 13px;
   color: var(--slate);
   background: var(--canvas);
@@ -387,7 +407,7 @@ a:focus-visible {
   position: sticky;
   top: 0;
   z-index: 100;
-  margin: 0 calc(-1 * clamp(18px, 4vw, 40px)) 40px;
+  margin: 0 calc(-1 * clamp(18px, 4vw, 40px)) 32px;
   padding: 0 clamp(18px, 4vw, 40px);
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px) saturate(1.2);
@@ -450,7 +470,8 @@ a:focus-visible {
   display: none;
   font-family: var(--font-display);
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--black);
   white-space: nowrap;
   overflow: hidden;
@@ -544,20 +565,21 @@ body.nav-menu-open {
 .section-heading {
   display: flex;
   align-items: baseline;
-  gap: 14px;
-  margin-bottom: 28px;
-  padding-bottom: 16px;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
   border-bottom: 1px solid var(--hairline);
 }
 
 .section-eyebrow {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0.28px;
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: var(--track-label);
   color: var(--coral);
   flex-shrink: 0;
   line-height: 1;
+  font-variant-numeric: tabular-nums;
 }
 
 .section-heading h2 {
@@ -580,50 +602,65 @@ section {
 
 section h2 {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3.2vw, 2.35rem);
-  font-weight: 400;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
+  font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
   color: var(--black);
   margin-bottom: 0;
 }
 
 section p {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   color: var(--ink);
   font-size: 15px;
   line-height: 1.55;
+}
+
+/* Two columns on desktop: narrative left, education panel right. Previously a
+   single stacked run that cost ~200px of scroll for very little content. */
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: 24px 40px;
+  align-items: start;
 }
 
 .about-lead {
   font-size: clamp(16px, 1.8vw, 18px);
-  line-height: 1.55;
+  line-height: 1.5;
   max-width: 62ch;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   color: var(--ink);
+  letter-spacing: -0.005em;
 }
 
 .about-highlights {
   list-style: none;
-  margin: 0 0 18px;
+  margin: 0 0 12px;
   padding: 0;
   display: grid;
-  gap: 10px;
+  gap: 0;
+  border-top: 1px solid var(--hairline);
 }
 
+/* Rule-separated rows instead of three boxed cards — same information, less
+   chrome, and it stops competing with the panel beside it. */
 .about-highlights li {
   margin: 0;
-  padding: 16px 18px;
-  border: 1px solid var(--hairline);
-  border-radius: var(--radius-md);
-  background: var(--canvas);
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid var(--hairline);
+  border-radius: 0;
+  background: transparent;
   font-size: 15px;
   line-height: 1.5;
-  color: var(--ink);
+  color: var(--slate);
 }
 
 .about-highlights li strong {
   color: var(--black);
+  font-weight: 600;
 }
 
 .about-note {
@@ -633,8 +670,8 @@ section p {
 }
 
 .edu-panel {
-  margin-top: 28px;
-  padding: 22px 24px;
+  margin-top: 0;
+  padding: 20px;
   background: var(--stone);
   border: 1px solid var(--hairline);
   border-radius: var(--radius-md);
@@ -646,7 +683,7 @@ section p {
 
 .edu-degree {
   margin-bottom: 6px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .edu-meta {
@@ -660,13 +697,13 @@ section p {
 }
 
 .sub-label {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0.28px;
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: var(--track-label);
   text-transform: uppercase;
   color: var(--muted);
-  margin-top: 20px;
+  margin-top: 24px;
   margin-bottom: 10px;
 }
 
@@ -679,8 +716,8 @@ section p {
 .stats-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin-bottom: 28px;
+  gap: 10px;
+  margin-bottom: 24px;
   border: none;
   border-radius: 0;
   overflow: visible;
@@ -690,7 +727,7 @@ section p {
 
 .stat-item {
   text-align: left;
-  padding: 20px 20px 18px;
+  padding: 16px;
   border: 1px solid var(--hairline);
   border-radius: var(--radius-md);
   background: var(--stone);
@@ -700,30 +737,30 @@ section p {
 .stat-item:hover {
   border-color: var(--slate);
   background: var(--canvas);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .stat-item .stat-num {
   font-family: var(--font-display);
-  font-size: clamp(28px, 3vw, 36px);
-  font-weight: 400;
+  font-size: clamp(26px, 2.6vw, 32px);
+  font-weight: 500;
   display: block;
   color: var(--black);
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   margin-bottom: 6px;
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum" 1;
 }
 
 .stat-item .stat-label {
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   font-size: 11px;
   color: var(--muted);
   text-transform: uppercase;
-  letter-spacing: 0.28px;
-  line-height: 1.4;
-  font-weight: 400;
+  letter-spacing: var(--track-label);
+  line-height: 1.35;
+  font-weight: 500;
 }
 
 /* ── Publications (research-table) ── */
@@ -734,10 +771,10 @@ section p {
 
 .pub-list li {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 220px;
-  gap: 8px 28px;
+  grid-template-columns: minmax(0, 1fr) 210px;
+  gap: 6px 28px;
   align-items: start;
-  padding: 22px 8px;
+  padding: 18px 8px;
   margin: 0 -8px;
   border-bottom: 1px solid var(--hairline);
   border-radius: var(--radius-sm);
@@ -773,16 +810,16 @@ section p {
 }
 
 .pub-title {
-  font-size: clamp(17px, 1.8vw, 20px);
-  font-weight: 400;
+  font-size: clamp(16px, 1.6vw, 18px);
+  font-weight: 500;
   line-height: 1.3;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
   color: inherit;
   min-width: 0;
 }
 
 .pub-link .pub-title {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .pub-arrow {
@@ -837,11 +874,13 @@ section p {
 }
 
 .pub-venue {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--muted);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.4;
   white-space: nowrap;
+  letter-spacing: 0.01em;
+  font-variant-numeric: tabular-nums;
 }
 
 .pub-authors {
@@ -855,25 +894,26 @@ section p {
 
 .pub-desc {
   grid-column: 1 / -1;
-  font-size: 15px;
+  font-size: 14px;
   color: var(--slate);
   margin: 0;
   line-height: 1.55;
-  max-width: 75ch;
+  max-width: 82ch;
 }
 
 .badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 10px;
   background: transparent;
   color: var(--coral);
   border: 1px solid var(--soft-coral);
-  padding: 4px 12px;
-  border-radius: 30px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
   white-space: nowrap;
   line-height: 1.3;
 }
@@ -894,7 +934,7 @@ section p {
 .exp-timeline {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   position: relative;
   padding-left: 20px;
 }
@@ -912,7 +952,7 @@ section p {
 
 .exp-item {
   position: relative;
-  padding: 22px 22px 22px 24px;
+  padding: 18px 20px;
   border: 1px solid var(--hairline);
   border-radius: var(--radius-md);
   background: var(--canvas);
@@ -923,7 +963,7 @@ section p {
   content: "";
   position: absolute;
   left: -20px;
-  top: 26px;
+  top: 22px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -941,10 +981,10 @@ section p {
 .exp-card-head {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 12px 16px;
-  align-items: start;
-  margin-bottom: 12px;
-  padding-bottom: 12px;
+  gap: 8px 16px;
+  align-items: baseline;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--hairline);
 }
 
@@ -953,43 +993,50 @@ section p {
 }
 
 .exp-period {
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 500;
   color: var(--muted);
   line-height: 1.4;
-  letter-spacing: 0.28px;
+  letter-spacing: var(--track-label);
   text-transform: uppercase;
   text-align: right;
   white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 .exp-role {
   font-family: var(--font-display);
-  font-size: clamp(18px, 2vw, 22px);
-  font-weight: 400;
+  font-size: clamp(17px, 1.8vw, 19px);
+  font-weight: 600;
   color: var(--black);
   line-height: 1.25;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   margin: 0;
 }
 
 .exp-org {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--muted);
-  margin: 6px 0 0;
+  margin: 4px 0 0;
   line-height: 1.45;
 }
 
 .exp-item ul {
-  padding-left: 20px;
-  font-size: 15px;
-  color: var(--ink);
+  padding-left: 18px;
+  font-size: 14px;
+  color: var(--slate);
   line-height: 1.55;
   margin: 0;
 }
 
 .exp-item ul li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+}
+
+.exp-item ul li strong {
+  color: var(--black);
+  font-weight: 600;
 }
 
 .exp-item ul li:last-child {
@@ -997,10 +1044,12 @@ section p {
 }
 
 /* ── Projects (product cards) ── */
+/* auto-fill lets the wider 1240px container fit 4 columns instead of a fixed 3,
+   so the same 12 projects occupy three rows rather than four. */
 .proj-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
+  gap: 14px;
 }
 
 .proj-entry {
@@ -1019,12 +1068,14 @@ section p {
   border-color: var(--slate);
   background: var(--stone);
   box-shadow: none;
-  transform: translateY(-4px);
+  transform: translateY(-2px);
 }
 
 .proj-thumb {
+  display: block;
   width: 100%;
-  height: 180px;
+  aspect-ratio: 16 / 9;
+  height: auto;
   object-fit: cover;
   border-bottom: 1px solid var(--hairline);
   border-radius: 0;
@@ -1035,22 +1086,22 @@ section p {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 24px;
-  gap: 10px;
+  padding: 18px;
+  gap: 8px;
 }
 
 .proj-text > div:first-child {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .proj-name {
   font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 600;
   line-height: 1.25;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   color: var(--black);
 }
 
@@ -1060,26 +1111,27 @@ section p {
 
 .proj-name-plain {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 16px;
   color: var(--black);
   line-height: 1.25;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 .proj-tags-inline {
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   font-size: 10px;
+  font-weight: 500;
   color: var(--muted);
-  letter-spacing: 0.28px;
+  letter-spacing: var(--track-label);
   text-transform: uppercase;
   line-height: 1.5;
 }
 
 .proj-text p {
-  font-size: 14px;
+  font-size: 13.5px;
   color: var(--slate);
-  line-height: 1.55;
+  line-height: 1.5;
   margin: 0;
   flex: 1;
 }
@@ -1087,18 +1139,18 @@ section p {
 .proj-links-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   margin-top: auto;
-  padding-top: 14px;
+  padding-top: 12px;
   border-top: 1px solid var(--hairline);
 }
 
 .proj-links-row a {
   display: inline-flex;
   align-items: center;
-  padding: 6px 14px;
+  padding: 6px 13px;
   border: 1px solid var(--hairline);
-  border-radius: 30px;
+  border-radius: var(--radius-pill);
   font-size: 12px;
   font-weight: 500;
   line-height: 1.4;
@@ -1123,34 +1175,36 @@ section p {
 }
 
 /* ── Skills (pill-outline chips) ── */
+/* Eight groups in a rigid 2-column grid was the tallest block on the page.
+   auto-fit gives 3–4 columns on desktop and collapses cleanly on mobile. */
 .skills-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 36px 64px;
-  padding: 8px 0 4px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 26px 36px;
+  padding: 4px 0;
 }
 
 .skill-group h3 {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 400;
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 600;
   color: var(--muted);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.28px;
+  letter-spacing: var(--track-label);
 }
 
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .skill-tag {
-  padding: 6px 14px;
+  padding: 5px 12px;
   border: 1px solid var(--hairline);
-  border-radius: 30px;
-  font-size: 14px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
   color: var(--ink);
   background: var(--canvas);
   line-height: 1.4;
@@ -1165,8 +1219,8 @@ section p {
 /* ── Certifications ── */
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(196px, 1fr));
+  gap: 12px;
 }
 
 .cert-grid:not(.is-expanded) .cert-extra {
@@ -1201,42 +1255,61 @@ section p {
   border-color: var(--slate);
   background: var(--stone);
   box-shadow: none;
-  transform: translateY(-4px);
+  transform: translateY(-2px);
 }
 
+/* Certificate scans have wildly different intrinsic ratios; height:auto left
+   the grid rows ragged. A fixed ratio + cover makes every row align. */
 .cert-thumb {
+  display: block;
   width: 100%;
+  aspect-ratio: 4 / 3;
   height: auto;
+  object-fit: cover;
+  object-position: center;
+  background: var(--stone);
   border-bottom: 1px solid var(--hairline);
 }
 
 .cert-info {
-  padding: 16px;
+  padding: 12px 14px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
+  flex: 1;
 }
 
 .cert-name {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 600;
   color: var(--ink);
-  line-height: 1.4;
+  line-height: 1.35;
+  letter-spacing: -0.005em;
 }
 
 .cert-meta {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--muted);
+  margin-top: auto;
 }
 
 /* ── Awards ── */
+/* Three full-width stacked cards became three columns — same content, ~2/3
+   less vertical space. */
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+
 .award-item {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 0;
-  padding: 22px;
+  padding: 18px;
   border: 1px solid var(--hairline);
   border-radius: var(--radius-md);
   background: var(--canvas);
-  margin-bottom: 12px;
   transition: border-color 0.2s var(--ease-out), background 0.2s var(--ease-out), transform 0.2s var(--ease-out);
 }
 
@@ -1252,24 +1325,26 @@ section p {
 
 .award-item strong {
   display: block;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 600;
   line-height: 1.3;
+  letter-spacing: -0.025em;
   color: var(--black);
   font-family: var(--font-display);
 }
 
 .award-meta {
-  font-size: 13px;
+  font-size: 11px;
   color: var(--muted);
   margin: 6px 0 8px;
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.2px;
+  letter-spacing: var(--track-label);
 }
 
 .award-item p {
-  font-size: 15px;
+  font-size: 13.5px;
   color: var(--slate);
   margin: 0;
   line-height: 1.5;
@@ -1280,7 +1355,7 @@ section p {
   background: var(--enterprise-green);
   color: var(--canvas);
   margin: 0 calc(-1 * clamp(18px, 4vw, 40px));
-  padding: clamp(48px, 7vw, 72px) clamp(18px, 4vw, 40px);
+  padding: clamp(36px, 5vw, 56px) clamp(18px, 4vw, 40px);
   border-radius: 0;
 }
 
@@ -1295,11 +1370,11 @@ section p {
 }
 
 .dark-feature-band .contact-lead {
-  font-size: clamp(18px, 2.2vw, 22px);
+  font-size: clamp(17px, 2vw, 20px);
   color: rgba(255, 255, 255, 0.88);
-  max-width: 48ch;
+  max-width: 52ch;
   line-height: 1.4;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
 
 .dark-feature-band .contact-topics {
@@ -1310,37 +1385,39 @@ section p {
 .dark-feature-band .contact-topics em {
   color: var(--soft-coral);
   font-style: normal;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.28px;
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: var(--track-label);
   text-transform: uppercase;
 }
 
 .contact-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin: 18px 0 16px;
+  gap: 8px;
+  margin: 16px 0 14px;
 }
 
 .contact-topics-label {
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   font-size: 11px;
-  letter-spacing: 0.28px;
+  font-weight: 600;
+  letter-spacing: var(--track-label);
   text-transform: uppercase;
   color: var(--soft-coral);
-  margin: 0 0 10px;
+  margin: 0 0 8px;
 }
 
 .topic-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .topic-chip {
   display: inline-flex;
-  padding: 6px 14px;
+  padding: 6px 13px;
   font-size: 13px;
   font-weight: 500;
   color: var(--canvas);
@@ -1378,15 +1455,14 @@ section p {
 }
 
 /* ── Footer ── */
+/* The footer is a sibling of .page-wrap, so it is already full-bleed. It also
+   carried .page-wrap's negative breakout margins, which pushed it one gutter
+   past the viewport on each side and forced a horizontal scrollbar. */
 .site-footer {
-  margin-top: 0;
-  padding: 40px 0 28px;
+  margin: 0;
+  padding: 32px clamp(18px, 4vw, 40px) 22px;
   border-top: 1px solid var(--hairline);
   background: var(--stone);
-  margin-left: calc(-1 * clamp(18px, 4vw, 40px));
-  margin-right: calc(-1 * clamp(18px, 4vw, 40px));
-  padding-left: clamp(18px, 4vw, 40px);
-  padding-right: clamp(18px, 4vw, 40px);
 }
 
 .footer-shell {
@@ -1397,14 +1473,16 @@ section p {
 .footer-inner {
   display: grid;
   grid-template-columns: 1.4fr 1fr auto;
-  gap: 20px 24px;
+  gap: 16px 24px;
   align-items: start;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .footer-name {
   font-family: var(--font-display);
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   color: var(--black);
   margin-bottom: 4px;
 }
@@ -1477,7 +1555,7 @@ section p {
   color: var(--muted);
   text-align: center;
   margin: 0;
-  padding-top: 16px;
+  padding-top: 14px;
   border-top: 1px solid var(--hairline);
 }
 
@@ -1544,14 +1622,16 @@ footer {
 }
 
 /* ── Responsive ── */
+/* .proj-list, .cert-grid, .skills-grid and .awards-grid are auto-fill/auto-fit
+   grids — they reflow on their own and need no column overrides here. */
 @media (max-width: 1024px) {
-  .proj-list,
-  .cert-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .skills-grid {
-    gap: 24px 32px;
+    gap: 22px 28px;
   }
 
   .footer-inner {
@@ -1615,9 +1695,21 @@ footer {
     margin-bottom: 24px;
   }
 
+  /* Actions take the full row and socials wrap beneath, rather than the two
+     fighting for space on one line. */
+  .hero-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
   .hero-actions .btn {
     flex: 1 1 auto;
-    min-width: calc(50% - 5px);
+    min-width: calc(50% - 4px);
   }
 }
 
@@ -1659,11 +1751,15 @@ footer {
   }
 
   section {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 
   .stats-row {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-controls {
+    gap: 10px;
   }
 
   .footer-inner {
@@ -1674,7 +1770,7 @@ footer {
 
 @media (max-width: 480px) {
   .page-wrap {
-    padding-bottom: 40px;
+    padding-bottom: 36px;
   }
 
   .skills-grid {
@@ -1683,17 +1779,22 @@ footer {
   }
 
   .proj-list,
-  .cert-grid,
   .stats-row {
     grid-template-columns: 1fr;
   }
 
+  /* Two cert columns still read fine at 375px with the fixed 4:3 ratio. */
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
   .hero-actions {
-    flex-direction: column;
+    width: 100%;
   }
 
   .hero-actions .btn {
-    width: 100%;
+    flex: 1 1 auto;
     min-width: 0;
   }
 
@@ -1706,15 +1807,11 @@ footer {
   }
 
   .dark-feature-band {
-    padding: 32px 16px;
+    padding: 28px 16px;
   }
 
   .proj-text {
-    padding: 16px;
-  }
-
-  .proj-thumb {
-    height: 130px;
+    padding: 15px;
   }
 
   #top-btn {

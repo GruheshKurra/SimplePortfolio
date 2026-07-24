@@ -36,8 +36,8 @@ What makes the system distinctive is the mix of austere black-and-white UI with 
 ### Text & Rules
 
 - **Ink** (`#212121`): Default body text and most link text on light backgrounds.
-- **Muted Slate** (`#93939f`): Footer links, dates, metadata, and de-emphasized labels.
-- **Slate** (`#75758a`): Research separators and tertiary text.
+- **Muted Slate** (`#68687a`): Footer links, dates, metadata, and de-emphasized labels. Darkened from Cohere's `#93939f`, which measured 3.0:1 on white and failed WCAG AA at the body sizes this site uses it for. The current value clears 4.5:1 on both `--canvas` and `--stone`.
+- **Slate** (`#5f5f70`): Tertiary text, card body copy, and separators. Darkened from `#75758a` for the same reason.
 - **Hairline** (`#d9d9dd`): Standard list rules and section dividers.
 - **Border Light** (`#e5e7eb`): Secondary divider and utility rule.
 
@@ -55,35 +55,51 @@ Cohere does not use gradients as a generic UI fill. Gradients and color fields a
 
 ### Font Family
 
-- **Display**: `CohereText`, falling back to `Space Grotesk`, `Inter`, `ui-sans-serif`, and `system-ui`.
-- **Body/UI**: `Unica77 Cohere Web`, falling back to `Inter`, `Arial`, `ui-sans-serif`, and `system-ui`.
-- **Technical labels**: `CohereMono`, falling back to `Arial`, `ui-sans-serif`, and `system-ui`.
-- **Icons**: Cohere uses custom icon fonts and thin-line geometric illustrations.
+**Helvetica only.** The portfolio implementation uses a single family for every
+role — display, body, and label:
+
+```css
+--font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+```
+
+`--font-display`, `--font-body`, and `--font-label` all alias `--font-sans`.
+There is no webfont request: the stack resolves locally on every target
+platform, with Arial as the Windows fallback.
+
+This is a deliberate divergence from Cohere's three-family system (CohereText /
+Unica77 / CohereMono). Because there is no second family and no mono face,
+hierarchy has to be carried entirely by **size, weight, tracking, and colour**.
 
 ### Hierarchy
 
-| Role | Font | Size | Weight | Line Height | Letter Spacing | Notes |
-|---|---|---:|---:|---:|---:|---|
-| Hero Display | CohereText | 96px | 400 | 1.00 | -1.92px | Home page declaration scale. |
-| Product Display | CohereText | 72px | 400 | 1.00 | -1.44px | Product and research hero headlines. |
-| Section Display | Unica77 | 60px | 400 | 1.00 | -1.2px | Large product-page headings. |
-| Section Heading | Unica77 | 48px | 400 | 1.20 | -0.48px | Split hero and CTA headings. |
-| Card Heading | Unica77 | 32px | 400 | 1.20 | -0.32px | Feature card and list section titles. |
-| Feature Heading | Unica77 | 24px | 400 | 1.30 | 0 | Cards, filters, and article titles. |
-| Body Large | Unica77 | 18px | 400 | 1.40 | 0 | Lead text and larger paragraphs. |
-| Body | Unica77 | 16px | 400 | 1.50 | 0 | Default copy and link text. |
-| Button | Unica77 | 14px | 500 | 1.71 | 0 | Compact CTA labels. |
-| Caption | Unica77 | 14px | 400 | 1.40 | 0 | Metadata and small explanatory text. |
-| Mono Label | CohereMono | 14px | 400 | 1.40 | 0.28px | Uppercase technical labels. |
-| Micro | Unica77 | 12px | 400 | 1.40 | 0 | Footer, nav microcopy, and small links. |
+All rows use Helvetica. `--track-label` is `0.08em`.
+
+| Role | Size | Weight | Line Height | Letter Spacing | Notes |
+|---|---:|---:|---:|---:|---|
+| Hero Display | clamp(2.05rem → 3.4rem) | 500 | 0.96 | -0.04em | Name. Tight and carved. |
+| Section Heading | clamp(1.6rem → 2.1rem) | 500 | 1.05 | -0.035em | `section h2`. |
+| Card Heading | 16–19px | 600 | 1.25 | -0.025em | Project names, roles, award titles. |
+| Publication Title | clamp(16px → 18px) | 500 / 600 linked | 1.30 | -0.02em | 600 when the title is a link. |
+| Stat Number | clamp(26px → 32px) | 500 | 1.00 | -0.04em | `tabular-nums`. |
+| Body Large | clamp(16px → 18px) | 400 | 1.50 | -0.005em | About lead. |
+| Body | 15px | 400 | 1.55 | 0 | Default copy. |
+| Body Small | 13.5–14px | 400 | 1.50 | 0 | Card and bullet copy. |
+| Button | 14px | 500 | 1.50 | 0 | Pill CTA labels. |
+| Label (was Mono) | 11px | 500–600 | 1.35 | 0.08em | Uppercase. Eyebrows, stat labels, periods, tags. |
+| Micro | 12px | 400 | 1.40 | 0 | Footer copy, venue lines. |
 
 ### Principles
 
-- Use massive type sparingly; Cohere pages often have one oversized headline and then settle into restrained 16px-24px UI copy.
-- Keep display type tight. Hero copy should feel compact and carved, not airy.
-- Avoid heavy bold weights. Size, spacing, and surface contrast do most of the hierarchy work.
-- Use uppercase mono labels for category and system markers, especially on product and research pages.
-- Editorial pages can use coral chips and blue links, but the base typography remains black and measured.
+- One family. Never introduce a second typeface, including for "technical" or
+  code-like labels.
+- Helvetica goes soft at mid sizes, so titles sit at **500–600**, not 400. Large
+  display type stays at 500 and leans on negative tracking instead of weight.
+- Uppercase + `0.08em` tracking is the label voice that replaces the mono face.
+  Uppercase Helvetica without added tracking reads cramped — the tracking is
+  load-bearing, not decorative.
+- Set numerals with `tabular-nums` wherever they align in a column (stats,
+  dates, venue years).
+- Keep display type tight; hero copy should feel compact, not airy.
 
 ## Layout
 
@@ -121,15 +137,17 @@ Cohere is mostly flat. Depth comes from surface alternation, media contrast, rou
 
 ### Radius Scale
 
+Four steps plus a pill. Fewer values than the source system, applied
+consistently — every pill-shaped control uses the same token rather than a
+spread of 30px/32px one-offs.
+
 | Token | Value | Role |
 |---|---:|---|
-| `xs` | 4px | Small images, search fields, article thumbnails, utility elements |
-| `sm` | 8px | Blog chips, cards, small media, dialogs |
-| `md` | 16px | Medium product cards and grouped blocks |
-| `lg` | 22px | Signature media-card and soft placeholder radius |
-| `xl` | 30px | Research/topic filter pills |
-| `pill` | 32px | Primary CTA buttons |
-| `full` | 9999px | Round status elements and fully pill-shaped controls |
+| `--radius-xs` | 4px | Skip link, focus outlines, utility elements |
+| `--radius-sm` | 8px | Social icon buttons, nav items, small media |
+| `--radius-md` | 12px | Stat cards, experience items, award cards, edu panel |
+| `--radius-lg` | 20px | Project cards, cert cards, profile photo frame |
+| `--radius-pill` | 999px | All pill controls: buttons, chips, badges, tags |
 
 ### Image Treatment
 
@@ -211,7 +229,8 @@ Dark footer subscription block with coral "AI moves fast" label, white headline,
 - Do not add heavy drop shadows to cards.
 - Do not make every section card-based; Cohere often uses unframed rows, rules, and open space.
 - Do not use rounded cards below 8px for major media.
-- Do not replace the display/body type split with one generic sans-serif voice.
+- Do not introduce a second typeface. The portfolio is Helvetica-only; the
+  display/body/mono split described in Cohere's own system does not apply here.
 - Do not render undocumented interaction variants in documentation or previews.
 - Do not use saturated gradients as normal UI backgrounds; keep gradients media-led.
 
