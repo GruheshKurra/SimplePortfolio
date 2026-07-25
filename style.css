@@ -46,6 +46,7 @@
   --track-label: 0.08em;
 
   --max-width: 1240px;
+  --gutter: clamp(18px, 4vw, 40px);
   --nav-height: 52px;
   --section-gap: clamp(40px, 5vw, 68px);
   --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -172,18 +173,39 @@ a:focus-visible {
 }
 
 /* ── Page layout ── */
+/* Three-track grid instead of a centred max-width box with negative-margin
+   breakouts. Normal content sits in the middle track; the contact band spans
+   every track, so it reaches the viewport edge at any width without 100vw
+   scrollbar maths.
+   The hero and the sticky nav are body-level siblings of <main> rather than
+   grid items: a sticky grid item can only travel inside its own grid area,
+   which is exactly its own height, so it would never actually stick. Their
+   inner wrappers carry the same max-width, so all three stay aligned with the
+   content track. */
 .page-wrap {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 clamp(18px, 4vw, 40px) 56px;
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(var(--gutter), 1fr)
+    [content-start] minmax(0, var(--max-width)) [content-end]
+    minmax(var(--gutter), 1fr) [full-end];
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrap > * {
+  grid-column: content;
+}
+
+.page-wrap > .dark-feature-band {
+  grid-column: full;
 }
 
 /* ── Hero ── */
 .site-header {
   display: block;
-  padding: clamp(32px, 5vw, 56px) clamp(18px, 4vw, 40px);
-  margin: 0 calc(-1 * clamp(18px, 4vw, 40px));
-  margin-bottom: 0;
+  padding: clamp(32px, 5vw, 56px) var(--gutter);
+  margin: 0;
   background: var(--stone);
   border-bottom: 1px solid var(--hairline);
 }
@@ -240,7 +262,8 @@ a:focus-visible {
   letter-spacing: -0.04em;
   color: var(--black);
   margin-bottom: 10px;
-  max-width: 15ch;
+  max-width: 24ch;
+  overflow-wrap: break-word;
 }
 
 .header-text .subtitle {
@@ -256,7 +279,6 @@ a:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 0;
 }
 
 /* Actions + social icons share one row instead of stacking two blocks. */
@@ -373,7 +395,8 @@ a:focus-visible {
 .meta-chip {
   display: inline-flex;
   align-items: center;
-  padding: 6px 13px;
+  min-height: 34px;
+  padding: 6px 14px;
   font-size: 13px;
   color: var(--slate);
   background: var(--canvas);
@@ -407,8 +430,8 @@ a:focus-visible {
   position: sticky;
   top: 0;
   z-index: 100;
-  margin: 0 calc(-1 * clamp(18px, 4vw, 40px)) 32px;
-  padding: 0 clamp(18px, 4vw, 40px);
+  margin: 0 0 32px;
+  padding: 0 var(--gutter);
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px) saturate(1.2);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
@@ -600,6 +623,12 @@ section {
   scroll-margin-top: calc(var(--nav-height) + 20px);
 }
 
+/* The contact band is the last child of .page-wrap; any trailing margin here
+   shows up as a white strip between it and the footer. */
+.page-wrap > section:last-child {
+  margin-bottom: 0;
+}
+
 section h2 {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 2.8vw, 2.1rem);
@@ -618,12 +647,15 @@ section p {
 }
 
 /* Two columns on desktop: narrative left, education panel right. Previously a
-   single stacked run that cost ~200px of scroll for very little content. */
+   single stacked run that cost ~200px of scroll for very little content.
+   Items stretch rather than start: the panel is much shorter than the narrative
+   column, and a bordered box that stops halfway leaves a ~150px hole in the
+   track. Stretching turns that hole into panel. */
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
-  gap: 24px 40px;
-  align-items: start;
+  gap: 24px clamp(24px, 3vw, 40px);
+  align-items: stretch;
 }
 
 .about-lead {
@@ -670,6 +702,8 @@ section p {
 }
 
 .edu-panel {
+  display: flex;
+  flex-direction: column;
   margin-top: 0;
   padding: 20px;
   background: var(--stone);
@@ -713,16 +747,19 @@ section p {
 }
 
 /* ── Stats (product-card style) ── */
+/* Deliberately 4-up or 2-up, never auto-fit: with exactly four stats, an
+   intermediate 3-column step leaves one card dangling on a second row. */
 .stats-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
   margin-bottom: 24px;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  background: transparent;
-  box-shadow: none;
+}
+
+@media (max-width: 760px) {
+  .stats-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .stat-item {
@@ -769,9 +806,12 @@ section p {
   border-top: 1px solid var(--hairline);
 }
 
+/* 172px is the widest venue string ("IEEE ICCCMLA 2025 · 2025") plus slack.
+   The old 210px track was dead space on every preprint row, where the column
+   holds nothing but a year. */
 .pub-list li {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 210px;
+  grid-template-columns: minmax(0, 1fr) 172px;
   gap: 6px 28px;
   align-items: start;
   padding: 18px 8px;
@@ -784,10 +824,6 @@ section p {
 
 .pub-list li:hover {
   background: var(--stone);
-}
-
-.pub-list li:last-child {
-  margin-bottom: 0;
 }
 
 .pub-title-row {
@@ -816,12 +852,16 @@ section p {
   letter-spacing: -0.02em;
   color: inherit;
   min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .pub-link .pub-title {
   font-weight: 600;
 }
 
+/* Was opacity:0 until hover, which left touch users with no cue at all that a
+   title is a link — linked and unlinked titles differ only by font weight.
+   Now it is always drawn, and hover/focus just brings it to full strength. */
 .pub-arrow {
   display: inline-flex;
   align-items: center;
@@ -831,15 +871,19 @@ section p {
   height: 20px;
   margin-top: 3px;
   color: var(--muted);
-  opacity: 0;
-  transform: translate(-3px, 3px);
-  transition: opacity 0.18s ease, transform 0.18s ease, color 0.15s;
+  opacity: 0.4;
+  transition: opacity 0.18s ease, color 0.15s;
 }
 
 .pub-link:hover .pub-arrow {
   opacity: 1;
-  transform: translate(0, 0);
   color: var(--ink);
+}
+
+@media (hover: none) {
+  .pub-arrow {
+    opacity: 0.75;
+  }
 }
 
 .pub-link:focus-visible {
@@ -850,7 +894,6 @@ section p {
 
 .pub-link:focus-visible .pub-arrow {
   opacity: 1;
-  transform: translate(0, 0);
   color: var(--ink);
 }
 
@@ -918,9 +961,12 @@ section p {
   line-height: 1.3;
 }
 
+/* Every accepted paper carries this badge, so a filled coral pill made the
+   loudest colour on the page carry no information. Outline keeps the label and
+   returns the fill to being a genuine emphasis tool. */
 .badge.new {
-  background: var(--coral);
-  color: var(--ink);
+  background: transparent;
+  color: var(--coral);
   border-color: var(--coral);
 }
 
@@ -1013,6 +1059,7 @@ section p {
   line-height: 1.25;
   letter-spacing: -0.025em;
   margin: 0;
+  overflow-wrap: break-word;
 }
 
 .exp-org {
@@ -1022,16 +1069,32 @@ section p {
   line-height: 1.45;
 }
 
+/* Unconstrained, these bullets ran ~150 characters per line at 1440px. Capped
+   for readability below 1100px; above it the cap is dropped and the list flows
+   into two columns instead, so the card width is used without the long lines. */
 .exp-item ul {
   padding-left: 18px;
   font-size: 14px;
   color: var(--slate);
   line-height: 1.55;
   margin: 0;
+  max-width: 84ch;
 }
 
 .exp-item ul li {
   margin-bottom: 6px;
+}
+
+@media (min-width: 1100px) {
+  .exp-item ul {
+    max-width: none;
+    column-count: 2;
+    column-gap: 40px;
+  }
+
+  .exp-item ul li {
+    break-inside: avoid;
+  }
 }
 
 .exp-item ul li strong {
@@ -1048,7 +1111,7 @@ section p {
    so the same 12 projects occupy three rows rather than four. */
 .proj-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(272px, 100%), 1fr));
   gap: 14px;
 }
 
@@ -1103,6 +1166,7 @@ section p {
   line-height: 1.25;
   letter-spacing: -0.025em;
   color: var(--black);
+  overflow-wrap: break-word;
 }
 
 .proj-name:hover {
@@ -1148,7 +1212,8 @@ section p {
 .proj-links-row a {
   display: inline-flex;
   align-items: center;
-  padding: 6px 13px;
+  min-height: 34px;
+  padding: 6px 14px;
   border: 1px solid var(--hairline);
   border-radius: var(--radius-pill);
   font-size: 12px;
@@ -1175,13 +1240,23 @@ section p {
 }
 
 /* ── Skills (pill-outline chips) ── */
-/* Eight groups in a rigid 2-column grid was the tallest block on the page.
-   auto-fit gives 3–4 columns on desktop and collapses cleanly on mobile. */
+/* Multi-column, not grid. In a grid every group in a row inherits the height of
+   the tallest one, so the 15-tag specialisations group inflated its whole row
+   and left four visible holes. Column flow packs groups by height instead, and
+   the column count adapts to the container with no breakpoints. */
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 26px 36px;
+  column-width: 250px;
+  column-gap: clamp(24px, 3vw, 40px);
   padding: 4px 0;
+}
+
+.skill-group {
+  break-inside: avoid;
+  margin-bottom: 26px;
+}
+
+.skill-group:last-child {
+  margin-bottom: 0;
 }
 
 .skill-group h3 {
@@ -1200,7 +1275,11 @@ section p {
   gap: 6px;
 }
 
+/* No hover state: these are spans, not links. A border/background change on
+   hover reads as "clickable" and nothing happens on click. */
 .skill-tag {
+  display: inline-flex;
+  align-items: center;
   padding: 5px 12px;
   border: 1px solid var(--hairline);
   border-radius: var(--radius-pill);
@@ -1208,18 +1287,12 @@ section p {
   color: var(--ink);
   background: var(--canvas);
   line-height: 1.4;
-  transition: border-color 0.15s, background 0.15s;
-}
-
-.skill-tag:hover {
-  border-color: var(--ink);
-  background: var(--stone);
 }
 
 /* ── Certifications ── */
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(196px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(196px, 100%), 1fr));
   gap: 12px;
 }
 
@@ -1285,6 +1358,7 @@ section p {
   color: var(--ink);
   line-height: 1.35;
   letter-spacing: -0.005em;
+  overflow-wrap: break-word;
 }
 
 .cert-meta {
@@ -1298,7 +1372,7 @@ section p {
    less vertical space. */
 .awards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   gap: 12px;
 }
 
@@ -1351,11 +1425,15 @@ section p {
 }
 
 /* ── Contact (dark-feature-band) ── */
+/* Spans the full grid (see .page-wrap), so it reaches the viewport edge like
+   the footer does. It previously broke out by one gutter only, which left it
+   inset ~100px per side on a 1440px screen — neither a band nor a card. Zero
+   bottom margin so the green band meets the stone footer directly. */
 .dark-feature-band {
   background: var(--enterprise-green);
   color: var(--canvas);
-  margin: 0 calc(-1 * clamp(18px, 4vw, 40px));
-  padding: clamp(36px, 5vw, 56px) clamp(18px, 4vw, 40px);
+  margin: 0;
+  padding: clamp(36px, 5vw, 56px) var(--gutter);
   border-radius: 0;
 }
 
@@ -1417,7 +1495,9 @@ section p {
 
 .topic-chip {
   display: inline-flex;
-  padding: 6px 13px;
+  align-items: center;
+  min-height: 34px;
+  padding: 6px 14px;
   font-size: 13px;
   font-weight: 500;
   color: var(--canvas);
@@ -1460,7 +1540,7 @@ section p {
    past the viewport on each side and forced a horizontal scrollbar. */
 .site-footer {
   margin: 0;
-  padding: 32px clamp(18px, 4vw, 40px) 22px;
+  padding: 32px var(--gutter) 22px;
   border-top: 1px solid var(--hairline);
   background: var(--stone);
 }
@@ -1509,6 +1589,9 @@ section p {
 }
 
 .footer-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
   font-size: 13px;
   font-weight: 500;
   color: var(--slate);
@@ -1557,15 +1640,6 @@ section p {
   margin: 0;
   padding-top: 14px;
   border-top: 1px solid var(--hairline);
-}
-
-footer {
-  margin-top: 0;
-  padding: 0;
-  border-top: none;
-  font-size: 12px;
-  color: var(--muted);
-  text-align: center;
 }
 
 /* ── Scroll-to-top ── */
@@ -1622,16 +1696,14 @@ footer {
 }
 
 /* ── Responsive ── */
-/* .proj-list, .cert-grid, .skills-grid and .awards-grid are auto-fill/auto-fit
-   grids — they reflow on their own and need no column overrides here. */
+/* .proj-list, .cert-grid and .awards-grid are auto-fill/auto-fit grids and
+   .skills-grid is multi-column — all reflow on their own and need no column
+   overrides here. .stats-row carries its own 4→2 rule next to the component.
+   What is left below are genuine layout changes. */
 @media (max-width: 1024px) {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 20px;
-  }
-
-  .skills-grid {
-    gap: 22px 28px;
   }
 
   .footer-inner {
@@ -1714,12 +1786,6 @@ footer {
 }
 
 @media (max-width: 700px) {
-  .site-header {
-    margin: 0 calc(-1 * clamp(18px, 4vw, 40px));
-    padding-left: clamp(18px, 4vw, 40px);
-    padding-right: clamp(18px, 4vw, 40px);
-  }
-
   .header-text h1 {
     max-width: none;
   }
@@ -1754,10 +1820,6 @@ footer {
     margin-bottom: 36px;
   }
 
-  .stats-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .hero-controls {
     gap: 10px;
   }
@@ -1769,21 +1831,8 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .page-wrap {
-    padding-bottom: 36px;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .proj-list,
-  .stats-row {
-    grid-template-columns: 1fr;
-  }
-
-  /* Two cert columns still read fine at 375px with the fixed 4:3 ratio. */
+  /* Two cert columns still read fine at 375px with the fixed 4:3 ratio, and
+     that beats the single column auto-fill would otherwise give here. */
   .cert-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -1806,8 +1855,10 @@ footer {
     width: 100%;
   }
 
+  /* Inline padding stays on --gutter so the band's contents keep aligning with
+     the content column above it. */
   .dark-feature-band {
-    padding: 28px 16px;
+    padding: 28px var(--gutter);
   }
 
   .proj-text {
@@ -1828,14 +1879,30 @@ footer {
   }
 }
 
-@media (max-width: 380px) {
-  .mono-label {
-    font-size: 11px;
+/* Touch devices: grow every small control to a comfortable target. Keyed on the
+   pointer, not the viewport, so a 1024px tablet gets it and a 500px desktop
+   window does not. */
+@media (pointer: coarse) {
+  /* Interactive controls only — .skill-tag is a plain span and inflating it
+     would just make the skills block taller on the smallest screens. */
+  .proj-links-row a,
+  .meta-chip-link,
+  .topic-chip {
+    min-height: 42px;
   }
 
-  .social-icons a {
-    width: 40px;
-    height: 40px;
+  .footer-nav a {
+    min-height: 40px;
+  }
+
+  .social-icons a,
+  .footer-social a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .mobile-nav a {
+    padding: 14px;
   }
 }
 
@@ -1878,7 +1945,9 @@ footer {
     display: none;
   }
 
+  /* Drop the three-track bleed grid — print wants one plain column. */
   .page-wrap {
+    display: block;
     max-width: 100%;
     padding: 16px;
   }
@@ -1886,6 +1955,11 @@ footer {
   section {
     break-inside: avoid;
     margin-bottom: 28px;
+  }
+
+  .exp-item ul {
+    column-count: 1;
+    max-width: none;
   }
 
   .dark-feature-band {
