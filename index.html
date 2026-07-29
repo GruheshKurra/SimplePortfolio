@@ -310,7 +310,7 @@
         <p class="about-lead">Independent AI/ML researcher and builder — from transformer architectures implemented from scratch to on-device deepfake detectors shipped to production.</p>
         <ul class="about-highlights">
           <li><strong>IIIT Hyderabad</strong> — Layout-preserving document translation with 92% layout detection accuracy and multi-language OCR</li>
-          <li><strong>6 published papers</strong> — IEEE, IJNRD, Zenodo on compression, deepfake detection, and word representation</li>
+          <li><strong>6 published papers</strong> — IEEE, IJNRD, Zenodo on compression, deepfake detection, and word representation; <strong>2 more under review at IEEE NEPCON 2026</strong></li>
           <li><strong>Full-stack AI</strong> — LLMs, computer vision, neural compression, synthetic data, and cloud deployment</li>
         </ul>
         <p class="about-note">AWS &amp; TensorFlow certified. ML-from-scratch blog at <a href="https://blogs.gruheshkurra.com" target="_blank" class="text-link">blogs.gruheshkurra.com</a>.</p>
@@ -410,7 +410,7 @@
 
     </ul>
 
-    <p class="sub-label">Preprints &amp; Working Papers</p>
+    <p class="sub-label">Under Review &amp; Working Papers</p>
     <ul class="pub-list">
 
       <li>
@@ -418,21 +418,10 @@
           <span class="pub-title">Prism Tuning: Repulsion-Trained Seed Embeddings in a Frozen Transformer for Non-Redundant Generation</span>
         </div>
         <div class="pub-meta-col">
-          <div class="pub-status"><span class="badge badge-review">Preprint</span></div>
-          <span class="pub-venue">2026</span>
+          <div class="pub-status"><span class="badge badge-review">Under Review</span></div>
+          <span class="pub-venue">IEEE NEPCON 2026 · Submitted 2026</span>
         </div>
         <p class="pub-desc">K learnable seed vectors trained by output-level repulsion inside one frozen transformer, giving K non-redundant generation streams from a single prompt — diversity paid once at training, zero overhead at inference, unlike generate-then-deduplicate. Resolves the non-differentiability of decoded text with a generated-position hidden-state surrogate, corrects representation anisotropy inside the repulsion loss, and splits each seed into a shared-style / repelled-content part to block style-only divergence.</p>
-      </li>
-
-      <li>
-        <div class="pub-title-row">
-          <span class="pub-title">RADAR: Reasoning-Augmented Deepfake Artifact Recognition via Multi-Branch Evidence Aggregation</span>
-        </div>
-        <div class="pub-meta-col">
-          <div class="pub-status"><span class="badge badge-review">Preprint</span></div>
-          <span class="pub-venue">2026</span>
-        </div>
-        <p class="pub-desc">Deepfake detection as structured evidence aggregation rather than end-to-end classification: three specialised branches — skin-texture, boundary-aliasing, and AI-generation-fingerprint analysis — feed an iterative cross-attention reasoning module (R-Former) for interpretable per-artifact confidence scores and saliency maps, trained entirely from random initialisation to remove ImageNet bias. Architecture and evaluation protocol; empirical validation carried out in the companion study below.</p>
       </li>
 
       <li>
@@ -443,10 +432,21 @@
           </a>
         </div>
         <div class="pub-meta-col">
+          <div class="pub-status"><span class="badge badge-review">Under Review</span></div>
+          <span class="pub-venue">IEEE NEPCON 2026 · Submitted 2026</span>
+        </div>
+        <p class="pub-desc">Boundary (Sobel-edge) and frequency (multi-band FFT) streams trained under an orthogonality penalty and fused via iterative cross-attention (ERM). Trained on 227,504 frames from FaceForensics++, Celeb-DF v2, and WildDeepfake — <strong>96.3% AUC</strong> on the video-disjoint test split (87.1% on Celeb-DF alone), reported after an internal audit caught train/test video leakage in the WildDeepfake portion and the paper cites the corrected number over the inflated 95.6% headline. Code, frame corpus, audit script, and trained checkpoint public.</p>
+      </li>
+
+      <li>
+        <div class="pub-title-row">
+          <span class="pub-title">RADAR: Reasoning-Augmented Deepfake Artifact Recognition via Multi-Branch Evidence Aggregation</span>
+        </div>
+        <div class="pub-meta-col">
           <div class="pub-status"><span class="badge badge-review">Preprint</span></div>
           <span class="pub-venue">2026</span>
         </div>
-        <p class="pub-desc">Boundary (Sobel-edge) and frequency (multi-band FFT) streams trained under an orthogonality penalty and fused via iterative cross-attention (ERM). Trained on 227,504 frames from FaceForensics++, Celeb-DF v2, and WildDeepfake — <strong>96.3% AUC</strong> on the video-disjoint test split (87.1% on Celeb-DF alone), reported after an internal audit caught train/test video leakage in the WildDeepfake portion and the paper cites the corrected number over the inflated 95.6% headline. Code, frame corpus, audit script, and trained checkpoint public.</p>
+        <p class="pub-desc">Deepfake detection as structured evidence aggregation rather than end-to-end classification: three specialised branches — skin-texture, boundary-aliasing, and AI-generation-fingerprint analysis — feed an iterative cross-attention reasoning module (R-Former) for interpretable per-artifact confidence scores and saliency maps, trained entirely from random initialisation to remove ImageNet bias. Architecture and evaluation protocol; empirical validation carried out in the companion Dual-Stream study above.</p>
       </li>
 
     </ul>
