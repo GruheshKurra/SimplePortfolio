@@ -1424,6 +1424,33 @@ section p {
   line-height: 1.5;
 }
 
+/* Award certificate thumbnail — click-through to the full-size image. Sits on
+   margin-top:auto so the card's proof anchors to the bottom regardless of how
+   much copy sits above it. */
+.award-cert {
+  display: block;
+  margin-top: auto;
+  padding-top: 14px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.award-cert img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-sm);
+  background: var(--stone);
+  transition: border-color 0.2s var(--ease-out);
+}
+
+.award-cert:hover img {
+  border-color: var(--slate);
+}
+
 /* ── Contact (dark-feature-band) ── */
 /* Spans the full grid (see .page-wrap), so it reaches the viewport edge like
    the footer does. It previously broke out by one gutter only, which left it
