@@ -730,6 +730,13 @@ section p {
   margin-bottom: 0;
 }
 
+/* Separates the second degree block from the first inside the same panel. */
+.edu-degree-next {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--hairline);
+}
+
 .sub-label {
   font-family: var(--font-label);
   font-size: 11px;
@@ -1344,6 +1351,30 @@ section p {
   border-bottom: 1px solid var(--hairline);
 }
 
+/* Some credentials have no scan on file. A placeholder tile keeps them in the
+   same grid rhythm as the scanned cards instead of collapsing the row. */
+.cert-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--stone);
+  border-bottom: 1px solid var(--hairline);
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+  padding: 0 12px;
+}
+
+.cert-card-noimg:hover {
+  transform: none;
+}
+
 .cert-info {
   padding: 12px 14px;
   display: flex;
@@ -1422,33 +1453,6 @@ section p {
   color: var(--slate);
   margin: 0;
   line-height: 1.5;
-}
-
-/* Award certificate thumbnail — click-through to the full-size image. Sits on
-   margin-top:auto so the card's proof anchors to the bottom regardless of how
-   much copy sits above it. */
-.award-cert {
-  display: block;
-  margin-top: auto;
-  padding-top: 14px;
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-}
-
-.award-cert img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border: 1px solid var(--hairline);
-  border-radius: var(--radius-sm);
-  background: var(--stone);
-  transition: border-color 0.2s var(--ease-out);
-}
-
-.award-cert:hover img {
-  border-color: var(--slate);
 }
 
 /* ── Contact (dark-feature-band) ── */
