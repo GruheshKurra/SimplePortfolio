@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
@@ -1169,6 +1169,12 @@
   }
 
   navToggle.addEventListener('click', () => setNavOpen(!navWrap.classList.contains('nav-open')));
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && navWrap.classList.contains('nav-open')) {
+      setNavOpen(false);
+    }
+  });
 
   document.querySelectorAll('.mobile-nav a').forEach(link => {
     link.addEventListener('click', () => setNavOpen(false));

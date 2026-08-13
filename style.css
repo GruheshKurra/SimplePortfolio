@@ -46,9 +46,15 @@
   --track-label: 0.08em;
 
   --max-width: 1240px;
-  --gutter: clamp(18px, 4vw, 40px);
-  --nav-height: 52px;
-  --section-gap: clamp(40px, 5vw, 68px);
+  --gutter: max(
+    clamp(16px, 4.2vw, 48px),
+    env(safe-area-inset-left, 0px),
+    env(safe-area-inset-right, 0px)
+  );
+  --nav-height: 56px;
+  --section-gap: clamp(40px, 6.5vw, 96px);
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
   --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
 
   color-scheme: light;
@@ -62,9 +68,14 @@
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: clip;
 }
 
 body {
@@ -73,9 +84,11 @@ body {
   line-height: 1.5;
   color: var(--ink);
   background: var(--canvas);
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: rgba(33, 33, 33, 0.08);
 }
 
 ::selection {
@@ -204,7 +217,8 @@ a:focus-visible {
 /* ── Hero ── */
 .site-header {
   display: block;
-  padding: clamp(32px, 5vw, 56px) var(--gutter);
+  padding: calc(clamp(28px, 5.5vw, 80px) + var(--safe-top)) var(--gutter)
+    clamp(28px, 5.5vw, 80px);
   margin: 0;
   background: var(--stone);
   border-bottom: 1px solid var(--hairline);
@@ -213,7 +227,7 @@ a:focus-visible {
 .hero-main {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
-  gap: clamp(22px, 3.2vw, 34px);
+  gap: clamp(20px, 3.2vw, 48px);
   align-items: center;
   min-width: 0;
   max-width: var(--max-width);
@@ -231,8 +245,8 @@ a:focus-visible {
 
 .profile-photo-wrap img {
   display: block;
-  width: clamp(120px, 20vw, 164px);
-  height: clamp(120px, 20vw, 164px);
+  width: clamp(104px, 22vw, 176px);
+  height: clamp(104px, 22vw, 176px);
   border-radius: calc(var(--radius-lg) - 5px);
   object-fit: cover;
   border: 1px solid var(--card-border);
@@ -264,6 +278,7 @@ a:focus-visible {
   margin-bottom: 10px;
   max-width: 24ch;
   overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
 .header-text .subtitle {
@@ -286,15 +301,16 @@ a:focus-visible {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px 14px;
-  margin-top: 16px;
+  gap: 12px 16px;
+  margin-top: 18px;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 22px;
+  padding: 11px 22px;
+  min-height: 44px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
@@ -303,6 +319,7 @@ a:focus-visible {
   transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.15s;
   border: none;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 .btn:active {
@@ -430,8 +447,8 @@ a:focus-visible {
   position: sticky;
   top: 0;
   z-index: 100;
-  margin: 0 0 32px;
-  padding: 0 var(--gutter);
+  margin: 0 0 clamp(20px, 3.2vw, 40px);
+  padding: var(--safe-top) var(--gutter) 0;
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px) saturate(1.2);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
@@ -451,8 +468,8 @@ a:focus-visible {
   display: none;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   padding: 0;
   background: transparent;
   border: 1px solid var(--hairline);
@@ -460,6 +477,7 @@ a:focus-visible {
   color: var(--ink);
   cursor: pointer;
   flex-shrink: 0;
+  touch-action: manipulation;
   transition: border-color 0.15s, background 0.15s;
 }
 
@@ -568,6 +586,9 @@ a:focus-visible {
 
 .mobile-nav.is-open {
   display: flex;
+  max-height: min(70vh, calc(100dvh - var(--nav-height) - var(--safe-top) - 24px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .mobile-nav a {
@@ -589,7 +610,7 @@ body.nav-menu-open {
   display: flex;
   align-items: baseline;
   gap: 12px;
-  margin-bottom: 22px;
+  margin-bottom: clamp(18px, 2.4vw, 28px);
   padding-bottom: 12px;
   border-bottom: 1px solid var(--hairline);
 }
@@ -620,7 +641,7 @@ body.nav-menu-open {
 /* ── Sections ── */
 section {
   margin-bottom: var(--section-gap);
-  scroll-margin-top: calc(var(--nav-height) + 20px);
+  scroll-margin-top: calc(var(--nav-height) + var(--safe-top) + 16px);
 }
 
 /* The contact band is the last child of .page-wrap; any trailing margin here
@@ -637,6 +658,7 @@ section h2 {
   letter-spacing: -0.035em;
   color: var(--black);
   margin-bottom: 0;
+  text-wrap: balance;
 }
 
 section p {
@@ -705,7 +727,7 @@ section p {
   display: flex;
   flex-direction: column;
   margin-top: 0;
-  padding: 20px;
+  padding: clamp(16px, 2vw, 24px);
   background: var(--stone);
   border: 1px solid var(--hairline);
   border-radius: var(--radius-md);
@@ -763,11 +785,6 @@ section p {
   margin-bottom: 24px;
 }
 
-@media (max-width: 760px) {
-  .stats-row {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
 
 .stat-item {
   text-align: left;
@@ -818,7 +835,7 @@ section p {
    holds nothing but a year. */
 .pub-list li {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 172px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 172px);
   gap: 6px 28px;
   align-items: start;
   padding: 18px 8px;
@@ -1156,7 +1173,7 @@ section p {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 18px;
+  padding: clamp(14px, 1.8vw, 20px);
   gap: 8px;
 }
 
@@ -1464,7 +1481,7 @@ section p {
   background: var(--enterprise-green);
   color: var(--canvas);
   margin: 0;
-  padding: clamp(36px, 5vw, 56px) var(--gutter);
+  padding: clamp(32px, 5vw, 72px) var(--gutter);
   border-radius: 0;
 }
 
@@ -1571,7 +1588,7 @@ section p {
    past the viewport on each side and forced a horizontal scrollbar. */
 .site-footer {
   margin: 0;
-  padding: 32px var(--gutter) 22px;
+  padding: 32px var(--gutter) calc(22px + var(--safe-bottom));
   border-top: 1px solid var(--hairline);
   background: var(--stone);
 }
@@ -1676,8 +1693,8 @@ section p {
 /* ── Scroll-to-top ── */
 #top-btn {
   position: fixed;
-  bottom: 28px;
-  right: 28px;
+  bottom: calc(20px + var(--safe-bottom));
+  right: calc(20px + env(safe-area-inset-right, 0px));
   width: 44px;
   height: 44px;
   border-radius: var(--radius-pill);
@@ -1727,10 +1744,9 @@ section p {
 }
 
 /* ── Responsive ── */
-/* .proj-list, .cert-grid and .awards-grid are auto-fill/auto-fit grids and
-   .skills-grid is multi-column — all reflow on their own and need no column
-   overrides here. .stats-row carries its own 4→2 rule next to the component.
-   What is left below are genuine layout changes. */
+/* Breakpoints follow DESIGN.md: 1024 desktop/tablet seam, 900 mid-tablet,
+   768 hamburger (locked), 640 large-phone, 480 small, 360 extra-small.
+   .proj-list, .cert-grid, .awards-grid and .skills-grid reflow on their own. */
 @media (max-width: 1024px) {
   .about-grid {
     grid-template-columns: 1fr;
@@ -1744,6 +1760,20 @@ section p {
   .footer-social {
     grid-column: 1 / -1;
     justify-content: flex-start;
+  }
+
+  .nav-desktop {
+    gap: 0;
+    font-size: 12px;
+  }
+
+  .nav-desktop a {
+    padding: 8px 9px;
+  }
+
+  .nav-cta {
+    padding: 8px 14px;
+    font-size: 12px;
   }
 }
 
@@ -1777,6 +1807,11 @@ section p {
   .pub-authors {
     grid-row: 3;
   }
+
+  .stats-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1795,11 +1830,22 @@ section p {
   }
 
   .site-nav-wrap {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
-  /* Actions take the full row and socials wrap beneath, rather than the two
-     fighting for space on one line. */
+  .hero-main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .profile-photo-wrap {
+    width: fit-content;
+  }
+
+  .header-text h1 {
+    max-width: none;
+  }
+
   .hero-controls {
     flex-direction: column;
     align-items: flex-start;
@@ -1811,22 +1857,8 @@ section p {
   }
 
   .hero-actions .btn {
-    flex: 1 1 auto;
+    flex: 1 1 calc(50% - 4px);
     min-width: calc(50% - 4px);
-  }
-}
-
-@media (max-width: 700px) {
-  .header-text h1 {
-    max-width: none;
-  }
-
-  .hero-main {
-    grid-template-columns: 1fr;
-  }
-
-  .profile-photo-wrap {
-    width: fit-content;
   }
 
   .exp-card-head {
@@ -1847,35 +1879,37 @@ section p {
     left: -16px;
   }
 
-  section {
-    margin-bottom: 36px;
+  .section-heading {
+    flex-wrap: wrap;
+    gap: 8px 12px;
   }
+}
 
-  .hero-controls {
-    gap: 10px;
-  }
-
+@media (max-width: 640px) {
   .footer-inner {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+
+  .exp-item {
+    padding: 16px;
+  }
+
+  .award-item {
+    padding: 16px;
+  }
 }
 
 @media (max-width: 480px) {
-  /* Two cert columns still read fine at 375px with the fixed 4:3 ratio, and
-     that beats the single column auto-fill would otherwise give here. */
   .cert-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
   }
 
-  .hero-actions {
-    width: 100%;
-  }
-
   .hero-actions .btn {
-    flex: 1 1 auto;
+    flex: 1 1 100%;
     min-width: 0;
+    width: 100%;
   }
 
   .contact-actions {
@@ -1886,19 +1920,14 @@ section p {
     width: 100%;
   }
 
-  /* Inline padding stays on --gutter so the band's contents keep aligning with
-     the content column above it. */
   .dark-feature-band {
-    padding: 28px var(--gutter);
+    padding-block: 28px;
   }
 
-  .proj-text {
-    padding: 15px;
-  }
-
-  #top-btn {
-    bottom: 16px;
-    right: 16px;
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
 
   .pub-title {
@@ -1907,6 +1936,31 @@ section p {
 
   .cert-toggle {
     max-width: none;
+  }
+
+  .meta-chip {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  #top-btn {
+    bottom: calc(16px + var(--safe-bottom));
+    right: calc(16px + env(safe-area-inset-right, 0px));
+  }
+}
+
+@media (max-width: 360px) {
+  .cert-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .stat-item {
+    padding: 12px;
+  }
+
+  .profile-photo-wrap img {
+    width: 104px;
+    height: 104px;
   }
 }
 
@@ -1919,11 +1973,11 @@ section p {
   .proj-links-row a,
   .meta-chip-link,
   .topic-chip {
-    min-height: 42px;
+    min-height: 44px;
   }
 
   .footer-nav a {
-    min-height: 40px;
+    min-height: 44px;
   }
 
   .social-icons a,
