@@ -12,7 +12,10 @@
 
   <!-- PWA Manifest -->
   <link rel="manifest" href="/manifest.json" />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="theme-color" content="#0f3d38" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- RSS Feed -->
   <link rel="alternate" type="application/rss+xml" title="Gruhesh Kurra Blog" href="https://blogs.gruheshkurra.com/rss.xml" />
@@ -283,7 +286,7 @@
   <!-- ══ Header ══ -->
   <header class="site-header">
     <div class="hero-main">
-      <div class="profile-photo-wrap">
+      <div class="profile-photo-wrap hero-photo-card">
         <img src="assets/profile-picture.webp" alt="Gruhesh Sri Sai Karthik Kurra, AI Engineer and Researcher" width="200" height="200" decoding="async" fetchpriority="high" />
       </div>
       <div class="header-text">
@@ -435,128 +438,80 @@
       <h2>Research Publications</h2>
     </div>
     <ul class="pub-list">
-
-      <li>
-        <div class="pub-title-row">
+      <li class="pub-card">
+        <h3 class="pub-title">
           <a href="https://ieeexplore.ieee.org/document/11580466" target="_blank" class="pub-link">
-            <span class="pub-title">Morphology-Aware Nested Character Embeddings for Word Representation</span>
+            Morphology-Aware Nested Character Embeddings for Word Representation
             <span class="pub-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
           </a>
-        </div>
-        <div class="pub-meta-col">
-          <div class="pub-status"><span class="badge new">Accepted</span></div>
-          <span class="pub-venue">IEEE ICCCMLA 2025 · 2025</span>
-        </div>
+        </h3>
+        <p class="pub-meta"><span class="badge new">Accepted</span><span class="pub-venue">IEEE ICCCMLA 2025 · 2025</span></p>
         <p class="pub-desc">Character-level word representation: nested character sequences fused with hierarchical Transformers, CNNs, and BiLSTMs. <strong>+58.3 points on morphological-variant sentiment</strong> (91.67% vs 33.33% for Word2Vec), 99.0% on DBpedia and 93.5% on AG News classification, and 81.3% F1 on German NER (GermEval 2014). Morphology breakdown: 87.3% plurals, 85.9% past-tense, 81.5% superlatives, against 75.6% for FastText.</p>
       </li>
-
-      <li>
-        <div class="pub-title-row">
+      <li class="pub-card">
+        <h3 class="pub-title">
           <a href="https://zenodo.org/records/17217218" target="_blank" class="pub-link">
-            <span class="pub-title">BIE: Bit-Index Encoding for Efficient Neural Network Weight Compression</span>
+            BIE: Bit-Index Encoding for Efficient Neural Network Weight Compression
             <span class="pub-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
           </a>
-        </div>
-        <div class="pub-meta-col">
-          <div class="pub-status"><span class="badge new">Accepted</span></div>
-          <span class="pub-venue">Zenodo · September 2025</span>
-        </div>
+        </h3>
+        <p class="pub-meta"><span class="badge new">Accepted</span><span class="pub-venue">Zenodo · September 2025</span></p>
         <p class="pub-desc">Bit-level indexing for neural network weights: compression up to <strong>40× with MSE &lt; 10⁻⁶</strong> and minimal accuracy drop. Open-source implementation with optimised sparse kernels.</p>
       </li>
-
-      <li>
-        <div class="pub-title-row">
+      <li class="pub-card">
+        <h3 class="pub-title">
           <a href="https://zenodo.org/records/16732053" target="_blank" class="pub-link">
-            <span class="pub-title">Hybrid RAG-Enhanced Deepfake Detection: Combining Retrieval-Augmented Generation with Visual Inconsistency Analysis</span>
+            Hybrid RAG-Enhanced Deepfake Detection: Combining Retrieval-Augmented Generation with Visual Inconsistency Analysis
             <span class="pub-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
           </a>
-        </div>
-        <div class="pub-meta-col">
-          <div class="pub-status"><span class="badge new">Accepted</span></div>
-          <span class="pub-venue">Zenodo · August 2024</span>
-        </div>
+        </h3>
+        <p class="pub-meta"><span class="badge new">Accepted</span><span class="pub-venue">Zenodo · August 2024</span></p>
         <p class="pub-desc">Privacy-first deepfake detection: RAG semantic retrieval plus visual anomaly detection and an uncertainty-aware classifier.</p>
       </li>
-
-      <li>
-        <div class="pub-title-row">
-          <span class="pub-title">Voice-Activated AI for Seamless Computer Interaction</span>
-        </div>
-        <div class="pub-meta-col">
-          <div class="pub-status"><span class="badge new">Accepted</span></div>
-          <span class="pub-venue">IJNRD · January 2025</span>
-        </div>
+      <li class="pub-card">
+        <h3 class="pub-title">Voice-Activated AI for Seamless Computer Interaction</h3>
+        <p class="pub-meta"><span class="badge new">Accepted</span><span class="pub-venue">IJNRD · January 2025</span></p>
         <p class="pub-desc">Voice command system with intent classification and system control for human–computer interaction.</p>
       </li>
-
-      <li>
-        <div class="pub-title-row">
-          <span class="pub-title">Global Remote RAM Sharing: A Novel Framework for Distributed Computational Systems</span>
-        </div>
-        <div class="pub-meta-col">
-          <div class="pub-status"><span class="badge new">Accepted</span></div>
-          <span class="pub-venue">IJNRD · December 2024</span>
-        </div>
+      <li class="pub-card">
+        <h3 class="pub-title">Global Remote RAM Sharing: A Novel Framework for Distributed Computational Systems</h3>
+        <p class="pub-meta"><span class="badge new">Accepted</span><span class="pub-venue">IJNRD · December 2024</span></p>
         <p class="pub-desc">Remote RAM sharing for distributed systems under compute and memory constraints.</p>
       </li>
-
-      <li>
-        <div class="pub-title-row">
-          <span class="pub-title">Dynamic Auto-Finetuning of Language Models Based on Confidence-Driven Knowledge Integration</span>
-        </div>
-        <div class="pub-meta-col">
-          <div class="pub-status"><span class="badge new">Accepted</span></div>
-          <span class="pub-venue">IJNRD · November 2024</span>
-        </div>
+      <li class="pub-card">
+        <h3 class="pub-title">Dynamic Auto-Finetuning of Language Models Based on Confidence-Driven Knowledge Integration</h3>
+        <p class="pub-meta"><span class="badge new">Accepted</span><span class="pub-venue">IJNRD · November 2024</span></p>
         <p class="pub-desc">Confidence scores trigger selective fine-tuning without a full retrain, using confidence metrics and knowledge integration.</p>
       </li>
-
     </ul>
 
     <p class="sub-label">Under Review &amp; Working Papers</p>
     <ul class="pub-list">
-
-      <li>
-        <div class="pub-title-row">
-          <span class="pub-title">Prism Tuning: Repulsion-Trained Seed Embeddings in a Frozen Transformer for Non-Redundant Generation</span>
-        </div>
-        <div class="pub-meta-col">
-          <div class="pub-status"><span class="badge badge-review">Under Review</span></div>
-          <span class="pub-venue">IEEE NEPCON 2026 · Submitted 2026</span>
-        </div>
+      <li class="pub-card">
+        <h3 class="pub-title">Prism Tuning: Repulsion-Trained Seed Embeddings in a Frozen Transformer for Non-Redundant Generation</h3>
+        <p class="pub-meta"><span class="badge badge-review">Under Review</span><span class="pub-venue">IEEE NEPCON 2026 · Submitted 2026</span></p>
         <p class="pub-desc">K learnable seed vectors trained by output-level repulsion inside one frozen transformer, giving K non-redundant generation streams from a single prompt. Diversity is paid once at training, with zero overhead at inference, unlike generate-then-deduplicate. Uses a generated-position hidden-state surrogate for non-differentiable decoded text, corrects representation anisotropy in the repulsion loss, and splits each seed into shared-style / repelled-content parts to block style-only divergence.</p>
       </li>
-
-      <li>
-        <div class="pub-title-row">
+      <li class="pub-card">
+        <h3 class="pub-title">
           <a href="https://github.com/GruheshKurra/radar_deepfake" target="_blank" class="pub-link">
-            <span class="pub-title">Dual-Stream Artifact Detection with Iterative Evidence Refinement for Frame-Level Deepfake Recognition</span>
+            Dual-Stream Artifact Detection with Iterative Evidence Refinement for Frame-Level Deepfake Recognition
             <span class="pub-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
           </a>
-        </div>
-        <div class="pub-meta-col">
-          <div class="pub-status"><span class="badge badge-review">Under Review</span></div>
-          <span class="pub-venue">IEEE NEPCON 2026 · Submitted 2026</span>
-        </div>
+        </h3>
+        <p class="pub-meta"><span class="badge badge-review">Under Review</span><span class="pub-venue">IEEE NEPCON 2026 · Submitted 2026</span></p>
         <p class="pub-desc">Boundary (Sobel-edge) and frequency (multi-band FFT) streams trained under an orthogonality penalty and fused via iterative cross-attention (ERM). Trained on 227,504 frames from FaceForensics++, Celeb-DF v2, and WildDeepfake. <strong>96.3% AUC</strong> on the video-disjoint test split (87.1% on Celeb-DF alone), after an internal audit caught train/test video leakage in WildDeepfake and the paper cites the corrected number over the inflated 95.6% headline. Code, frame corpus, audit script, and trained checkpoint public: <a href="https://github.com/GruheshKurra/radar_deepfake" target="_blank" class="text-link">GitHub</a> · <a href="https://www.kaggle.com/datasets/gruheshkurra/radar-deepfake-frames" target="_blank" class="text-link">Kaggle dataset</a>.</p>
       </li>
-
-      <li>
-        <div class="pub-title-row">
-          <span class="pub-title">RADAR: Reasoning-Augmented Deepfake Artifact Recognition via Multi-Branch Evidence Aggregation</span>
-        </div>
-        <div class="pub-meta-col">
-          <div class="pub-status"><span class="badge badge-review">Preprint</span></div>
-          <span class="pub-venue">2026</span>
-        </div>
+      <li class="pub-card">
+        <h3 class="pub-title">RADAR: Reasoning-Augmented Deepfake Artifact Recognition via Multi-Branch Evidence Aggregation</h3>
+        <p class="pub-meta"><span class="badge badge-review">Preprint</span><span class="pub-venue">2026</span></p>
         <p class="pub-desc">Deepfake detection as structured evidence aggregation: three specialised branches (skin texture, boundary aliasing, AI-generation fingerprints) feed an iterative cross-attention reasoning module (R-Former) for per-artifact confidence scores and saliency maps, trained from random initialisation to remove ImageNet bias. Architecture and evaluation protocol; empirical validation is in the companion Dual-Stream study above.</p>
       </li>
-
     </ul>
   </section>
 
   <!-- ══ Experience ══ -->
-  <section id="experience">
+  <section id="experience" class="surface-band">
     <div class="section-heading">
       <span class="section-eyebrow" aria-hidden="true">03</span>
       <h2>Experience</h2>
@@ -796,7 +751,7 @@
   </section>
 
   <!-- ══ Skills ══ -->
-  <section id="skills">
+  <section id="skills" class="surface-band">
     <div class="section-heading">
       <span class="section-eyebrow" aria-hidden="true">05</span>
       <h2>Technical Skills</h2>
@@ -1045,7 +1000,7 @@
   </section>
 
   <!-- ══ Awards ══ -->
-  <section id="awards">
+  <section id="awards" class="surface-band surface-band-green">
     <div class="section-heading">
       <span class="section-eyebrow" aria-hidden="true">07</span>
       <h2>Awards &amp; Honours</h2>
@@ -1171,7 +1126,7 @@
   navToggle.addEventListener('click', () => setNavOpen(!navWrap.classList.contains('nav-open')));
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 768 && navWrap.classList.contains('nav-open')) {
+    if (window.innerWidth > 960 && navWrap.classList.contains('nav-open')) {
       setNavOpen(false);
     }
   });
@@ -1241,7 +1196,7 @@
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
     document.documentElement.classList.add('js-reveal');
     const revealEls = Array.from(document.querySelectorAll(
-      '.section-heading, .stat-item, .exp-item, .pub-list li, .proj-entry, .skills-grid, .cert-grid, .award-item'
+      '.section-heading, .stat-item, .exp-item, .pub-card, .proj-entry, .skills-grid, .cert-grid, .award-item'
     ));
     revealEls.forEach(el => el.classList.add('reveal'));
     revealEls.forEach(el => {
