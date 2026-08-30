@@ -13,9 +13,6 @@
   <!-- PWA Manifest -->
   <link rel="manifest" href="/manifest.json" />
   <meta name="theme-color" content="#0f3d38" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- RSS Feed -->
   <link rel="alternate" type="application/rss+xml" title="Gruhesh Kurra Blog" href="https://blogs.gruheshkurra.com/rss.xml" />
@@ -286,48 +283,52 @@
   <!-- ══ Header ══ -->
   <header class="site-header">
     <div class="hero-main">
-      <div class="profile-photo-wrap hero-photo-card">
+      <div class="profile-photo-wrap">
         <img src="assets/profile-picture.webp" alt="Gruhesh Sri Sai Karthik Kurra, AI Engineer and Researcher" width="200" height="200" decoding="async" fetchpriority="high" />
       </div>
-      <div class="header-text">
+      <div class="hero-titles">
         <p class="mono-label">AI Engineer · Researcher · Founder</p>
         <h1>Gruhesh Sri Sai Karthik Kurra</h1>
-        <p class="subtitle">I build AI systems from scratch and ship them to the real world.</p>
-        <div class="header-meta">
-          <span class="meta-chip">Hyderabad, India</span>
-          <span class="meta-chip">MSc Computing (AI &amp; ML), Imperial College London, from Sep 2026</span>
-          <a href="tel:+918008258065" class="meta-chip meta-chip-link">+91 8008258065</a>
-          <span class="meta-chip meta-chip-accent">Open to roles &amp; collabs</span>
-        </div>
-        <div class="hero-controls">
+      </div>
+      <p class="subtitle">I build AI systems from scratch and ship them: transformers, on-device detectors, and published research.</p>
+      <ul class="hero-facts">
+        <li>IEEE ICCCMLA 2025</li>
+        <li>Imperial MSc, Sep 2026</li>
+        <li>CGPA 9.72</li>
+      </ul>
+      <div class="header-meta">
+        <span class="meta-chip">Hyderabad, India</span>
+        <a href="tel:+918008258065" class="meta-chip meta-chip-link">+91 8008258065</a>
+        <span class="meta-chip meta-chip-accent">Open to roles &amp; collabs</span>
+      </div>
+      <div class="hero-controls">
         <div class="hero-actions">
           <a href="mailto:gruheshkurra2@gmail.com" class="btn btn-primary">Get in touch</a>
           <a href="assets/Resume.pdf" target="_blank" class="btn btn-secondary">Download CV</a>
         </div>
         <div class="social-icons">
-        <a href="https://x.com/Karthik__kurra" target="_blank" aria-label="Twitter / X">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.26 5.632L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
-        <a href="https://github.com/GruheshKurra" target="_blank" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.341-3.369-1.341-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/gruheshkurra/" target="_blank" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="https://huggingface.co/karthik-2905" target="_blank" aria-label="Hugging Face">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.025 1.13c-5.77 0-10.449 4.647-10.449 10.378 0 1.112.178 2.181.503 3.185.064-.222.203-.444.416-.577a.96.96 0 0 1 .524-.15c.293 0 .584.124.84.284.278.173.48.408.71.694.226.282.458.611.684.951v-.014c.017-.324.106-.622.264-.874s.403-.487.762-.543c.3-.047.596.06.787.203s.31.313.4.467c.15.257.212.468.233.542.01.026.653 1.552 1.657 2.54.616.605 1.01 1.223 1.082 1.912.055.537-.096 1.059-.38 1.572.637.121 1.294.187 1.967.187.657 0 1.298-.063 1.921-.178-.287-.517-.44-1.041-.384-1.581.07-.69.465-1.307 1.081-1.913 1.004-.987 1.647-2.513 1.657-2.539.021-.074.083-.285.233-.542.09-.154.208-.323.4-.467a1.08 1.08 0 0 1 .787-.203c.359.056.604.29.762.543s.247.55.265.874v.015c.225-.34.457-.67.683-.952.23-.286.432-.52.71-.694.257-.16.547-.284.84-.285a.97.97 0 0 1 .524.151c.228.143.373.388.43.625l.006.04a10.3 10.3 0 0 0 .534-3.273c0-5.731-4.678-10.378-10.449-10.378M8.327 6.583a1.5 1.5 0 0 1 .713.174 1.487 1.487 0 0 1 .617 2.013c-.183.343-.762-.214-1.102-.094-.38.134-.532.914-.917.71a1.487 1.487 0 0 1 .69-2.803m7.486 0a1.487 1.487 0 0 1 .689 2.803c-.385.204-.536-.576-.916-.71-.34-.12-.92.437-1.103.094a1.487 1.487 0 0 1 .617-2.013 1.5 1.5 0 0 1 .713-.174m-10.68 1.55a.96.96 0 1 1 0 1.921.96.96 0 0 1 0-1.92m13.838 0a.96.96 0 1 1 0 1.92.96.96 0 0 1 0-1.92M8.489 11.458c.588.01 1.965 1.157 3.572 1.164 1.607-.007 2.984-1.155 3.572-1.164.196-.003.305.12.305.454 0 .886-.424 2.328-1.563 3.202-.22-.756-1.396-1.366-1.63-1.32q-.011.001-.02.006l-.044.026-.01.008-.03.024q-.018.017-.035.036l-.032.04a1 1 0 0 0-.058.09l-.014.025q-.049.088-.11.19a1 1 0 0 1-.083.116 1.2 1.2 0 0 1-.173.18q-.035.029-.075.058a1.3 1.3 0 0 1-.251-.243 1 1 0 0 1-.076-.107c-.124-.193-.177-.363-.337-.444-.034-.016-.104-.008-.2.022q-.094.03-.216.087-.06.028-.125.063l-.13.074q-.067.04-.136.086a3 3 0 0 0-.135.096 3 3 0 0 0-.26.219 2 2 0 0 0-.12.121 2 2 0 0 0-.106.128l-.002.002a2 2 0 0 0-.09.132l-.001.001a1.2 1.2 0 0 0-.105.212q-.013.036-.024.073c-1.139-.875-1.563-2.317-1.563-3.203 0-.334.109-.457.305-.454m.836 10.354c.824-1.19.766-2.082-.365-3.194-1.13-1.112-1.789-2.738-1.789-2.738s-.246-.945-.806-.858-.97 1.499.202 2.362c1.173.864-.233 1.45-.685.64-.45-.812-1.683-2.896-2.322-3.295s-1.089-.175-.938.647 2.822 2.813 2.562 3.244-1.176-.506-1.176-.506-2.866-2.567-3.49-1.898.473 1.23 2.037 2.16c1.564.932 1.686 1.178 1.464 1.53s-3.675-2.511-4-1.297c-.323 1.214 3.524 1.567 3.287 2.405-.238.839-2.71-1.587-3.216-.642-.506.946 3.49 2.056 3.522 2.064 1.29.33 4.568 1.028 5.713-.624m5.349 0c-.824-1.19-.766-2.082.365-3.194 1.13-1.112 1.789-2.738 1.789-2.738s.246-.945.806-.858.97 1.499-.202 2.362c-1.173.864.233 1.45.685.64.451-.812 1.683-2.896 2.322-3.295s1.089-.175.938.647-2.822 2.813-2.562 3.244 1.176-.506 1.176-.506 2.866-2.567 3.49-1.898-.473 1.23-2.037 2.16c-1.564.932-1.686 1.178-1.464 1.53s3.675-2.511 4-1.297c.323 1.214-3.524 1.567-3.287 2.405.238.839 2.71-1.587 3.216-.642.506.946-3.49 2.056-3.522 2.064-1.29.33-4.568 1.028-5.713-.624"/></svg>
-        </a>
-        <a href="https://dev.to/gruhesh_kurra_6eb933146da" target="_blank" aria-label="dev.to">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="5" width="22" height="14" rx="3" fill="currentColor"/><text x="12" y="15.4" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="7.6" font-weight="700" letter-spacing="0.2" fill="#fff">DEV</text></svg>
-        </a>
-        <a href="https://blogs.gruheshkurra.com" target="_blank" aria-label="Blog">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 14H7v-2h10v2zm0-4H7v-2h10v2zm0-4H7V6h10v2z"/></svg>
-        </a>
-        <a href="mailto:gruheshkurra2@gmail.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        </a>
-      </div>
-      </div>
+          <a href="https://x.com/Karthik__kurra" target="_blank" aria-label="Twitter / X">
+            <img src="assets/skill-icons/x.svg" alt="" width="18" height="18">
+          </a>
+          <a href="https://github.com/GruheshKurra" target="_blank" aria-label="GitHub">
+            <img src="assets/skill-icons/github.svg" alt="" width="18" height="18">
+          </a>
+          <a href="https://www.linkedin.com/in/gruheshkurra/" target="_blank" aria-label="LinkedIn">
+            <img src="assets/skill-icons/linkedin.svg" alt="" width="18" height="18">
+          </a>
+          <a href="https://huggingface.co/karthik-2905" target="_blank" aria-label="Hugging Face">
+            <img src="assets/skill-icons/huggingface.svg" alt="" width="18" height="18">
+          </a>
+          <a href="https://dev.to/gruhesh_kurra_6eb933146da" target="_blank" aria-label="dev.to">
+            <img src="assets/skill-icons/devdotto.svg" alt="" width="18" height="18">
+          </a>
+          <a href="https://blogs.gruheshkurra.com" target="_blank" aria-label="Blog">
+            <img src="assets/skill-icons/rss.svg" alt="" width="18" height="18">
+          </a>
+          <a href="mailto:gruheshkurra2@gmail.com" aria-label="Email">
+            <img src="assets/skill-icons/gmail.svg" alt="" width="18" height="18">
+          </a>
+        </div>
       </div>
     </div>
   </header>
@@ -399,7 +400,7 @@
         <span class="stat-label">Open-Source Projects</span>
       </div>
       <div class="stat-item">
-        <span class="stat-num">21</span>
+        <span class="stat-num">20</span>
         <span class="stat-label">Certifications</span>
       </div>
       <div class="stat-item">
@@ -621,131 +622,277 @@
 
     <div class="proj-list">
 
-      <div class="proj-entry">
-        <img class="proj-thumb" width="640" height="360" src="assets/projects/deepguard.gif" alt="DeepGuard project" />
-        <div class="proj-text">
-          <div><a href="https://github.com/GruheshKurra/Deepguard" class="proj-name" target="_blank">DeepGuard: On-Device Deepfake Detection</a><span class="proj-tags-inline">PyTorch · Core ML · EfficientNet · FastAPI · SwiftUI</span></div>
-          <p>EfficientNet-B1 trained on 25k images; <strong>98.62% accuracy</strong> in 55 min on M4 MacBook. Converted to 26MB Core ML model for real-time on-device iOS inference in &lt;500ms. Full-stack FastAPI + React web app.</p>
-          <div class="proj-links-row"><a href="https://github.com/GruheshKurra/Deepguard" target="_blank">GitHub</a><a href="https://www.youtube.com/watch?v=4MmHJNjLRy4" target="_blank">▶ Demo Video</a></div>
+      <article class="proj-entry">
+        <div class="proj-head">
+          <img class="proj-thumb" width="88" height="88" src="assets/projects/deepguard.gif" alt="DeepGuard project" />
+          <div class="proj-id">
+            <a href="https://github.com/GruheshKurra/Deepguard" class="proj-name" target="_blank">DeepGuard</a>
+            <span class="proj-tags-inline">On-device deepfake detection</span>
+          </div>
         </div>
-      </div>
+        <p>EfficientNet-B1 trained on 25k images; 98.62% accuracy in 55 min on M4 MacBook. Converted to a 26MB Core ML model for real-time iOS inference in &lt;500ms.</p>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-label">Accuracy</span><span class="proj-stat-val">98.62%</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Model size</span><span class="proj-stat-val">26MB</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Latency</span><span class="proj-stat-val">&lt;500ms</span></div>
+        </div>
+        <div class="proj-links-row">
+          <a href="https://github.com/GruheshKurra/Deepguard" target="_blank">GitHub</a>
+          <a href="https://www.youtube.com/watch?v=4MmHJNjLRy4" target="_blank">Demo</a>
+        </div>
+      </article>
 
-      <div class="proj-entry">
-        <img class="proj-thumb" width="640" height="360" src="assets/projects/radar-deepfake.webp" alt="Dual-Stream deepfake detection" loading="lazy" />
-        <div class="proj-text">
-          <div><a href="https://github.com/GruheshKurra/radar_deepfake" class="proj-name" target="_blank">Dual-Stream Deepfake Detection</a><span class="proj-tags-inline">ViT · FFT · Sobel · Cross-Attention · Under Review</span></div>
-          <p>Boundary and frequency streams under an orthogonality penalty, fused by an iterative cross-attention refinement module. <strong>96.3% AUC</strong> on the video-disjoint split (87.1% on Celeb-DF alone) over 227,504 frames from FaceForensics++, Celeb-DF v2, and WildDeepfake. Code, frame corpus, leakage-audit script, and checkpoint all public.</p>
-          <div class="proj-links-row"><a href="https://github.com/GruheshKurra/radar_deepfake" target="_blank">GitHub</a><a href="https://www.kaggle.com/datasets/gruheshkurra/radar-deepfake-frames" target="_blank">Kaggle Dataset</a></div>
+      <article class="proj-entry">
+        <div class="proj-head">
+          <img class="proj-thumb" width="88" height="88" src="assets/projects/radar-deepfake.webp" alt="Dual-Stream deepfake detection" loading="eager" />
+          <div class="proj-id">
+            <a href="https://github.com/GruheshKurra/radar_deepfake" class="proj-name" target="_blank">Dual-Stream Deepfake Detection</a>
+            <span class="proj-tags-inline">ViT · FFT · Cross-attention</span>
+          </div>
         </div>
-      </div>
+        <p>Boundary and frequency streams under an orthogonality penalty, fused by iterative cross-attention. 96.3% AUC on a video-disjoint split over 227,504 frames.</p>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-label">AUC</span><span class="proj-stat-val">96.3%</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Frames</span><span class="proj-stat-val">227k</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Celeb-DF</span><span class="proj-stat-val">87.1%</span></div>
+        </div>
+        <div class="proj-links-row">
+          <a href="https://github.com/GruheshKurra/radar_deepfake" target="_blank">GitHub</a>
+          <a href="https://www.kaggle.com/datasets/gruheshkurra/radar-deepfake-frames" target="_blank">Dataset</a>
+        </div>
+      </article>
 
-      <div class="proj-entry">
-        <img class="proj-thumb" width="640" height="360" src="assets/projects/mance-nlp.webp" alt="MANCE morphology-aware embeddings" loading="lazy" />
-        <div class="proj-text">
-          <div><a href="https://github.com/GruheshKurra/MANCE-NLP" class="proj-name" target="_blank">MANCE: Morphology-Aware Nested Character Embeddings</a><span class="proj-tags-inline">PyTorch · NLP · Transformers · BiLSTM · Published</span></div>
-          <p>Words modelled as nested character sequences from n-grams up to the full word. <strong>+58.3 points on morphological-variant sentiment</strong> over Word2Vec, 99.0% DBpedia, 93.5% AG News, 81.3% F1 on German NER. Published at IEEE ICCCMLA 2025.</p>
-          <div class="proj-links-row"><a href="https://github.com/GruheshKurra/MANCE-NLP" target="_blank">GitHub</a><a href="https://ieeexplore.ieee.org/document/11580466" target="_blank">IEEE Paper</a></div>
+      <article class="proj-entry">
+        <div class="proj-head">
+          <img class="proj-thumb" width="88" height="88" src="assets/projects/mance-nlp.webp" alt="MANCE morphology-aware embeddings" loading="eager" />
+          <div class="proj-id">
+            <a href="https://github.com/GruheshKurra/MANCE-NLP" class="proj-name" target="_blank">MANCE</a>
+            <span class="proj-tags-inline">Morphology-aware embeddings</span>
+          </div>
         </div>
-      </div>
+        <p>Words modelled as nested character sequences from n-grams up to the full word. +58.3 points on morphological-variant sentiment over Word2Vec. IEEE ICCCMLA 2025.</p>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-label">Morph. gain</span><span class="proj-stat-val">+58.3</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">DBpedia</span><span class="proj-stat-val">99.0%</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">AG News</span><span class="proj-stat-val">93.5%</span></div>
+        </div>
+        <div class="proj-links-row">
+          <a href="https://github.com/GruheshKurra/MANCE-NLP" target="_blank">GitHub</a>
+          <a href="https://ieeexplore.ieee.org/document/11580466" target="_blank">Paper</a>
+        </div>
+      </article>
 
-      <div class="proj-entry">
-        <img class="proj-thumb" width="640" height="360" src="assets/projects/transformers-from-scratch.webp" alt="Transformers From Scratch" />
-        <div class="proj-text">
-          <div><a href="https://github.com/GruheshKurra/TransformersFromScratch" class="proj-name" target="_blank">Transformers From Scratch</a><span class="proj-tags-inline">PyTorch · Transformer · BPE · BLEU</span></div>
-          <p>Replicated "Attention Is All You Need": full encoder-decoder with BLEU benchmarks. Separately implemented GPT-2 (124M params) from scratch with BPE tokeniser and full training loop.</p>
-          <div class="proj-links-row"><a href="https://github.com/GruheshKurra/TransformersFromScratch" target="_blank">GitHub</a><a href="https://github.com/GruheshKurra/FirstGPTFromScratch" target="_blank">GPT-2 Repo</a></div>
+      <article class="proj-entry">
+        <div class="proj-head">
+          <img class="proj-thumb" width="88" height="88" src="assets/projects/transformers-from-scratch.webp" alt="Transformers From Scratch" />
+          <div class="proj-id">
+            <a href="https://github.com/GruheshKurra/TransformersFromScratch" class="proj-name" target="_blank">Transformers From Scratch</a>
+            <span class="proj-tags-inline">Encoder-decoder · GPT-2</span>
+          </div>
         </div>
-      </div>
+        <p>Replicated Attention Is All You Need with BLEU benchmarks, then a GPT-2 (124M) from scratch with BPE and a full training loop.</p>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-label">Paper model</span><span class="proj-stat-val">Vaswani</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">GPT-2</span><span class="proj-stat-val">124M</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Tokeniser</span><span class="proj-stat-val">BPE</span></div>
+        </div>
+        <div class="proj-links-row">
+          <a href="https://github.com/GruheshKurra/TransformersFromScratch" target="_blank">GitHub</a>
+          <a href="https://github.com/GruheshKurra/FirstGPTFromScratch" target="_blank">GPT-2</a>
+        </div>
+      </article>
 
-      <div class="proj-entry">
-        <img class="proj-thumb" width="640" height="360" src="assets/projects/bit-index-encoding.webp" alt="BIE Bit-Index Encoding" />
-        <div class="proj-text">
-          <div><a href="https://github.com/GruheshKurra/bit-index-encoding-research-" class="proj-name" target="_blank">BIE: Bit-Index Encoding</a><span class="proj-tags-inline">Python · NumPy · Numba · Compression · Published</span></div>
-          <p>Neural weight compression at <strong>40× with MSE &lt; 10⁻⁶</strong>. Zenodo 2025 release with open-source sparse kernels and a benchmarking suite.</p>
-          <div class="proj-links-row"><a href="https://github.com/GruheshKurra/bit-index-encoding-research-" target="_blank">GitHub</a><a href="https://zenodo.org/records/17217218" target="_blank">Paper</a></div>
+      <article class="proj-entry">
+        <div class="proj-head">
+          <img class="proj-thumb" width="88" height="88" src="assets/projects/bit-index-encoding.webp" alt="BIE Bit-Index Encoding" />
+          <div class="proj-id">
+            <a href="https://github.com/GruheshKurra/bit-index-encoding-research-" class="proj-name" target="_blank">BIE: Bit-Index Encoding</a>
+            <span class="proj-tags-inline">Neural weight compression</span>
+          </div>
         </div>
-      </div>
+        <p>Neural weight compression at 40× with MSE &lt; 10⁻⁶. Zenodo 2025 release with open-source sparse kernels and a benchmarking suite.</p>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-label">Compression</span><span class="proj-stat-val">40×</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">MSE</span><span class="proj-stat-val">&lt;10⁻⁶</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Year</span><span class="proj-stat-val">2025</span></div>
+        </div>
+        <div class="proj-links-row">
+          <a href="https://github.com/GruheshKurra/bit-index-encoding-research-" target="_blank">GitHub</a>
+          <a href="https://zenodo.org/records/17217218" target="_blank">Paper</a>
+        </div>
+      </article>
 
-      <div class="proj-entry">
-        <img class="proj-thumb" width="640" height="360" src="assets/projects/clinical-trials.webp" alt="Clinical Trial Similarity Analysis" />
-        <div class="proj-text">
-          <div><a href="https://github.com/GruheshKurra/Clinical-Trial-Similarity-Analysis" class="proj-name" target="_blank">Clinical Trial Similarity Analysis</a><span class="proj-tags-inline">PubMedBERT · FAISS · NLP · Python</span></div>
-          <p>PubMedBERT clinical NLP pipeline for trial matching. Achieved <strong>99.5% accuracy</strong> on biomedical similarity tasks using domain-specific pre-trained embeddings and FAISS vector retrieval.</p>
-          <div class="proj-links-row"><a href="https://github.com/GruheshKurra/Clinical-Trial-Similarity-Analysis" target="_blank">GitHub</a></div>
+      <article class="proj-entry">
+        <div class="proj-head">
+          <img class="proj-thumb" width="88" height="88" src="assets/projects/clinical-trials.webp" alt="Clinical Trial Similarity Analysis" />
+          <div class="proj-id">
+            <a href="https://github.com/GruheshKurra/Clinical-Trial-Similarity-Analysis" class="proj-name" target="_blank">Clinical Trial Similarity</a>
+            <span class="proj-tags-inline">PubMedBERT · FAISS</span>
+          </div>
         </div>
-      </div>
+        <p>PubMedBERT pipeline for trial matching. 99.5% accuracy on biomedical similarity with domain embeddings and FAISS retrieval.</p>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-label">Accuracy</span><span class="proj-stat-val">99.5%</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Encoder</span><span class="proj-stat-val">PubMedBERT</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Index</span><span class="proj-stat-val">FAISS</span></div>
+        </div>
+        <div class="proj-links-row">
+          <a href="https://github.com/GruheshKurra/Clinical-Trial-Similarity-Analysis" target="_blank">GitHub</a>
+        </div>
+      </article>
 
-      <div class="proj-entry">
-        <img class="proj-thumb" width="640" height="360" src="assets/projects/sweagent.webp" alt="Zynthetix SWE Agent" />
-        <div class="proj-text">
-          <div><a href="https://github.com/GruheshKurra/Zynthetix-SWE-Agent" class="proj-name" target="_blank">Zynthetix SWE Agent</a><span class="proj-tags-inline">Python · GitHub Actions · LLM · Agentic</span></div>
-          <p>Agent that reads GitHub issues, writes fix patches, and opens PRs with no always-on server. Runs on GitHub Actions with Python and LLM-based code editing.</p>
-          <div class="proj-links-row"><a href="https://github.com/GruheshKurra/Zynthetix-SWE-Agent" target="_blank">GitHub</a></div>
+      <article class="proj-entry">
+        <div class="proj-head">
+          <img class="proj-thumb" width="88" height="88" src="assets/projects/sweagent.webp" alt="Zynthetix SWE Agent" />
+          <div class="proj-id">
+            <a href="https://github.com/GruheshKurra/Zynthetix-SWE-Agent" class="proj-name" target="_blank">Zynthetix SWE Agent</a>
+            <span class="proj-tags-inline">GitHub Actions · LLM</span>
+          </div>
         </div>
-      </div>
+        <p>Reads GitHub issues, writes fix patches, and opens PRs with no always-on server. Python and LLM-based code editing on GitHub Actions.</p>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-label">Runtime</span><span class="proj-stat-val">Actions</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Type</span><span class="proj-stat-val">Agentic</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Stack</span><span class="proj-stat-val">Python</span></div>
+        </div>
+        <div class="proj-links-row">
+          <a href="https://github.com/GruheshKurra/Zynthetix-SWE-Agent" target="_blank">GitHub</a>
+        </div>
+      </article>
 
-      <div class="proj-entry">
-        <img class="proj-thumb" width="640" height="360" src="assets/projects/gnn-suite.webp" alt="GNN Suite" />
-        <div class="proj-text">
-          <div><a href="https://github.com/GruheshKurra/GraphNeuralNetworks-GNN-" class="proj-name" target="_blank">GNN Suite</a><span class="proj-tags-inline">PyTorch Geometric · GCN · GraphSAGE · GAT</span></div>
-          <p>GCN, GraphSAGE, and GAT implementations with <strong>81.9% accuracy</strong> on node classification benchmarks. Full comparison framework across architectures with detailed ablation studies.</p>
-          <div class="proj-links-row"><a href="https://github.com/GruheshKurra/GraphNeuralNetworks-GNN-" target="_blank">GitHub</a></div>
+      <article class="proj-entry">
+        <div class="proj-head">
+          <img class="proj-thumb" width="88" height="88" src="assets/projects/gnn-suite.webp" alt="GNN Suite" />
+          <div class="proj-id">
+            <a href="https://github.com/GruheshKurra/GraphNeuralNetworks-GNN-" class="proj-name" target="_blank">GNN Suite</a>
+            <span class="proj-tags-inline">GCN · GraphSAGE · GAT</span>
+          </div>
         </div>
-      </div>
+        <p>GCN, GraphSAGE, and GAT with 81.9% accuracy on node classification, plus a comparison framework and ablation studies.</p>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-label">Accuracy</span><span class="proj-stat-val">81.9%</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Models</span><span class="proj-stat-val">3</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Task</span><span class="proj-stat-val">Node class.</span></div>
+        </div>
+        <div class="proj-links-row">
+          <a href="https://github.com/GruheshKurra/GraphNeuralNetworks-GNN-" target="_blank">GitHub</a>
+        </div>
+      </article>
 
-      <div class="proj-entry">
-        <img class="proj-thumb" width="640" height="360" src="assets/projects/gan-project.webp" alt="GAN Implementation" />
-        <div class="proj-text">
-          <div><a href="https://github.com/GruheshKurra/GAN_Implementation" class="proj-name" target="_blank">GAN Implementation</a><span class="proj-tags-inline">PyTorch · GAN · DCGAN · MNIST</span></div>
-          <p>GAN trained on MNIST with multiple architectures (vanilla GAN, DCGAN). Full training pipeline with loss curves, generation quality metrics, and latent space interpolation.</p>
-          <div class="proj-links-row"><a href="https://github.com/GruheshKurra/GAN_Implementation" target="_blank">GitHub</a></div>
+      <article class="proj-entry">
+        <div class="proj-head">
+          <img class="proj-thumb" width="88" height="88" src="assets/projects/gan-project.webp" alt="GAN Implementation" />
+          <div class="proj-id">
+            <a href="https://github.com/GruheshKurra/GAN_Implementation" class="proj-name" target="_blank">GAN Implementation</a>
+            <span class="proj-tags-inline">Vanilla GAN · DCGAN</span>
+          </div>
         </div>
-      </div>
+        <p>GANs trained on MNIST with loss curves, generation metrics, and latent-space interpolation.</p>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-label">Dataset</span><span class="proj-stat-val">MNIST</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Models</span><span class="proj-stat-val">2</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Stack</span><span class="proj-stat-val">PyTorch</span></div>
+        </div>
+        <div class="proj-links-row">
+          <a href="https://github.com/GruheshKurra/GAN_Implementation" target="_blank">GitHub</a>
+        </div>
+      </article>
 
-      <div class="proj-entry">
-        <img class="proj-thumb" width="640" height="360" src="assets/projects/diffusion-models.webp" alt="Diffusion Model From Scratch" />
-        <div class="proj-text">
-          <div><a href="https://github.com/GruheshKurra/DiffusionModelFromScratch" class="proj-name" target="_blank">Diffusion Model From Scratch</a><span class="proj-tags-inline">PyTorch · DDPM · UNet · Generative</span></div>
-          <p>DDPM from math to generated images. ~130K parameter model with full noise schedule, denoising UNet, and sample generation.</p>
-          <div class="proj-links-row"><a href="https://github.com/GruheshKurra/DiffusionModelFromScratch" target="_blank">GitHub</a></div>
+      <article class="proj-entry">
+        <div class="proj-head">
+          <img class="proj-thumb" width="88" height="88" src="assets/projects/diffusion-models.webp" alt="Diffusion Model From Scratch" />
+          <div class="proj-id">
+            <a href="https://github.com/GruheshKurra/DiffusionModelFromScratch" class="proj-name" target="_blank">Diffusion From Scratch</a>
+            <span class="proj-tags-inline">DDPM · UNet</span>
+          </div>
         </div>
-      </div>
+        <p>DDPM from math to generated images: ~130K-parameter UNet, noise schedule, and sample generation.</p>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-label">Params</span><span class="proj-stat-val">~130K</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Type</span><span class="proj-stat-val">DDPM</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Net</span><span class="proj-stat-val">UNet</span></div>
+        </div>
+        <div class="proj-links-row">
+          <a href="https://github.com/GruheshKurra/DiffusionModelFromScratch" target="_blank">GitHub</a>
+        </div>
+      </article>
 
-      <div class="proj-entry">
-        <img class="proj-thumb" width="640" height="360" src="assets/projects/nl2sql.webp" alt="NL2SQL" />
-        <div class="proj-text">
-          <div><a href="https://github.com/GruheshKurra/nl2sql-pretrained" class="proj-name" target="_blank">NL2SQL</a><span class="proj-tags-inline">Python · Transformers · SQL · HuggingFace</span></div>
-          <p>Natural language to SQL translation system achieving perplexity 1.42. Fine-tuned language model for structured query generation from plain-English questions.</p>
-          <div class="proj-links-row"><a href="https://github.com/GruheshKurra/nl2sql-pretrained" target="_blank">GitHub</a></div>
+      <article class="proj-entry">
+        <div class="proj-head">
+          <img class="proj-thumb" width="88" height="88" src="assets/projects/nl2sql.webp" alt="NL2SQL" />
+          <div class="proj-id">
+            <a href="https://github.com/GruheshKurra/nl2sql-pretrained" class="proj-name" target="_blank">NL2SQL</a>
+            <span class="proj-tags-inline">Transformers · SQL</span>
+          </div>
         </div>
-      </div>
+        <p>Natural language to SQL with perplexity 1.42. Fine-tuned language model for structured queries from plain-English questions.</p>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-label">Perplexity</span><span class="proj-stat-val">1.42</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Task</span><span class="proj-stat-val">NL→SQL</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Stack</span><span class="proj-stat-val">HF</span></div>
+        </div>
+        <div class="proj-links-row">
+          <a href="https://github.com/GruheshKurra/nl2sql-pretrained" target="_blank">GitHub</a>
+        </div>
+      </article>
 
-      <div class="proj-entry">
-        <img class="proj-thumb" width="640" height="360" src="assets/projects/hybridrag.webp" alt="Hybrid RAG Deepfake Detection" />
-        <div class="proj-text">
-          <div><a href="https://zenodo.org/records/16732053" class="proj-name" target="_blank">Hybrid RAG Deepfake Detection</a><span class="proj-tags-inline">RAG · CLIP · FAISS · PyTorch · Published</span></div>
-          <p>Privacy-first deepfake detection: retrieval-augmented generation plus visual inconsistency analysis, with an uncertainty-aware classifier. Zenodo 2024.</p>
-          <div class="proj-links-row"><a href="https://zenodo.org/records/16732053" target="_blank">Paper</a></div>
+      <article class="proj-entry">
+        <div class="proj-head">
+          <img class="proj-thumb" width="88" height="88" src="assets/projects/hybridrag.webp" alt="Hybrid RAG Deepfake Detection" />
+          <div class="proj-id">
+            <a href="https://zenodo.org/records/16732053" class="proj-name" target="_blank">Hybrid RAG Deepfake Detection</a>
+            <span class="proj-tags-inline">RAG · CLIP · FAISS</span>
+          </div>
         </div>
-      </div>
+        <p>Privacy-first deepfake detection: retrieval-augmented generation plus visual inconsistency analysis, with an uncertainty-aware classifier.</p>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-label">Year</span><span class="proj-stat-val">2024</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Method</span><span class="proj-stat-val">RAG+CLIP</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Status</span><span class="proj-stat-val">Published</span></div>
+        </div>
+        <div class="proj-links-row">
+          <a href="https://zenodo.org/records/16732053" target="_blank">Paper</a>
+        </div>
+      </article>
 
-      <div class="proj-entry">
-        <img class="proj-thumb" width="640" height="360" src="assets/projects/blog.webp" alt="ML From Scratch Blog Series" />
-        <div class="proj-text">
-          <div><a href="https://blogs.gruheshkurra.com" class="proj-name" target="_blank">ML From Scratch Blog Series</a><span class="proj-tags-inline">Python · NumPy · Pure ML · Educational</span></div>
-          <p>Linear Regression, Logistic Regression, KNN, Naive Bayes, Decision Trees, Random Forest, SVM, K-Means, t-SNE, UMAP: all from math up, no sklearn wrappers.</p>
-          <div class="proj-links-row"><a href="https://github.com/GruheshKurra" target="_blank">GitHub</a></div>
+      <article class="proj-entry">
+        <div class="proj-head">
+          <img class="proj-thumb" width="88" height="88" src="assets/projects/blog.webp" alt="ML From Scratch Blog Series" />
+          <div class="proj-id">
+            <a href="https://blogs.gruheshkurra.com" class="proj-name" target="_blank">ML From Scratch Blog</a>
+            <span class="proj-tags-inline">NumPy · no sklearn wrappers</span>
+          </div>
         </div>
-      </div>
+        <p>Linear Regression, Logistic Regression, KNN, Naive Bayes, Decision Trees, Random Forest, SVM, K-Means, t-SNE, UMAP: from the math up.</p>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-label">Algorithms</span><span class="proj-stat-val">10</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Stack</span><span class="proj-stat-val">NumPy</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Type</span><span class="proj-stat-val">From scratch</span></div>
+        </div>
+        <div class="proj-links-row">
+          <a href="https://blogs.gruheshkurra.com" target="_blank">Blog</a>
+          <a href="https://github.com/GruheshKurra" target="_blank">GitHub</a>
+        </div>
+      </article>
 
-      <div class="proj-entry">
-        <img class="proj-thumb" width="640" height="360" src="assets/projects/lpdt.jpeg" alt="Layout Preserving Document Translation" />
-        <div class="proj-text">
-          <div><span class="proj-name-plain">Layout Preserving Document Translation (IIITH)</span><span class="proj-tags-inline">Vision Transformer · Tesseract · K-Means · FastAPI</span></div>
-          <p>Vision Transformer layout detection (92% accuracy) + multi-language OCR (English, Hindi, Telugu, German) preserving fonts, colours, and document structure. Research project at IIITH.</p>
-          <div class="proj-links-row"><a href="https://youtu.be/rcvSuBcBjyg" target="_blank">▶ Demo Video</a></div>
+      <article class="proj-entry">
+        <div class="proj-head">
+          <img class="proj-thumb" width="88" height="88" src="assets/projects/lpdt.jpeg" alt="Layout Preserving Document Translation" />
+          <div class="proj-id">
+            <span class="proj-name-plain">Layout-Preserving Translation</span>
+            <span class="proj-tags-inline">ViT · OCR · IIITH</span>
+          </div>
         </div>
-      </div>
+        <p>Vision Transformer layout detection plus multi-language OCR (English, Hindi, Telugu, German), keeping fonts, colours, and structure.</p>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-label">Layout acc.</span><span class="proj-stat-val">92%</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Languages</span><span class="proj-stat-val">4</span></div>
+          <div class="proj-stat"><span class="proj-stat-label">Lab</span><span class="proj-stat-val">IIITH</span></div>
+        </div>
+        <div class="proj-links-row">
+          <a href="https://youtu.be/rcvSuBcBjyg" target="_blank">Demo</a>
+        </div>
+      </article>
 
     </div>
   </section>
@@ -761,56 +908,135 @@
       <div class="skill-group">
         <h3>Programming Languages</h3>
         <div class="skill-tags">
-          <span class="skill-tag">Python</span><span class="skill-tag">JavaScript</span><span class="skill-tag">TypeScript</span><span class="skill-tag">Swift</span><span class="skill-tag">Java</span><span class="skill-tag">C</span><span class="skill-tag">C++</span><span class="skill-tag">R</span><span class="skill-tag">SQL</span><span class="skill-tag">PHP</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">Shell</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/python/3776AB" alt="" width="16" height="16">Python</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="" width="16" height="16">JavaScript</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" width="16" height="16">TypeScript</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/swift/F05138" alt="" width="16" height="16">Swift</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/openjdk/437291" alt="" width="16" height="16">Java</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/c/A8B9CC" alt="" width="16" height="16">C</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/cplusplus/00599C" alt="" width="16" height="16">C++</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/r/276DC3" alt="" width="16" height="16">R</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="" width="16" height="16">SQL</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/php/777BB4" alt="" width="16" height="16">PHP</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="" width="16" height="16">HTML</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/css/663399" alt="" width="16" height="16">CSS</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/gnubash/4EAA25" alt="" width="16" height="16">Shell</span>
         </div>
       </div>
 
       <div class="skill-group">
         <h3>AI / ML Frameworks</h3>
         <div class="skill-tags">
-          <span class="skill-tag">PyTorch</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">Hugging Face</span><span class="skill-tag">LangChain</span><span class="skill-tag">LlamaIndex</span><span class="skill-tag">scikit-learn</span><span class="skill-tag">PyTorch Geometric</span><span class="skill-tag">Gradio</span><span class="skill-tag">Streamlit</span><span class="skill-tag">UMAP</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" width="16" height="16">PyTorch</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="" width="16" height="16">TensorFlow</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="" width="16" height="16">Hugging Face</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/langchain/1C3C3C" alt="" width="16" height="16">LangChain</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/python/3776AB" alt="" width="16" height="16">LlamaIndex</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="" width="16" height="16">scikit-learn</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" width="16" height="16">PyTorch Geometric</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/gradio/FF7C00" alt="" width="16" height="16">Gradio</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/streamlit/FF4B4B" alt="" width="16" height="16">Streamlit</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/numpy/013243" alt="" width="16" height="16">UMAP</span>
         </div>
       </div>
 
       <div class="skill-group">
         <h3>AI / ML Specialisations</h3>
         <div class="skill-tags">
-          <span class="skill-tag">LLM Optimisation</span><span class="skill-tag">SLM Fine-tuning</span><span class="skill-tag">RAG</span><span class="skill-tag">Prompt Engineering</span><span class="skill-tag">Transformers</span><span class="skill-tag">Attention Mechanisms</span><span class="skill-tag">GANs</span><span class="skill-tag">VAEs</span><span class="skill-tag">Diffusion Models</span><span class="skill-tag">GNNs</span><span class="skill-tag">On-Device AI</span><span class="skill-tag">Deepfake Detection</span><span class="skill-tag">Quantisation</span><span class="skill-tag">Pruning</span><span class="skill-tag">Distillation</span>
+          <span class="skill-tag"><img src="assets/skill-icons/openai.svg" alt="" width="16" height="16">LLM Optimisation</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="" width="16" height="16">SLM Fine-tuning</span>
+          <span class="skill-tag"><img src="assets/skill-icons/openai.svg" alt="" width="16" height="16">RAG</span>
+          <span class="skill-tag"><img src="assets/skill-icons/openai.svg" alt="" width="16" height="16">Prompt Engineering</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="" width="16" height="16">Transformers</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" width="16" height="16">Attention Mechanisms</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" width="16" height="16">GANs</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" width="16" height="16">VAEs</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" width="16" height="16">Diffusion Models</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" width="16" height="16">GNNs</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/apple/000000" alt="" width="16" height="16">On-Device AI</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/opencv/5C3EE8" alt="" width="16" height="16">Deepfake Detection</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" width="16" height="16">Quantisation</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" width="16" height="16">Pruning</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="" width="16" height="16">Distillation</span>
         </div>
       </div>
 
       <div class="skill-group">
         <h3>Computer Vision</h3>
         <div class="skill-tags">
-          <span class="skill-tag">EfficientNet</span><span class="skill-tag">Vision Transformer</span><span class="skill-tag">MediaPipe</span><span class="skill-tag">OpenCV</span><span class="skill-tag">Tesseract</span><span class="skill-tag">CLIP</span><span class="skill-tag">Document Analysis</span><span class="skill-tag">OCR</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" width="16" height="16">EfficientNet</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="" width="16" height="16">Vision Transformer</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/google/4285F4" alt="" width="16" height="16">MediaPipe</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/opencv/5C3EE8" alt="" width="16" height="16">OpenCV</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/google/4285F4" alt="" width="16" height="16">Tesseract</span>
+          <span class="skill-tag"><img src="assets/skill-icons/openai.svg" alt="" width="16" height="16">CLIP</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/opencv/5C3EE8" alt="" width="16" height="16">Document Analysis</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/opencv/5C3EE8" alt="" width="16" height="16">OCR</span>
         </div>
       </div>
 
       <div class="skill-group">
         <h3>iOS / Mobile</h3>
         <div class="skill-tags">
-          <span class="skill-tag">Swift</span><span class="skill-tag">SwiftUI</span><span class="skill-tag">Core ML</span><span class="skill-tag">iOS Development</span><span class="skill-tag">Vision Framework</span><span class="skill-tag">AVFoundation</span><span class="skill-tag">Core Data</span><span class="skill-tag">Metal MPS</span><span class="skill-tag">On-Device Inference</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/swift/F05138" alt="" width="16" height="16">Swift</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/swift/F05138" alt="" width="16" height="16">SwiftUI</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/apple/000000" alt="" width="16" height="16">Core ML</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/apple/000000" alt="" width="16" height="16">iOS Development</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/apple/000000" alt="" width="16" height="16">Vision Framework</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/apple/000000" alt="" width="16" height="16">AVFoundation</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/apple/000000" alt="" width="16" height="16">Core Data</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/apple/000000" alt="" width="16" height="16">Metal MPS</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/apple/000000" alt="" width="16" height="16">On-Device Inference</span>
         </div>
       </div>
 
       <div class="skill-group">
         <h3>Web &amp; Backend</h3>
         <div class="skill-tags">
-          <span class="skill-tag">React.js</span><span class="skill-tag">Next.js</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Node.js</span><span class="skill-tag">Express.js</span><span class="skill-tag">TailwindCSS</span><span class="skill-tag">Vite</span><span class="skill-tag">React Native</span><span class="skill-tag">WebSocket</span><span class="skill-tag">REST APIs</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="" width="16" height="16">React.js</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/nextdotjs/000000" alt="" width="16" height="16">Next.js</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/fastapi/009688" alt="" width="16" height="16">FastAPI</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/nodedotjs/5FA04E" alt="" width="16" height="16">Node.js</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/express/000000" alt="" width="16" height="16">Express.js</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="" width="16" height="16">TailwindCSS</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/vite/646CFF" alt="" width="16" height="16">Vite</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="" width="16" height="16">React Native</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/socketdotio/010101" alt="" width="16" height="16">WebSocket</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/nodedotjs/5FA04E" alt="" width="16" height="16">REST APIs</span>
         </div>
       </div>
 
       <div class="skill-group">
         <h3>Cloud &amp; DevOps</h3>
         <div class="skill-tags">
-          <span class="skill-tag">AWS</span><span class="skill-tag">Azure OpenAI</span><span class="skill-tag">Azure AD</span><span class="skill-tag">Google Cloud</span><span class="skill-tag">Docker</span><span class="skill-tag">Vercel</span><span class="skill-tag">WSO2</span><span class="skill-tag">CI/CD</span><span class="skill-tag">Git</span><span class="skill-tag">GitLab</span><span class="skill-tag">Serverless</span>
+          <span class="skill-tag"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/amazonwebservices.svg" alt="" width="16" height="16">AWS</span>
+          <span class="skill-tag"><img src="assets/skill-icons/microsoftazure.svg" alt="" width="16" height="16">Azure OpenAI</span>
+          <span class="skill-tag"><img src="assets/skill-icons/microsoftazure.svg" alt="" width="16" height="16">Azure AD</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="" width="16" height="16">Google Cloud</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="" width="16" height="16">Docker</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/vercel/000000" alt="" width="16" height="16">Vercel</span>
+          <span class="skill-tag"><img src="assets/skill-icons/wso2.svg" alt="" width="16" height="16">WSO2</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/githubactions/2088FF" alt="" width="16" height="16">CI/CD</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/git/F05032" alt="" width="16" height="16">Git</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/gitlab/FC6D26" alt="" width="16" height="16">GitLab</span>
+          <span class="skill-tag"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/amazonwebservices.svg" alt="" width="16" height="16">Serverless</span>
         </div>
       </div>
 
       <div class="skill-group">
         <h3>Databases &amp; Data Science</h3>
         <div class="skill-tags">
-          <span class="skill-tag">PostgreSQL</span><span class="skill-tag">MySQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">Redis</span><span class="skill-tag">Firebase</span><span class="skill-tag">Supabase</span><span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span><span class="skill-tag">Matplotlib</span><span class="skill-tag">FAISS</span><span class="skill-tag">Synthetic Data</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="" width="16" height="16">PostgreSQL</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="" width="16" height="16">MySQL</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="" width="16" height="16">MongoDB</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/redis/FF4438" alt="" width="16" height="16">Redis</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/firebase/DD2C00" alt="" width="16" height="16">Firebase</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/supabase/3FCF8E" alt="" width="16" height="16">Supabase</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/pandas/150458" alt="" width="16" height="16">Pandas</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/numpy/013243" alt="" width="16" height="16">NumPy</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/plotly/3F4F75" alt="" width="16" height="16">Matplotlib</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/meta/0467DF" alt="" width="16" height="16">FAISS</span>
+          <span class="skill-tag"><img src="https://cdn.simpleicons.org/python/3776AB" alt="" width="16" height="16">Synthetic Data</span>
         </div>
       </div>
 
@@ -826,7 +1052,7 @@
     <div class="cert-grid" id="cert-grid">
 
       <a class="cert-card cert-featured" href="assets/certificates/Global_Challenge_Lab_2026.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Global_Challenge_Lab_2026.webp" alt="Certificate of Achievement — Global Challenge Lab 2026, awarded to Gruhesh Sri Sai Karthik Kurra as part of team Corio, signed by Ben Mumby-Croft, Director of Entrepreneurship, Imperial College London" loading="lazy" />
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Global_Challenge_Lab_2026.webp" alt="Certificate of Achievement — Global Challenge Lab 2026, awarded to Gruhesh Sri Sai Karthik Kurra as part of team Corio, signed by Ben Mumby-Croft, Director of Entrepreneurship, Imperial College London" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">Certificate of Achievement — Global Challenge Lab 2026 (1st Place)</div>
           <div class="cert-meta">Imperial College London &nbsp;·&nbsp; 2026</div>
@@ -834,7 +1060,7 @@
       </a>
 
       <a class="cert-card cert-featured" href="assets/certificates/TensorFlow_Developer_Certificate.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/TensorFlow_Developer_Certificate.webp" alt="TensorFlow Developer Certificate" loading="lazy" />
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/TensorFlow_Developer_Certificate.webp" alt="TensorFlow Developer Certificate" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">TensorFlow Developer Certificate</div>
           <div class="cert-meta">Google &nbsp;·&nbsp; 2024</div>
@@ -842,7 +1068,7 @@
       </a>
 
       <a class="cert-card cert-featured" href="assets/certificates/AWS_Certified_Cloud_Practitioner_2023.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/AWS_Certified_Cloud_Practitioner_2023.webp" alt="AWS Cloud Practitioner" loading="lazy" />
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/AWS_Certified_Cloud_Practitioner_2023.webp" alt="AWS Cloud Practitioner" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">AWS Certified Cloud Practitioner</div>
           <div class="cert-meta">Amazon Web Services &nbsp;·&nbsp; 2023</div>
@@ -850,7 +1076,7 @@
       </a>
 
       <a class="cert-card cert-featured" href="assets/certificates/AWS_Certified_Solutions_Architect_Associate_2023.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/AWS_Certified_Solutions_Architect_Associate_2023.webp" alt="AWS Solutions Architect" loading="lazy" />
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/AWS_Certified_Solutions_Architect_Associate_2023.webp" alt="AWS Solutions Architect" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">AWS Certified Solutions Architect – Associate</div>
           <div class="cert-meta">Amazon Web Services &nbsp;·&nbsp; 2023</div>
@@ -858,31 +1084,31 @@
       </a>
 
       <a class="cert-card cert-extra" href="assets/certificates/Oracle_Cloud_Infrastructure_Architect_Associate_2023.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Oracle_Cloud_Infrastructure_Architect_Associate_2023.webp" alt="Oracle Cloud Infrastructure" loading="lazy" />
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Oracle_Cloud_Infrastructure_Architect_Associate_2023.webp" alt="Oracle Cloud Infrastructure" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">Oracle Cloud Infrastructure Architect Associate</div>
           <div class="cert-meta">Oracle &nbsp;·&nbsp; 2023</div>
         </div>
       </a>
 
-      <div class="cert-card cert-extra cert-card-noimg">
-        <div class="cert-placeholder" aria-hidden="true">Oracle</div>
+      <a class="cert-card cert-extra" href="assets/certificates/Oracle_Cloud_Infrastructure_Generative_AI_Professional_2024.jpg" target="_blank">
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Oracle_Cloud_Infrastructure_Generative_AI_Professional_2024.jpg" alt="Oracle Cloud Infrastructure Generative AI Professional" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">Oracle Cloud Infrastructure Generative AI Professional</div>
           <div class="cert-meta">Oracle &nbsp;·&nbsp; 2024</div>
         </div>
-      </div>
+      </a>
 
       <a class="cert-card cert-extra" href="assets/certificates/Oracle_Database_Certificate.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Oracle_Database_Certificate.webp" alt="Oracle Database Certificate" loading="lazy" />
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Oracle_Database_Certificate.webp" alt="Oracle Database Certificate" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">Oracle Database Certificate</div>
           <div class="cert-meta">Oracle &nbsp;·&nbsp; 2023</div>
         </div>
       </a>
 
-      <a class="cert-card cert-extra" href="assets/certificates/Certified Advanced Automation Professional.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Certified Advanced Automation Professional.webp" alt="Certified Advanced Automation Professional" loading="lazy" />
+      <a class="cert-card cert-extra" href="assets/certificates/Certified_Advanced_Automation_Professional.webp" target="_blank">
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Certified_Advanced_Automation_Professional.webp" alt="Certified Advanced Automation Professional" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">Certified Advanced Automation Professional</div>
           <div class="cert-meta">Automation Anywhere &nbsp;·&nbsp; 2024</div>
@@ -890,39 +1116,39 @@
       </a>
 
       <a class="cert-card cert-extra" href="assets/certificates/RedHat_Certified_Enterprise_Application_Developer_2024.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/RedHat_Certified_Enterprise_Application_Developer_2024.webp" alt="Red Hat Certified Developer" loading="lazy" />
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/RedHat_Certified_Enterprise_Application_Developer_2024.webp" alt="Red Hat Certified Developer" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">Red Hat Certified Enterprise Application Developer</div>
           <div class="cert-meta">Red Hat &nbsp;·&nbsp; 2024</div>
         </div>
       </a>
 
-      <a class="cert-card cert-featured" href="assets/certificates/WSO2 MI Developer.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/WSO2 MI Developer.webp" alt="WSO2 MI Developer" loading="lazy" />
+      <a class="cert-card cert-featured" href="assets/certificates/WSO2_MI_Developer.webp" target="_blank">
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/WSO2_MI_Developer.webp" alt="WSO2 MI Developer" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">WSO2 Certified Micro Integrator Developer – V4</div>
           <div class="cert-meta">WSO2 &nbsp;·&nbsp; 2025</div>
         </div>
       </a>
 
-      <a class="cert-card cert-extra" href="assets/certificates/Visuara Build Large Language Models.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Visuara Build Large Language Models.webp" alt="Build LLMs From Scratch" loading="lazy" />
+      <a class="cert-card cert-extra" href="assets/certificates/Visuara_Build_Large_Language_Models.webp" target="_blank">
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Visuara_Build_Large_Language_Models.webp" alt="Build LLMs From Scratch" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">Build Large Language Models From Scratch</div>
           <div class="cert-meta">Visuara &nbsp;·&nbsp; 2024</div>
         </div>
       </a>
 
-      <a class="cert-card cert-extra" href="assets/certificates/Hugging Face MCP Unit1.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Hugging Face MCP Unit1.webp" alt="Hugging Face MCP Unit 1" loading="lazy" />
+      <a class="cert-card cert-extra" href="assets/certificates/Hugging_Face_MCP_Unit1.webp" target="_blank">
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Hugging_Face_MCP_Unit1.webp" alt="Hugging Face MCP Unit 1" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">Hugging Face MCP – Unit 1</div>
           <div class="cert-meta">Hugging Face &nbsp;·&nbsp; 2024</div>
         </div>
       </a>
 
-      <a class="cert-card cert-extra" href="assets/certificates/Hugging Face MCP Unit3.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Hugging Face MCP Unit3.webp" alt="Hugging Face MCP Unit 3" loading="lazy" />
+      <a class="cert-card cert-extra" href="assets/certificates/Hugging_Face_MCP_Unit3.webp" target="_blank">
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Hugging_Face_MCP_Unit3.webp" alt="Hugging Face MCP Unit 3" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">Hugging Face MCP – Unit 3</div>
           <div class="cert-meta">Hugging Face &nbsp;·&nbsp; 2024</div>
@@ -930,7 +1156,7 @@
       </a>
 
       <a class="cert-card cert-featured" href="assets/certificates/IIIT_6Month_Training_Certificate.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/IIIT_6Month_Training_Certificate.webp" alt="IIIT Hyderabad Training" loading="lazy" />
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/IIIT_6Month_Training_Certificate.webp" alt="IIIT Hyderabad Training" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">IIIT Hyderabad 6-Month AI/ML Training</div>
           <div class="cert-meta">IIIT Hyderabad &nbsp;·&nbsp; 2024</div>
@@ -938,7 +1164,7 @@
       </a>
 
       <a class="cert-card cert-extra" href="assets/certificates/SAC_Certificate.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/SAC_Certificate.webp" alt="Certificate of Appreciation — Student Activity Center, KL University" loading="lazy" />
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/SAC_Certificate.webp" alt="Certificate of Appreciation — Student Activity Center, KL University" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">Certificate of Appreciation — Student Activity Center</div>
           <div class="cert-meta">KL University &nbsp;·&nbsp; 2022–23</div>
@@ -946,31 +1172,23 @@
       </a>
 
       <a class="cert-card cert-extra" href="assets/certificates/StreetCause_Certificate.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/StreetCause_Certificate.webp" alt="Certificate of Service — Street Cause NGO" loading="lazy" />
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/StreetCause_Certificate.webp" alt="Certificate of Service — Street Cause NGO" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">Certificate of Service — Volunteer</div>
           <div class="cert-meta">Street Cause NGO &nbsp;·&nbsp; 2023–24</div>
         </div>
       </a>
 
-      <div class="cert-card cert-extra cert-card-noimg">
-        <div class="cert-placeholder" aria-hidden="true">Swetcha</div>
-        <div class="cert-info">
-          <div class="cert-name">Certificate of Appreciation — Community Volunteer</div>
-          <div class="cert-meta">Swetcha Foundation &nbsp;·&nbsp; 2021–22</div>
-        </div>
-      </div>
-
       <a class="cert-card cert-extra" href="assets/certificates/WSO2_Certified_Micro_Integrator_Practitioner_V4_2025.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/WSO2_Certified_Micro_Integrator_Practitioner_V4_2025.webp" alt="WSO2 MI Practitioner V4" loading="lazy" />
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/WSO2_Certified_Micro_Integrator_Practitioner_V4_2025.webp" alt="WSO2 MI Practitioner V4" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">WSO2 Certified Micro Integrator Practitioner V4</div>
           <div class="cert-meta">WSO2 &nbsp;·&nbsp; 2025</div>
         </div>
       </a>
 
-      <a class="cert-card cert-extra" href="assets/certificates/google gdg.webp" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/google gdg.webp" alt="Google GDG Certificate" loading="lazy" />
+      <a class="cert-card cert-extra" href="assets/certificates/google_gdg.jpg" target="_blank">
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/google_gdg.jpg" alt="Google GDG Certificate" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">Google GDG Certificate</div>
           <div class="cert-meta">Google Developer Groups &nbsp;·&nbsp; 2025</div>
@@ -978,7 +1196,7 @@
       </a>
 
       <a class="cert-card cert-extra" href="assets/certificates/Udemy_Linear_Algebra_Master_2026.jpg" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Udemy_Linear_Algebra_Master_2026.jpg" alt="Linear Algebra Master" loading="lazy" />
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/Udemy_Linear_Algebra_Master_2026.jpg" alt="Linear Algebra Master" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">Become a Linear Algebra Master</div>
           <div class="cert-meta">Udemy &nbsp;·&nbsp; 2026</div>
@@ -986,7 +1204,7 @@
       </a>
 
       <a class="cert-card cert-extra" href="assets/certificates/deep-learning-udemy.png" target="_blank">
-        <img class="cert-thumb" width="640" height="480" src="assets/certificates/deep-learning-udemy.png" alt="Deep Learning with Python" loading="lazy" />
+        <img class="cert-thumb" width="640" height="480" src="assets/certificates/deep-learning-udemy.png" alt="Deep Learning with Python" loading="eager" />
         <div class="cert-info">
           <div class="cert-name">A Deep Understanding of Deep Learning (with Python)</div>
           <div class="cert-meta">Udemy &nbsp;·&nbsp; 2026</div>
@@ -994,9 +1212,6 @@
       </a>
 
     </div>
-    <button type="button" class="btn btn-outline cert-toggle" id="cert-toggle" aria-expanded="false" aria-controls="cert-grid">
-      Show all certifications <span class="cert-toggle-count">(+15)</span>
-    </button>
   </section>
 
   <!-- ══ Awards ══ -->
@@ -1078,20 +1293,26 @@
       <a href="assets/Resume.pdf" target="_blank">Résumé</a>
     </nav>
     <div class="footer-social">
+      <a href="https://x.com/Karthik__kurra" target="_blank" aria-label="Twitter / X">
+        <img src="assets/skill-icons/x.svg" alt="" width="18" height="18">
+      </a>
       <a href="https://github.com/GruheshKurra" target="_blank" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.341-3.369-1.341-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        <img src="assets/skill-icons/github.svg" alt="" width="18" height="18">
       </a>
       <a href="https://www.linkedin.com/in/gruheshkurra/" target="_blank" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <img src="assets/skill-icons/linkedin.svg" alt="" width="18" height="18">
       </a>
-      <a href="https://x.com/Karthik__kurra" target="_blank" aria-label="Twitter / X">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.26 5.632L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      <a href="https://huggingface.co/karthik-2905" target="_blank" aria-label="Hugging Face">
+        <img src="assets/skill-icons/huggingface.svg" alt="" width="18" height="18">
       </a>
       <a href="https://dev.to/gruhesh_kurra_6eb933146da" target="_blank" aria-label="dev.to">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="5" width="22" height="14" rx="3" fill="currentColor"/><text x="12" y="15.4" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="7.6" font-weight="700" letter-spacing="0.2" fill="#fff">DEV</text></svg>
+        <img src="assets/skill-icons/devdotto.svg" alt="" width="18" height="18">
+      </a>
+      <a href="https://blogs.gruheshkurra.com" target="_blank" aria-label="Blog">
+        <img src="assets/skill-icons/rss.svg" alt="" width="18" height="18">
       </a>
       <a href="mailto:gruheshkurra2@gmail.com" aria-label="Email">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <img src="assets/skill-icons/gmail.svg" alt="" width="18" height="18">
       </a>
     </div>
   </div>
@@ -1175,45 +1396,6 @@
   });
   topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-  // Certifications expand/collapse
-  const certToggle = document.getElementById('cert-toggle');
-  const certGrid = document.getElementById('cert-grid');
-  if (certToggle && certGrid) {
-    certToggle.addEventListener('click', () => {
-      const expanded = certGrid.classList.toggle('is-expanded');
-      certToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-      certToggle.innerHTML = expanded
-        ? 'Show fewer certifications'
-        : 'Show all certifications <span class="cert-toggle-count">(+15)</span>';
-    });
-  }
-
-  // Scroll reveal (skipped when the user prefers reduced motion).
-  // .cert-grid is revealed as a unit — its collapsed .cert-extra cards are
-  // display:none, so observing them individually would leave them stuck hidden.
-  // .skills-grid likewise: it is a multi-column container, and transforming its
-  // individual groups fights the column flow.
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
-    document.documentElement.classList.add('js-reveal');
-    const revealEls = Array.from(document.querySelectorAll(
-      '.section-heading, .stat-item, .exp-item, .pub-card, .proj-entry, .skills-grid, .cert-grid, .award-item'
-    ));
-    revealEls.forEach(el => el.classList.add('reveal'));
-    revealEls.forEach(el => {
-      const sibs = Array.from(el.parentElement.children).filter(c => c.classList.contains('reveal'));
-      const i = sibs.indexOf(el);
-      if (i > 0) el.style.transitionDelay = Math.min(i, 5) * 55 + 'ms';
-    });
-    const revealIO = new IntersectionObserver((entries, obs) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('is-visible');
-          obs.unobserve(e.target);
-        }
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-    revealEls.forEach(el => revealIO.observe(el));
-  }
 </script>
 
 </body>
