@@ -803,6 +803,14 @@ body.nav-menu-open {
   overflow-wrap: anywhere;
 }
 
+.pub-logo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -873,15 +881,29 @@ body.nav-menu-open {
 
 .exp-card-head {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 4px 16px;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 4px 12px;
+  align-items: start;
   margin-bottom: 8px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--line);
 }
 
+.exp-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  background: #0a0a0a;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
 .exp-card-title {
   min-width: 0;
+}
+
+.exp-period {
+  grid-column: 2;
 }
 
 .exp-role {
@@ -1447,10 +1469,11 @@ body.nav-menu-open {
   }
 
   .exp-card-head {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: 44px minmax(0, 1fr) auto;
   }
 
   .exp-period {
+    grid-column: auto;
     text-align: right;
     white-space: nowrap;
   }
