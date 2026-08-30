@@ -893,7 +893,7 @@ body.nav-menu-open {
   width: 44px;
   height: 44px;
   object-fit: contain;
-  background: #0a0a0a;
+  background: #fff;
   border: 1px solid var(--line);
   border-radius: 10px;
 }
