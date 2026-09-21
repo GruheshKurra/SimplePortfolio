@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <title>Morphology-aware nested character embeddings</title>
+  <desc>Nested character sequences form a word representation.</desc>
+  <rect width="480" height="300" fill="#f7f7f4"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="240" y="39" font-size="16" fill="#666">MORPHOLOGY-AWARE EMBEDDINGS</text>
+    <rect x="65" y="67" width="350" height="126" rx="4" fill="#fff" stroke="#b8c6b8" stroke-width="2"/>
+    <rect x="84" y="86" width="247" height="88" rx="3" fill="#f0f4ee" stroke="#b8c6b8"/>
+    <rect x="103" y="105" width="128" height="50" rx="2" fill="#dfe9dc" stroke="#a9bba5"/>
+    <text x="167" y="136" font-size="24" letter-spacing="5" fill="#344b34">play</text>
+    <text x="272" y="136" font-size="24" letter-spacing="5" fill="#52664b">ing</text>
+    <text x="372" y="137" font-size="14" fill="#666">word</text>
+    <path d="M240 193v29m-6-8 6 8 6-8" fill="none" stroke="#789071" stroke-width="2"/>
+    <text x="240" y="254" font-size="19" fill="#333">Nested character representation</text>
+  </g>
+</svg>

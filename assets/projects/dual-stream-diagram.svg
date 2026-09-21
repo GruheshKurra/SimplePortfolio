@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <title>Dual-stream deepfake detection</title>
+  <desc>Boundary and frequency streams feed an iterative cross-attention module.</desc>
+  <rect width="480" height="300" fill="#f6f7f8"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="240" y="39" font-size="16" fill="#666">DUAL-STREAM DETECTION</text>
+    <g fill="#fff" stroke="#b7c5d5" stroke-width="2">
+      <rect x="32" y="73" width="174" height="70" rx="4"/>
+      <rect x="274" y="73" width="174" height="70" rx="4"/>
+      <rect x="110" y="204" width="260" height="57" rx="4"/>
+    </g>
+    <g fill="#333" font-size="20">
+      <text x="119" y="103">Boundary stream</text>
+      <text x="361" y="103">Frequency stream</text>
+      <text x="240" y="238">Iterative cross-attention</text>
+    </g>
+    <g fill="#777" font-size="14"><text x="119" y="126">Sobel edges</text><text x="361" y="126">Multi-band FFT</text></g>
+    <g stroke="#6e8caa" stroke-width="2" fill="none"><path d="M119 143v28h121v33M361 143v28H240"/><path d="m234 196 6 8 6-8"/></g>
+  </g>
+</svg>

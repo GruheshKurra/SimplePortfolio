@@ -5,7 +5,7 @@
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#17171c",
+  "theme_color": "#ffffff",
   "icons": [
     {
       "src": "/assets/favicon-192.png",
@@ -20,9 +20,9 @@
       "purpose": "any"
     },
     {
-      "src": "/assets/profile-picture.png",
-      "sizes": "512x512",
-      "type": "image/png",
+      "src": "/assets/profile-2026.webp",
+      "sizes": "1254x1254",
+      "type": "image/webp",
       "purpose": "any"
     }
   ]
