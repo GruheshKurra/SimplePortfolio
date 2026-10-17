@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="Inter, Helvetica, Arial, sans-serif">
+  <title>Prism Tuning: K seeds, one frozen model, K outputs</title>
+  <rect width="480" height="300" fill="#efeef6"/>
+  <rect x="24" y="126" width="88" height="48" rx="10" fill="#fff" stroke="#a7a1cc"/><text x="68" y="155" text-anchor="middle" font-size="15" fill="#3f3780">prompt</text>
+  <g fill="#7a6fd0"><circle cx="150" cy="96" r="9"/><circle cx="150" cy="128" r="9" fill="#9b8fe6"/><circle cx="150" cy="172" r="9" fill="#b7adf0"/><circle cx="150" cy="204" r="9" fill="#5a4fb8"/></g>
+  <text x="150" y="236" text-anchor="middle" font-size="12" fill="#5f5a8a">K seeds</text>
+  <path d="M114 150H186" stroke="#3f3780" stroke-width="2.5" marker-end="url(#c)"/>
+  <rect x="190" y="88" width="120" height="124" rx="12" fill="#3f3780"/>
+  <text x="250" y="144" text-anchor="middle" font-size="16" fill="#fff" font-weight="600">frozen</text>
+  <text x="250" y="166" text-anchor="middle" font-size="16" fill="#fff" font-weight="600">transformer</text>
+  <g stroke-width="2.5" fill="none"><path d="M312 120L372 74" stroke="#5a4fb8"/><path d="M312 140L372 124" stroke="#7a6fd0"/><path d="M312 160L372 176" stroke="#9b8fe6"/><path d="M312 180L372 226" stroke="#b7adf0"/></g>
+  <g font-size="13" fill="#3f3780"><rect x="374" y="60" width="86" height="28" rx="7" fill="#fff" stroke="#c9c4e6"/><text x="417" y="79" text-anchor="middle">answer 1</text>
+  <rect x="374" y="110" width="86" height="28" rx="7" fill="#fff" stroke="#c9c4e6"/><text x="417" y="129" text-anchor="middle">answer 2</text>
+  <rect x="374" y="162" width="86" height="28" rx="7" fill="#fff" stroke="#c9c4e6"/><text x="417" y="181" text-anchor="middle">answer 3</text>
+  <rect x="374" y="212" width="86" height="28" rx="7" fill="#fff" stroke="#c9c4e6"/><text x="417" y="231" text-anchor="middle">answer K</text></g>
+  <defs><marker id="c" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#3f3780"/></marker></defs>
+</svg>

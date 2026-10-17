@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="Inter, Helvetica, Arial, sans-serif">
+  <title>BIE: gaps between non-zeros, Rice coded</title>
+  <rect width="480" height="300" fill="#ecf3ef"/>
+  <g font-size="12" text-anchor="middle">
+    <g fill="#fff" stroke="#a9c4b4">
+      <rect x="32" y="62" width="25" height="34"/><rect x="57" y="62" width="25" height="34"/><rect x="107" y="62" width="25" height="34"/><rect x="132" y="62" width="25" height="34"/><rect x="157" y="62" width="25" height="34"/><rect x="182" y="62" width="25" height="34"/><rect x="232" y="62" width="25" height="34"/><rect x="257" y="62" width="25" height="34"/><rect x="282" y="62" width="25" height="34"/><rect x="307" y="62" width="25" height="34"/><rect x="332" y="62" width="25" height="34"/><rect x="357" y="62" width="25" height="34"/><rect x="407" y="62" width="25" height="34"/>
+    </g>
+    <g fill="#2e7d5b"><rect x="82" y="62" width="25" height="34"/><rect x="207" y="62" width="25" height="34"/><rect x="382" y="62" width="25" height="34"/></g>
+  </g>
+  <g fill="none" stroke="#2e7d5b" stroke-width="2"><path d="M32 106v8h50v-8"/><path d="M107 106v8h100v-8"/><path d="M232 106v8h150v-8"/></g>
+  <g font-size="15" text-anchor="middle" fill="#1f5c42" font-weight="600"><text x="57" y="136">2</text><text x="157" y="136">4</text><text x="307" y="136">6</text></g>
+  <text x="240" y="166" text-anchor="middle" font-size="13" fill="#4f6e60">zeros skipped before each non-zero</text>
+  <g font-family="Menlo, Consolas, monospace" font-size="20" font-weight="600" text-anchor="middle"><text x="130" y="222" fill="#1f5c42">0|10</text><text x="240" y="222" fill="#1f5c42">10|00</text><text x="350" y="222" fill="#1f5c42">10|10</text></g>
+  <text x="240" y="258" text-anchor="middle" font-size="14" fill="#1f5c42">11 bits instead of a 16-bit bitmap</text>
+</svg>

@@ -1,13 +1,23 @@
-// Include expanded research and supporting work when printing the portfolio.
-let printDetails = [];
-window.addEventListener('beforeprint', () => {
-  printDetails = [...document.querySelectorAll('details:not([open])')];
-  printDetails.forEach(detail => { detail.open = true; });
-});
-window.addEventListener('afterprint', () => {
-  printDetails.forEach(detail => { detail.open = false; });
-  printDetails = [];
-});
+// Light / dark switch; the choice is remembered when storage is available.
+const toggle = document.querySelector('.theme-toggle');
+if (toggle) {
+  toggle.addEventListener('click', () => {
+    const root = document.documentElement;
+    const dark = root.dataset.theme
+      ? root.dataset.theme === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    root.dataset.theme = dark ? 'light' : 'dark';
+    try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+  });
+}
+
+// Show a hairline under the sticky bar once the page scrolls.
+const bar = document.querySelector('.topnav');
+if (bar) {
+  const onScroll = () => { bar.style.borderBottomColor = window.scrollY > 8 ? 'var(--line)' : 'transparent'; };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
 
 // Keep the existing analytics provider on the public domain only.
 if (['gruheshkurra.com', 'www.gruheshkurra.com'].includes(window.location.hostname)) {
