@@ -157,6 +157,7 @@
     <section id="news" class="block">
       <h2>News</h2>
       <ul class="news">
+        <li><time datetime="2026-10">Oct 2026</time><span>Tested a redesigned <a href="#paper-prism-tuning">Prism Tuning</a> in pre-registered GPU experiments; no significant gain, with a diagnosis.</span></li>
         <li><time datetime="2026-10">Oct 2026</time><span>Version 2 of <a href="#paper-bie">BIE</a> is on Zenodo, with a new storage format and a full measured evaluation.</span></li>
         <li><time datetime="2026-09">Sep 2026</time><span>Started the MSc in Computing (AI and Machine Learning) at Imperial College London.</span></li>
         <li><time datetime="2026-07">Jul 2026</time><span>My team won <strong>first place</strong> at Imperial’s Global Challenge Lab, a 14-day sprint with over 1,000 students; I led the AI work on OrbitOps, a reliability layer for satellite onboard AI.</span></li>
@@ -201,7 +202,7 @@
           <h4>Prism Tuning: Repulsion-Trained Seed Embeddings in a Frozen Transformer for Non-Redundant Generation</h4>
           <p class="authors"><b>Gruhesh Sri Sai Karthik Kurra</b>, Pavan Kumar Pagadala, Malathy Batumalay, Sushma Reddy Koduru</p>
           <p class="venue"><em>IEEE NEPCON 2026</em> · Accepted, presentation December 2026</p>
-          <p class="tldr">Only K seed vectors are trained, added to the input embeddings of a frozen transformer and pushed apart by a repulsion loss, so one prompt yields K different answers in a single batched pass with no filtering. The paper gives the method and formulation; running the experiments is my next step.</p>
+          <p class="tldr">Only K seed vectors are trained, added to the input embeddings of a frozen transformer and pushed apart by a repulsion loss, so one prompt yields K different answers in a single batched pass with no filtering. The paper gives the method and formulation. Follow-up (Oct 2026): a redesigned version, tested in pre-registered GPU experiments on Qwen2.5, did not significantly beat tuned min-p sampling; the main suspected cause is the training data.</p>
         </div>
       </article>
 
