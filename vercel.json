@@ -2,9 +2,9 @@
   "cleanUrls": true,
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.gruheshkurra.com" }],
-      "destination": "https://gruheshkurra.com/:path*",
+      "destination": "https://gruheshkurra.com/$1",
       "permanent": true
     }
   ],
