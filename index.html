@@ -169,17 +169,17 @@
 
   <main id="main" tabindex="-1">
     <section class="intro" aria-label="About">
-      <p>I am an MSc student in Computing (Artificial Intelligence and Machine Learning) at Imperial College London. My research is on <strong>large language models and natural language processing</strong>: how models represent words and meaning, how one prompt can produce several genuinely different answers, and how to make models smaller without losing quality.</p>
-      <p>Before Imperial I studied Computer Science and Engineering at KL University (CGPA 9.72/10), worked as a research intern at IIIT Hyderabad on layout-preserving document translation, and built integration software for enterprise clients at InfoAjax.</p>
+      <p>I am an MSc student in Computing (Artificial Intelligence and Machine Learning) at Imperial College London. My research is on <strong>large language models and natural language processing</strong>. I look at how models represent words and meaning, how one prompt can give several different answers, and how to make models smaller without losing quality.</p>
+      <p>Before Imperial I studied Computer Science and Engineering at KL University (CGPA 9.72/10). I was a research intern at IIIT Hyderabad, working on document translation that keeps the page layout. I also built integration software for enterprise clients at InfoAjax.</p>
     </section>
 
     <section id="news" class="block">
       <h2>News</h2>
       <ul class="news">
-        <li><time datetime="2026-10">Oct 2026</time><span>Tested a redesigned <a href="#paper-prism-tuning">Prism Tuning</a> in pre-registered GPU experiments; no significant gain, with a diagnosis.</span></li>
-        <li><time datetime="2026-10">Oct 2026</time><span>Version 2 of <a href="#paper-bie">BIE</a> is on Zenodo, with a new storage format and a full measured evaluation.</span></li>
+        <li><time datetime="2026-10">Oct 2026</time><span>I tested a redesigned <a href="#paper-prism-tuning">Prism Tuning</a> in pre-registered GPU experiments. It gave no significant gain, and I have a suspected cause.</span></li>
+        <li><time datetime="2026-10">Oct 2026</time><span>Version 2 of <a href="#paper-bie">BIE</a> is on Zenodo. It has a new storage format and a full measured evaluation.</span></li>
         <li><time datetime="2026-09">Sep 2026</time><span>Started the MSc in Computing (AI and Machine Learning) at Imperial College London.</span></li>
-        <li><time datetime="2026-07">Jul 2026</time><span>My team won <strong>first place</strong> at Imperial’s Global Challenge Lab, a 14-day sprint with over 1,000 students; I led the AI work on OrbitOps, a reliability layer for satellite onboard AI.</span></li>
+        <li><time datetime="2026-07">Jul 2026</time><span>My team won <strong>first place</strong> at Imperial’s Global Challenge Lab, a 14-day sprint with over 1,000 students. I led the AI work on OrbitOps, a reliability layer for satellite onboard AI.</span></li>
         <li><time datetime="2026">2026</time><span>Two papers, <a href="#paper-dual-stream">Dual-Stream</a> and <a href="#paper-prism-tuning">Prism Tuning</a>, accepted at IEEE NEPCON 2026.</span></li>
         <li><time datetime="2025">2025</time><span><a href="#paper-mance">MANCE</a> published at IEEE ICCCMLA 2025 (IEEE Xplore).</span></li>
       </ul>
@@ -199,7 +199,7 @@
           <h4><a href="https://ieeexplore.ieee.org/document/11580466" target="_blank" rel="noopener">Morphology-Aware Nested Character Embeddings for Word Representation</a></h4>
           <p class="authors"><b>Gruhesh Sri Sai Karthik Kurra</b>, Chandanasree Moparthi, Prathipati Manish Chowdary, Pavan Kumar Pagadala</p>
           <p class="venue"><em>IEEE ICCCMLA 2025</em> · Published in IEEE Xplore</p>
-          <p class="tldr">Every word is built from its characters by a character-level Transformer, so related forms share most of their computation and unseen words still get a vector. In a seeded re-implementation it beats word embeddings by 14.9 F1 on German NER (63.0 vs 48.2) and matches them on English topic classification.</p>
+          <p class="tldr">A character-level Transformer builds every word from its characters. Related forms share part of their representation, and unseen words still get a vector. In a seeded re-implementation it beats word embeddings by 14.9 F1 on German NER (63.0 vs 48.2) and is on par on English topic classification.</p>
           <p class="pub-links"><a href="https://ieeexplore.ieee.org/document/11580466" target="_blank" rel="noopener">Paper</a><a href="https://github.com/GruheshKurra/MANCE-NLP" target="_blank" rel="noopener">Code</a><a href="https://github.com/GruheshKurra/MANCE-NLP/blob/main/experiments/RESULTS.md" target="_blank" rel="noopener">Results</a></p>
         </div>
       </article>
@@ -210,7 +210,7 @@
           <h4><a href="https://github.com/GruheshKurra/radar_deepfake" target="_blank" rel="noopener">Dual-Stream Artifact Detection with Iterative Evidence Refinement for Frame-Level Deepfake Recognition</a></h4>
           <p class="authors"><b>Gruhesh Sri Sai Karthik Kurra</b>, Pavan Kumar Pagadala, Malathy Batumalay, Veda Boddapati</p>
           <p class="venue"><em>IEEE NEPCON 2026</em> · Accepted, presentation December 2026</p>
-          <p class="tldr">A ViT-Small detector with an edge stream for blending boundaries and a frequency stream for generator fingerprints, fused by iterative cross-attention. After an audit found that most WildDeepfake test frames came from training videos, it reports 96.3% AUC on a video-disjoint test subset (87.1% on Celeb-DF).</p>
+          <p class="tldr">The detector is a ViT-Small model with an edge stream for blending boundaries and a frequency stream for generator fingerprints, fused by iterative cross-attention. An audit found that most WildDeepfake test frames came from training videos, so the main result is 96.3% AUC on a video-disjoint test subset (87.1% on Celeb-DF).</p>
           <p class="pub-links"><a href="https://github.com/GruheshKurra/radar_deepfake" target="_blank" rel="noopener">Code</a><a href="https://www.kaggle.com/datasets/gruheshkurra/radar-deepfake-frames" target="_blank" rel="noopener">Dataset</a></p>
         </div>
       </article>
@@ -221,7 +221,7 @@
           <h4>Prism Tuning: Repulsion-Trained Seed Embeddings in a Frozen Transformer for Non-Redundant Generation</h4>
           <p class="authors"><b>Gruhesh Sri Sai Karthik Kurra</b>, Pavan Kumar Pagadala, Malathy Batumalay, Sushma Reddy Koduru</p>
           <p class="venue"><em>IEEE NEPCON 2026</em> · Accepted, presentation December 2026</p>
-          <p class="tldr">Only K seed vectors are trained, added to the input embeddings of a frozen transformer and pushed apart by a repulsion loss, so one prompt yields K different answers in a single batched pass with no filtering. The paper gives the method and formulation. Follow-up (Oct 2026): a redesigned version, tested in pre-registered GPU experiments on Qwen2.5, did not significantly beat tuned min-p sampling; the main suspected cause is the training data.</p>
+          <p class="tldr">Only K seed vectors are trained. They are added to the input embeddings of a frozen transformer and pushed apart by a repulsion loss, so one prompt gives K different answers in a single batched pass with no filtering. The paper gives the method and formulation only. In October 2026 I tested a redesigned version in pre-registered GPU experiments on Qwen2.5. It did not significantly beat tuned min-p sampling, and the main suspected cause is the training data.</p>
         </div>
       </article>
 
@@ -233,7 +233,7 @@
           <h4><a href="https://doi.org/10.5281/zenodo.17217217" target="_blank" rel="noopener">BIE: Bit-Index Encoding of Sparse Neural Network Weights</a></h4>
           <p class="authors"><b>Gruhesh Sri Sai Karthik Kurra</b></p>
           <p class="venue"><em>Zenodo preprint</em> · Version 2, October 2026</p>
-          <p class="tldr">A storage format for pruned weights: the gaps between non-zeros are Golomb–Rice coded, close to their entropy limit, and values are 8-bit codes stored as bitplanes. At 95% sparsity it is 44.5× smaller than float32 at 0.6% error, against 25.7× for CSR with the same values.</p>
+          <p class="tldr">BIE is a storage format for pruned weights. The gaps between non-zeros are Golomb–Rice coded, close to their entropy limit, and the values are 8-bit codes stored as bitplanes. At 95% sparsity it is 44.5× smaller than float32 at 0.6% error, against 25.7× for CSR with the same values.</p>
           <p class="pub-links"><a href="https://doi.org/10.5281/zenodo.17217217" target="_blank" rel="noopener">Paper</a><a href="https://github.com/GruheshKurra/bit-index-encoding-research-" target="_blank" rel="noopener">Code</a><a href="https://github.com/GruheshKurra/bit-index-encoding-research-/blob/main/experiments/RESULTS.md" target="_blank" rel="noopener">Results</a></p>
         </div>
       </article>
@@ -245,17 +245,17 @@
         <li>
           <span class="when">Oct – Nov 2025</span>
           <div><h4>AI Integration Engineer</h4><p class="org">InfoAjax Consulting · remote</p>
-          <p>Built a proof-of-concept browser agent that acts on screenshots using models on Azure AI Foundry, and a React and FastAPI console for monitoring agents live.</p></div>
+          <p>Built a proof-of-concept browser agent that acts on screenshots, using models on Azure AI Foundry. Also built a React and FastAPI console to watch agents live.</p></div>
         </li>
         <li>
           <span class="when">Dec 2024 – Jun 2025</span>
           <div><h4>Research Intern</h4><p class="org">IIIT Hyderabad</p>
-          <p>Designed a document translation system that keeps the original layout, for English, Hindi, Telugu and German: Vision Transformer layout detection, font detection, colour extraction and Tesseract OCR. Demonstrated it at the institute’s research expo (<a href="https://youtu.be/rcvSuBcBjyg" target="_blank" rel="noopener">demo</a>).</p></div>
+          <p>Designed a document translation system that keeps the original layout, for English, Hindi, Telugu and German. It uses Vision Transformer layout detection, font detection, colour extraction and Tesseract OCR. Demonstrated it at the institute’s research expo (<a href="https://youtu.be/rcvSuBcBjyg" target="_blank" rel="noopener">demo</a>).</p></div>
         </li>
         <li>
           <span class="when">Oct 2024 – Jun 2025</span>
           <div><h4>Software Engineer (freelance)</h4><p class="org">InfoAjax Consulting · remote</p>
-          <p>Built REST APIs in WSO2 Micro Integrator linking the service-desk, billing and inventory systems of a Philippine telecoms company, and supported them in production.</p></div>
+          <p>Built REST APIs in WSO2 Micro Integrator that link the service-desk, billing and inventory systems of a Philippine telecoms company. Supported them in production.</p></div>
         </li>
       </ol>
 
@@ -291,12 +291,12 @@
       <div class="certs">
         <a class="cert" href="assets/certificates/Global_Challenge_Lab_2026.webp" target="_blank" rel="noopener"><img src="assets/certificates/Global_Challenge_Lab_2026.webp" alt="" loading="lazy" decoding="async"><span class="cert-name">Certificate of Achievement — Global Challenge Lab 2026 (1st Place)</span><span class="cert-meta">Imperial College London · 2026</span></a>
         <a class="cert" href="assets/certificates/TensorFlow_Developer_Certificate.webp" target="_blank" rel="noopener"><img src="assets/certificates/TensorFlow_Developer_Certificate.webp" alt="" loading="lazy" decoding="async"><span class="cert-name">TensorFlow Developer Certificate</span><span class="cert-meta">Google · 2024</span></a>
-        <a class="cert" href="assets/certificates/AWS_Certified_Cloud_Practitioner_2023.webp" target="_blank" rel="noopener"><img src="assets/certificates/AWS_Certified_Cloud_Practitioner_2023.webp" alt="" loading="lazy" decoding="async"><span class="cert-name">AWS Certified Cloud Practitioner</span><span class="cert-meta">Amazon Web Services · 2023</span></a>
-        <a class="cert" href="assets/certificates/AWS_Certified_Solutions_Architect_Associate_2023.webp" target="_blank" rel="noopener"><img src="assets/certificates/AWS_Certified_Solutions_Architect_Associate_2023.webp" alt="" loading="lazy" decoding="async"><span class="cert-name">AWS Certified Solutions Architect – Associate</span><span class="cert-meta">Amazon Web Services · 2023</span></a>
+        <a class="cert" href="assets/certificates/AWS_Certified_Cloud_Practitioner_2023.webp" target="_blank" rel="noopener"><img src="assets/certificates/AWS_Certified_Cloud_Practitioner_2023.webp" alt="" loading="lazy" decoding="async"><span class="cert-name">AWS Certified Cloud Practitioner</span><span class="cert-meta">Amazon Web Services · 2023 · Expired May 2026</span></a>
+        <a class="cert" href="assets/certificates/AWS_Certified_Solutions_Architect_Associate_2023.webp" target="_blank" rel="noopener"><img src="assets/certificates/AWS_Certified_Solutions_Architect_Associate_2023.webp" alt="" loading="lazy" decoding="async"><span class="cert-name">AWS Certified Solutions Architect – Associate</span><span class="cert-meta">Amazon Web Services · 2023 · Expired Oct 2026</span></a>
         <a class="cert" href="assets/certificates/Oracle_Cloud_Infrastructure_Architect_Associate_2023.webp" target="_blank" rel="noopener"><img src="assets/certificates/Oracle_Cloud_Infrastructure_Architect_Associate_2023.webp" alt="" loading="lazy" decoding="async"><span class="cert-name">Oracle Cloud Infrastructure Architect Associate</span><span class="cert-meta">Oracle · 2023</span></a>
         <a class="cert" href="assets/certificates/Oracle_Cloud_Infrastructure_Generative_AI_Professional_2024.jpg" target="_blank" rel="noopener"><img src="assets/certificates/Oracle_Cloud_Infrastructure_Generative_AI_Professional_2024.jpg" alt="" loading="lazy" decoding="async"><span class="cert-name">Oracle Cloud Infrastructure Generative AI Professional</span><span class="cert-meta">Oracle · 2024</span></a>
         <a class="cert" href="assets/certificates/Oracle_Database_Certificate.webp" target="_blank" rel="noopener"><img src="assets/certificates/Oracle_Database_Certificate.webp" alt="" loading="lazy" decoding="async"><span class="cert-name">Oracle Database Certificate</span><span class="cert-meta">Oracle · 2023</span></a>
-        <a class="cert" href="assets/certificates/Certified_Advanced_Automation_Professional.webp" target="_blank" rel="noopener"><img src="assets/certificates/Certified_Advanced_Automation_Professional.webp" alt="" loading="lazy" decoding="async"><span class="cert-name">Certified Advanced Automation Professional</span><span class="cert-meta">Automation Anywhere · 2024</span></a>
+        <a class="cert" href="assets/certificates/Certified_Advanced_Automation_Professional.webp" target="_blank" rel="noopener"><img src="assets/certificates/Certified_Advanced_Automation_Professional.webp" alt="" loading="lazy" decoding="async"><span class="cert-name">Certified Advanced Automation Professional</span><span class="cert-meta">Automation Anywhere · 2024 · Expired Sep 2026</span></a>
         <a class="cert" href="assets/certificates/RedHat_Certified_Enterprise_Application_Developer_2024.webp" target="_blank" rel="noopener"><img src="assets/certificates/RedHat_Certified_Enterprise_Application_Developer_2024.webp" alt="" loading="lazy" decoding="async"><span class="cert-name">Red Hat Certified Enterprise Application Developer</span><span class="cert-meta">Red Hat · 2024</span></a>
         <a class="cert" href="assets/certificates/WSO2_MI_Developer.webp" target="_blank" rel="noopener"><img src="assets/certificates/WSO2_MI_Developer.webp" alt="" loading="lazy" decoding="async"><span class="cert-name">WSO2 Certified Micro Integrator Developer – V4</span><span class="cert-meta">WSO2 · 2025</span></a>
         <a class="cert" href="assets/certificates/Visuara_Build_Large_Language_Models.webp" target="_blank" rel="noopener"><img src="assets/certificates/Visuara_Build_Large_Language_Models.webp" alt="" loading="lazy" decoding="async"><span class="cert-name">Build Large Language Models From Scratch</span><span class="cert-meta">Visuara · 2024</span></a>
