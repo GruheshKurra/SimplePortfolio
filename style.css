@@ -36,21 +36,23 @@ h1 { font-size: 34px; font-weight: normal; padding: 0; margin: 0; }
 }
 
 /* Timeline */
-.entry { display: grid; grid-template-columns: 145px 80px 1fr; }
-.timespan { font-size: 14px; text-align: right; padding-right: 5px; color: #bbb; }
-.ico { position: relative; border-left: 2px solid #cfcfcf; }
-.ico img { display: block; width: 68px; height: auto; margin-left: 10px; border-radius: 5px; }
-.entry-dot { position: absolute; top: 0; left: -8px; width: 14px; height: 14px; border-radius: 7px; background-color: #cfcfcf; border: 2px solid white; }
-.desc { font-size: 17px; padding-left: 20px; padding-bottom: 20px; min-width: 0; }
-.desc h3 { font-size: 17px; font-weight: normal; margin: 0; }
-.org { margin: 0 0 6px; color: #999; }
+.entry { display: grid; grid-template-columns: 150px 84px 1fr; }
+.timespan { font-size: 14px; line-height: 1.7; text-align: right; padding-right: 16px; color: #888; white-space: nowrap; }
+.ico { position: relative; border-left: 2px solid #e2e2e2; }
+.ico img { display: block; width: 56px; height: 56px; margin-left: 16px; padding: 5px; object-fit: contain; background-color: white; border: 1px solid #e8e8e8; border-radius: 8px; }
+.ico img[src*="imperial-tile"] { padding: 0; }
+.entry-dot { position: absolute; top: 5px; left: -7px; width: 12px; height: 12px; border-radius: 6px; background-color: #9a9a9a; border: 2px solid white; }
+.desc { font-size: 16px; line-height: 1.5; padding-left: 12px; padding-bottom: 32px; min-width: 0; }
+.entry:last-child .desc { padding-bottom: 8px; }
+.desc h3 { font-size: 17px; font-weight: 600; margin: 0; }
+.org { margin: 2px 0 8px; font-size: 15px; color: #777; }
 .desc p:last-child { margin-bottom: 0; }
 @media (max-width: 600px) {
-  .entry { grid-template-columns: 68px 1fr; }
+  .entry { grid-template-columns: 64px 1fr; }
   .ico { grid-column: 1; grid-row: 1 / span 2; }
-  .ico img { width: 54px; margin-left: 8px; }
-  .timespan { grid-column: 2; grid-row: 1; text-align: left; padding: 0 0 0 10px; }
-  .desc { grid-column: 2; grid-row: 2; padding-left: 10px; }
+  .ico img { width: 44px; height: 44px; margin-left: 12px; padding: 4px; }
+  .timespan { grid-column: 2; grid-row: 1; text-align: left; padding: 0 0 0 6px; }
+  .desc { grid-column: 2; grid-row: 2; padding-left: 6px; }
 }
 
 /* Sections */
@@ -97,6 +99,10 @@ h1 { font-size: 34px; font-weight: normal; padding: 0; margin: 0; }
   .skills { grid-template-columns: 1fr; gap: 6px; }
   .skills dt { padding-top: 10px; }
 }
+
+/* Writing */
+.posts { list-style: none; margin: 16px 0 0; padding: 0; }
+.posts li { margin-bottom: 2px; }
 
 /* Footer */
 .footer { margin-top: 60px; padding-bottom: 60px; font-size: 14px; }
