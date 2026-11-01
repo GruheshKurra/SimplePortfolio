@@ -4,8 +4,8 @@
   "description": "Gruhesh Sri Sai Karthik Kurra, MSc AI and Machine Learning student at Imperial College London, researching large language models and NLP.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#fbfaf7",
-  "theme_color": "#fbfaf7",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "icons": [
     {
       "src": "/assets/favicon-192.png",
