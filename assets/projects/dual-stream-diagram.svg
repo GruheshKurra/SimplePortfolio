@@ -2,7 +2,7 @@
   <title>Dual-stream deepfake detection</title>
   <desc>Boundary and frequency streams feed an iterative cross-attention module.</desc>
   <rect width="480" height="300" fill="#f6f7f8"/>
-  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+  <g font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" text-anchor="middle">
     <text x="240" y="39" font-size="16" fill="#666">DUAL-STREAM DETECTION</text>
     <g fill="#fff" stroke="#b7c5d5" stroke-width="2">
       <rect x="32" y="73" width="174" height="70" rx="4"/>

@@ -1,8 +1,9 @@
-/* Plain research homepage: system sans-serif, a single timeline, no framework. */
+/* Plain research homepage: Helvetica Neue, a single timeline, no framework. */
 :root { color-scheme: light; }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; padding: 0; background-color: white; font-family: sans-serif; font-size: 16px; line-height: 1.4; color: #333; }
+body { margin: 0; padding: 0; background-color: white; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.4; color: #333; }
+button, input, select, textarea { font-family: inherit; }
 img { max-width: 100%; height: auto; }
 p { margin: 0 0 12px; }
 

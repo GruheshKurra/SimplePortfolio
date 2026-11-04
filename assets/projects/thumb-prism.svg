@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="Inter, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
   <title>Prism Tuning: K seeds, one frozen model, K outputs</title>
   <rect width="480" height="300" fill="#efeef6"/>
   <rect x="24" y="126" width="88" height="48" rx="10" fill="#fff" stroke="#a7a1cc"/><text x="68" y="155" text-anchor="middle" font-size="15" fill="#3f3780">prompt</text>

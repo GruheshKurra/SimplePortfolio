@@ -2,7 +2,7 @@
   <title>Morphology-aware nested character embeddings</title>
   <desc>Nested character sequences form a word representation.</desc>
   <rect width="480" height="300" fill="#f7f7f4"/>
-  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+  <g font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" text-anchor="middle">
     <text x="240" y="39" font-size="16" fill="#666">MORPHOLOGY-AWARE EMBEDDINGS</text>
     <rect x="65" y="67" width="350" height="126" rx="4" fill="#fff" stroke="#b8c6b8" stroke-width="2"/>
     <rect x="84" y="86" width="247" height="88" rx="3" fill="#f0f4ee" stroke="#b8c6b8"/>
